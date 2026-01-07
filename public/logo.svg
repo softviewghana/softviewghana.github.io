@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 289 316.12">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #006837;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <polygon class="cls-1" points="288.5 171.56 288.5 243.56 144.5 315.56 .5 243.56 .5 171.56 144.5 243.56 288.5 171.56"/>
+      <path class="cls-1" d="M144.5.56L.5,72.56v72l144,72,144-72v-72L144.5.56ZM144.5,144.56l-72-36,72-36,72,36-72,36Z"/>
+    </g>
+  </g>
+</svg>

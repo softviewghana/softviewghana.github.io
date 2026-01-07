@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html > body > #__nuxt {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+.light,
+:root {
+  color-scheme: light;
+  --background: var(--color-zinc-100);
+  --text: var(--color-slate-900);
+}
+
+.dark {
+  color-scheme: dark;
+  --background: var(--color-slate-900);
+  --text: var(--color-zinc-300);
+}
+
+@media (width >= 40rem /* 640px */) {
+  body {
+    @apply text-base;
+  }
+}
+@layer base {
+  html {
+    @apply h-dvh;
+  }
+  body {
+    @apply bg-body text-body text-sm;
+  }
+
+  .scrollbar-none {
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      height: 0;
+    }
+  }
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@utility text-body {
+  color: var(--text);
+}
+@utility bg-body {
+  background-color: var(--background);
+}
+
+@utility glass {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-text: var(--text);
+  --default-font-family: "Open Sans", "sans-serif";
+  --color-global: oklch(45.392% 0.11464 153.948);
+  --color-global-50: oklab(61.605% -0.14087 0.07085);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  transform: translateY(0);
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+  transform: translateY(-5px);
+}
+
+.slide-in-enter-active,
+.slide-in-leave-active {
+  transition: opacity 0.3s ease, transform 0.2s ease;
+  transform: translateX(0);
+}
+
+.slide-in-enter-from,
+.slide-in-leave-to {
+  opacity: 0;
+  /* transform: translateX(5px); */
+}

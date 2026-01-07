@@ -1,0 +1,26 @@
+{
+  "name": "eaglesoftghana-com",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "prepare": "tw-patch install",
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxt/fonts": "^0.12.1",
+    "@tailwindcss/vite": "^4.1.18",
+    "lucide-vue-next": "^0.562.0",
+    "nuxt": "^4.2.2",
+    "tailwindcss": "^4.1.18",
+    "vue": "^3.5.25",
+    "vue-router": "^4.6.4"
+  },
+  "devDependencies": {
+    "tailwindcss-patch": "^8.6.1",
+    "unplugin-tailwindcss-mangle": "^5.0.0"
+  }
+}
