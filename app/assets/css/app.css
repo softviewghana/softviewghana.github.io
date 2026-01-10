@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: "Open Sans";
-  src: url("../fonts/OpenSans-Regular.ttf") format("truetype");
+  font-family: "Instrument Sans";
+  src: url("../fonts/InstrumentSans-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -67,7 +67,7 @@ html > body > #__nuxt {
 @theme {
   --color-background: var(--background);
   --color-text: var(--text);
-  --default-font-family: "Open Sans", "sans-serif";
+  --default-font-family: "Instrument Sans", "sans-serif";
   --color-global: oklch(45.392% 0.11464 153.948);
   --color-global-50: oklab(61.605% -0.14087 0.07085);
 }

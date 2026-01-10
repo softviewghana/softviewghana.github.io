@@ -92,7 +92,7 @@
                   communication for schools across Ghana.
             </p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-                  <ProductListCard name="Eagle School Manager" link="//eschoolghana.com" link-name="explore" :features="[
+                  <ProductListCard name="Soft School Manager" link="//eschoolghana.com" link-name="explore" :features="[
                         'Student Information System (SIS)',
                         'Fee Collection & Tracking',
                         'Report Card Generation',

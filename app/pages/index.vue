@@ -65,7 +65,7 @@
                         </p>
                   </div>
                   <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 space-y-4 md:space-y-8">
-                        <CardLinkWithIcon header-text="eagle school manager"
+                        <CardLinkWithIcon header-text="soft school manager"
                           text="An all-in-one smart school management system" :icon="CrownIcon"
                           href="//eschoolghana.com" />
 
@@ -77,9 +77,9 @@
                           text="Organize swift, secure and transparent elections" :icon="CrownIcon"
                           href="//vote360online.com" />
 
-                        <CardLinkWithIcon header-text="eagle church suite"
+                        <CardLinkWithIcon header-text="soft church suite"
                           text="streamline church operations with ease and enhance community engagement"
-                          :icon="CrownIcon" href="//eaglechurchsuite.com" />
+                          :icon="CrownIcon" href="//softchurchsuite.com" />
 
                         <div class="flex items-center justify-center">
                               <NuxtLink class="text-lg capitalize hover:text-global dark:hover:text-white"

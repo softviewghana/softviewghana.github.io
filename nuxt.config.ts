@@ -51,6 +51,13 @@ export default defineNuxtConfig({
           rel: "manifest",
           href: "/manifest.json",
         },
+        {
+          rel: 'preload',
+          as: 'font',
+          href: '/fonts/InstrumentSans-Regular.woff2',
+          type: 'font/woff2',
+          crossorigin: 'anonymous'
+        }
       ],
       meta: [
         {
