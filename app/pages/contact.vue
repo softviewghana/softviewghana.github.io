@@ -128,8 +128,8 @@
                         <h2 class="text-2xl font-bold mb-6">Send Us a Message</h2>
                         <form @submit.prevent="" class="space-y-6">
                               <div class="grid sm:grid-cols-2 gap-6">
-                                    <TextInput label="full name" placeholder="enter full name here" />
-                                    <TextInput label="work/personal email"
+                                    <TextInput required label="full name" placeholder="enter full name here" />
+                                    <TextInput required label="work/personal email"
                                       placeholder="enter personal/work email address" />
                               </div>
 
@@ -144,11 +144,10 @@
                                     <select id="interest" name="interest"
                                       class="bg-inherit appearance-none! [-webkit-appearance:none]! [-moz-appearance:none]! inline-block w-full border-0 rounded-md shadow-sm p-3! outline outline-global focus:outline-2 focus:outline-global-50 focus:ring-0 focus:border-0">
                                           <option class="bg-body" disabled selected>-- Select an option --</option>
-                                          <option class="bg-body" value="">Request Demo: Clinic Plus (Premises)</option>
-                                          <option class="bg-body" value="">Request Demo: Pharma Plus</option>
-                                          <option class="bg-body" value="">Request Demo: My School GH / My School Portal
-                                                (SaaS)</option>
-                                          <option class="bg-body" value="">Request Demo: Vote360 (SaaS)</option>
+                                          <option class="bg-body" value="">Request Demo: eSchool Ghana / SBA</option>
+                                          <!-- <option class="bg-body" value="">Request Demo: Clinic Plus (Premises)</option> -->
+                                          <!-- <option class="bg-body" value="">Request Demo: Pharma Plus</option> -->
+                                          <!-- <option class="bg-body" value="">Request Demo: Vote360 (SaaS)</option> -->
                                           <option class="bg-body" value="">General Sales Enquiry</option>
                                           <option class="bg-body" value="">Technical Support</option>
                                           <option class="bg-body" value="">Partnership Inquiry</option>

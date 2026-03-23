@@ -1,5 +1,5 @@
 const constants = {
-  APP_URL: "https://softviewghana.github.io",
+  APP_URL: "https://softviewghana.com",
 };
 
 export default constants;

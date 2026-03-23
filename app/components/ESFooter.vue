@@ -55,22 +55,22 @@
                               </ul> -->
                               <div class="flex items-center gap-4">
                                     <NuxtLink :external="true" target="_blank" title="Facebook"
-                                      class="rounded-sm p-2.5 bg-zinc-100 dark:outline-0 outline outline-slate-400/50 dark:bg-slate-600"
+                                      class="rounded-sm p-2.5 dark:outline-0 outline outline-slate-400/50 dark:bg-slate-600"
                                       href="//facebook.com/softviewghana">
                                           <IconsFacebookIcon class="dark:text-zinc-100 text-zinc-900/85" />
                                     </NuxtLink>
                                     <NuxtLink :external="true" target="_blank" title="WhatsApp"
-                                      class="rounded-sm p-2.5 bg-zinc-100 dark:outline-0 outline outline-slate-400/50 dark:bg-slate-600"
+                                      class="rounded-sm p-2.5 dark:outline-0 outline outline-slate-400/50 dark:bg-slate-600"
                                       href="//wa.me/233543093942">
                                           <IconsWhatsAppIcon class="dark:text-zinc-100 text-zinc-900/85" />
                                     </NuxtLink>
                                     <NuxtLink :external="true" target="_blank" title="X"
-                                      class="rounded-sm p-2.5 bg-zinc-100 dark:outline-0 outline outline-slate-400/50 dark:bg-slate-600"
+                                      class="rounded-sm p-2.5 dark:outline-0 outline outline-slate-400/50 dark:bg-slate-600"
                                       href="//x.com/softviewghana">
                                           <IconsXTwitterIcon class="dark:text-zinc-100 text-zinc-900/85" />
                                     </NuxtLink>
                                     <NuxtLink :external="true" target="_blank" title="YouTube"
-                                      class="rounded-sm p-2.5 bg-zinc-100 dark:outline-0 outline outline-slate-400/50 dark:bg-slate-600"
+                                      class="rounded-sm p-2.5 dark:outline-0 outline outline-slate-400/50 dark:bg-slate-600"
                                       href="//youtube.com/@softviewghana">
                                           <IconsYouTubeIcon class="dark:text-zinc-100 text-zinc-900/85" />
                                     </NuxtLink>
@@ -85,13 +85,13 @@
                                     <li>
                                           <NuxtLink active-class=" " exact-active-class=" " external
                                             class="dark:hover:text-white hover:text-slate-600"
-                                            title="Eagle School Manager" target="_blank" href="//eschoolghana.com">
+                                            title="eSchool Ghana" target="_blank" href="//eschoolghana.com">
                                                 eSchool Ghana
                                           </NuxtLink>
                                     </li>
                                     <li>
                                           <NuxtLink active-class=" " exact-active-class=" " external
-                                            class="dark:hover:text-white hover:text-slate-600" title="Vote 360 Online"
+                                            class="dark:hover:text-white hover:text-slate-600" title="School-Based Assessment Pro"
                                             target="_blank" href="//sba.eschoolghana.com">
                                                 SBA Pro
                                           </NuxtLink>
@@ -106,7 +106,7 @@
                                     <li>
                                           <NuxtLink active-class=" " exact-active-class=" " external
                                             class="dark:hover:text-white hover:text-slate-600"
-                                            title="Eagle Church Suite" target="_blank" href="//echurch.softivew.app">
+                                            title="eChurch Flow" target="_blank" href="//echurch.softivew.app">
                                                 eChurch Flow
                                           </NuxtLink>
                                     </li>

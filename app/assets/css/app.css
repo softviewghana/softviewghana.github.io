@@ -27,17 +27,12 @@ html > body > #__nuxt {
   --text: oklch(0.98 0.01 240);
 }
 
-@media (width >= 40rem /* 640px */) {
-  body {
-    @apply text-base;
-  }
-}
 @layer base {
   html {
     @apply h-dvh;
   }
   body {
-    @apply bg-body text-body text-sm;
+    @apply bg-body text-body antialiased;
   }
 
   .scrollbar-none {
