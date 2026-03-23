@@ -82,13 +82,14 @@
             <div v-if="isProductListShown"
               class="absolute z-5 -left-full w-dvw max-w-md shadow-2xl bg-body rounded-2xl border border-slate-200 dark:border-slate-600">
               <div class="flex flex-col gap-4 p-4">
-                <FlexListWithIcon :to="{ name: 'products', hash: '#smart-sms' }" heading="softview school manager"
-                  :icon="PieChartIcon" text="An all-in-one smart school management system" />
+                <FlexListWithIcon :to="{ name: 'products', hash: '#eschool-ghana' }" heading="eSchool Ghana"
+                  :icon="PieChartIcon" text="An all-in-one smart school management system for basic schools in Ghana" />
 
-                <FlexListWithIcon :to="{ name: 'products', hash: '#vote-360-online' }" heading="vote 360 online"
-                  :icon="PieChartIcon" text="Organize swift, secure and transparent elections" />
+                <FlexListWithIcon :to="{ name: 'products', hash: '#sba-pro' }" heading="School-Based Assessment Pro"
+                  :icon="PieChartIcon"
+                  text="The smartest and efficient way of generating custom terminal report cards for students" />
 
-                <FlexListWithIcon :to="{ name: 'products', hash: '#echurch' }" heading="softview church suite"
+                <FlexListWithIcon :to="{ name: 'products', hash: '#echurch-flow' }" heading="eChurch Flow"
                   :icon="PieChartIcon" text="streamline church operations with ease and enhance community engagement" />
               </div>
             </div>
@@ -117,7 +118,7 @@
           <div @click.self="isSideNavOpen = false" v-if="isSideNavOpen" tabindex="0"
             class="fixed flex justify-end inset-0 z-50 focus:outline-none lg:hidden w-full h-dvh overflow-hidden backdrop-blur-sm bg-slate-800/20">
             <div class="relative w-full h-full overflow-hidden bg-body sm:max-w-sm sm:ring-1 sm:ring-gray-100/10">
-              <div class="flex items-center justify-between px-6 shadow-md py-3">
+              <div class="flex items-center justify-between px-6 py-3">
                 <NuxtLink :to="{ name: 'index' }" active-class=" " exact-active-class=" "
                   class="-m-1.5 p-1.5 flex items-center gap-2">
                   <span class="sr-only">Eaglesoft Logo</span>
@@ -161,15 +162,15 @@
                         <div v-if="isMenuShown"
                           class="relative dark:bg-slate-700/10 z-5 min-w-full shadow bg-transparent rounded-2xl border border-none dark:border-slate-600 backdrop-blur-md">
                           <div class="flex flex-col gap-4 p-4 relative ">
-                            <FlexListWithIcon :to="{ name: 'products', hash: '#smart-sms' }"
-                              heading="softview school manager" :icon="PieChartIcon"
-                              text="An all-in-one smart school management system" />
+                            <FlexListWithIcon :to="{ name: 'products', hash: '#eschool-ghana' }" heading="eSchool Ghana"
+                              :icon="PieChartIcon"
+                              text="An all-in-one smart school management system for basic schools in Ghana" />
 
-                            <FlexListWithIcon :to="{ name: 'products', hash: '#vote-360-online' }"
-                              heading="vote 360 online" :icon="PieChartIcon"
-                              text="Organize swift, secure and transparent elections" />
+                            <FlexListWithIcon :to="{ name: 'products', hash: '#sba-pro' }"
+                              heading="School-Based Assessment Pro" :icon="PieChartIcon"
+                              text="The smartest and efficient way of generating custom terminal report cards for students" />
 
-                            <FlexListWithIcon :to="{ name: 'products', hash: '#echurch' }" heading="softview church suite"
+                            <FlexListWithIcon :to="{ name: 'products', hash: '#echurch-flow' }" heading="eChurch Flow"
                               :icon="PieChartIcon"
                               text="streamline church operations with ease and enhance community engagement" />
                           </div>

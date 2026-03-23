@@ -44,7 +44,7 @@
                         <div v-fade-in class="mt-6 text-center">
                               <NuxtLink :to="{ hash: '#saas-products' }" active-class=" " exact-active-class=" "
                                 class="dark:text-white text-global text-lg font-semibold transition duration-300">
-                                    Explore Our SaaS Projects Below ↓
+                                    Explore Our SaaS Products Below ↓
                               </NuxtLink>
                         </div>
                   </div>
@@ -57,7 +57,7 @@
                   </div>
             </ESSection>
       </div>
-      <ESSection>
+      <!-- <ESSection>
             <h3 v-fade-in
               class="lg:text-3xl text-2xl text-center md:text-start font-bold flex items-center justify-center md:justify-start mb-6 text-global-50 dark:text-white">
                   Healthcare & Pharmacy Management
@@ -128,7 +128,9 @@
                   ]" target="Unions, Associations, Corporate Bodies" />
 
             </div>
-      </ESSection>
+      </ESSection> -->
+
+      <ProductSection />
 
       <ESSection class="mt-12">
             <h3 v-fade-in class="lg:text-3xl text-2xl text-center mb-6 text-global-50 dark:text-white">
@@ -136,7 +138,7 @@
             </h3>
             <div v-fade-in class="grid md:grid-cols-3 gap-8 text-center">
                   <TechStackCard header-text="modern stack"
-                    text="We use Vue.js, Nuxt.js, AdonisJS and Laravel to build fast, reactive, and scalable applications." />
+                    text="We use Vue.js, React.js, Nuxt.js, Express.js and Laravel to build fast, reactive, and scalable applications." />
                   <TechStackCard header-text="intuitive design"
                     text="Styling with Tailwind CSS ensures responsive, clean, and accessible user interfaces on every device." />
                   <TechStackCard header-text="ghanaian localization"

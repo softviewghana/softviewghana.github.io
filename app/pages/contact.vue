@@ -54,8 +54,8 @@
                   <div class="lg:col-span-2 space-y-8">
                         <h2 class="text-2xl font-bold">Contact Details</h2>
                         <div class="flex items-start">
-                              <svg class="w-6 h-6 text-global-50 mr-4 shrink-0 mt-1" fill="none"
-                                stroke="currentColor" viewBox="0 0 24 24">
+                              <svg class="w-6 h-6 text-global-50 mr-4 shrink-0 mt-1" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                       d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z">
                                     </path>
@@ -75,8 +75,8 @@
                         </div>
 
                         <div class="flex items-start">
-                              <svg class="w-6 h-6 text-global-50 mr-4 shrink-0 mt-1" fill="none"
-                                stroke="currentColor" viewBox="0 0 24 24">
+                              <svg class="w-6 h-6 text-global-50 mr-4 shrink-0 mt-1" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                       d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.144a11.002 11.002 0 0010.518 10.518l1.144-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
                                     </path>
@@ -98,8 +98,8 @@
                         </div>
 
                         <div class="flex items-start">
-                              <svg class="w-6 h-6 text-global-50 mr-4 shrink-0 mt-1" fill="none"
-                                stroke="currentColor" viewBox="0 0 24 24">
+                              <svg class="w-6 h-6 text-global-50 mr-4 shrink-0 mt-1" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                       d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
                                     </path>
@@ -108,14 +108,14 @@
                                     <h3 class="font-semibold text-global dark:text-body">Email</h3>
                                     <p class="">
                                           <NuxtLink href="mailto:info@eaglesoftghana.com"
-                                            class="text-global-50 hover:text-global-50 select-all">
+                                            class="hover:text-global-50 select-all">
                                                 info@eaglesoftghana.com
                                           </NuxtLink>
                                           (General)
                                     </p>
                                     <p class="">
                                           <NuxtLink href="mailto:support@eaglesoftghana.com"
-                                            class="text-global-50 hover:text-global-50 select-all">
+                                            class="hover:text-global-50 select-all">
                                                 support@eaglesoftghana.com
                                           </NuxtLink>
                                           (Technical)
@@ -146,7 +146,8 @@
                                           <option class="bg-body" disabled selected>-- Select an option --</option>
                                           <option class="bg-body" value="">Request Demo: Clinic Plus (Premises)</option>
                                           <option class="bg-body" value="">Request Demo: Pharma Plus</option>
-                                          <option class="bg-body" value="">Request Demo: My School GH / My School Portal (SaaS)</option>
+                                          <option class="bg-body" value="">Request Demo: My School GH / My School Portal
+                                                (SaaS)</option>
                                           <option class="bg-body" value="">Request Demo: Vote360 (SaaS)</option>
                                           <option class="bg-body" value="">General Sales Enquiry</option>
                                           <option class="bg-body" value="">Technical Support</option>
@@ -157,21 +158,19 @@
                               <div>
                                     <label for="message" class="block text-sm font-medium">How can
                                           we help you?</label>
-                                    <textarea id="message" name="message" rows="4"
+                                    <textarea id="message" name="message" rows="4" placeholder="Write your request here"
                                       class="mt-1 bg-inherit appearance-none! [-webkit-appearance:none]! [-moz-appearance:none]! inline-block w-full border-0 rounded-md shadow-sm p-3 outline outline-global focus:outline-2 focus:outline-global-50 focus:ring-0 focus:border-0"></textarea>
                               </div>
 
                               <div class="flex items-center justify-end">
                                     <button type="submit"
-                                      class="text-center px-8 py-3 w-full md:w-auto text-lg border-0 border-transparent rounded-md shadow-sm text-md font-medium text-white bg-global hover:bg-global-50 focus:outline-none">
-                                          <span class="flex items-center">
-                                                <span class="">
-                                                      Submit Inquiry
-                                                </span>
-                                                <!-- <span class="">
+                                      class="px-8 py-3 w-full md:w-auto text-lg border-0 border-transparent rounded-md shadow-sm text-md font-medium text-white bg-global hover:bg-global-50 focus:outline-none">
+                                          <span class="">
+                                                Submit Inquiry
+                                          </span>
+                                          <!-- <span class="">
                                                       <LoaderIcon class="animate-spin" />
                                                 </span> -->
-                                          </span>
                                     </button>
                               </div>
 

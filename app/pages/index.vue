@@ -64,29 +64,29 @@
                               software.
                         </p>
                   </div>
-                  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 space-y-4 md:space-y-8">
-                        <CardLinkWithIcon header-text="soft school manager"
-                          text="An all-in-one smart school management system" :icon="CrownIcon"
+                  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 space-y-4 md:space-y-8 h-full relative overflow-hidden">
+                        <CardLinkWithIcon header-text="eSchool Ghana"
+                          text="An all-in-one smart school management system for basic schools in Ghana" :icon="CrownIcon"
                           href="//eschoolghana.com" />
 
-                        <CardLinkWithIcon header-text="eTerminal report manager"
-                          text="The smart way of generating custom terminal report cards for students" :icon="CrownIcon"
-                          href="//terminal-report.eschoolghana.com" />
+                        <CardLinkWithIcon header-text="School-Based Assessment Pro"
+                          text="The smartest and efficient way of generating custom terminal report cards for students" :icon="CrownIcon"
+                          href="//sba.eschoolghana.com" />
 
-                        <CardLinkWithIcon header-text="vote 360 online"
+                        <!-- <CardLinkWithIcon header-text="vote 360 online"
                           text="Organize swift, secure and transparent elections" :icon="CrownIcon"
-                          href="//vote360online.com" />
+                          href="//vote360online.com" /> -->
 
-                        <CardLinkWithIcon header-text="soft church suite"
+                        <CardLinkWithIcon header-text="eChurch Flow"
                           text="streamline church operations with ease and enhance community engagement"
-                          :icon="CrownIcon" href="//softchurchsuite.com" />
+                          :icon="CrownIcon" href="//mychurch.softivew.app" />
 
-                        <div class="flex items-center justify-center">
+                        <!-- <div class="flex items-center justify-center">
                               <NuxtLink class="text-lg capitalize hover:text-global dark:hover:text-white"
                                 :to="{ name: 'products' }">see
                                     all products & features
                               </NuxtLink>
-                        </div>
+                        </div> -->
                   </div>
             </div>
       </ESSection>
@@ -97,7 +97,7 @@
                         <h6 class="text-center capitalize text-2xl font-semibold dark:text-white">
                               why softview ghana matters?
                         </h6>
-                        <p class="text-center text-lg/loose py-4 font-semibold text-global-50">
+                        <p class="text-center text-lg/loose py-4 font-semibold text-global-50 tracking-wider">
                               Excellence • Local • Secure
                         </p>
                         <p class="text-center text-lg pb-12">

@@ -1,10 +1,9 @@
 <script setup lang="ts">
-      import ImgCEO from '~/assets/image/img-cto.jpg';
       const people = [
             {
                   name: 'Kingsley Osei Opoku',
                   role: 'Co-Founder / CTO / Software Engineer',
-                  imageUrl: ImgCEO
+                  imageUrl: 'image/img-cto.jpg'
             },
             {
                   name: 'Douglas Boakye',
@@ -18,7 +17,8 @@
         class="relative py-24 sm:py-32 overflow-hidden backdrop-blur-md border border-slate-500/1 dark:bg-slate-700/1 bg-slate-300/40">
             <div class="mx-auto grid max-w-7xl gap-8 lg:gap-20 px-6 lg:px-8 xl:grid-cols-3">
                   <div v-fade-in class="max-w-xl">
-                        <h2 class="text-3xl font-semibold capitalize tracking-tight text-pretty dark:text-white sm:text-4xl">
+                        <h2
+                          class="text-3xl font-semibold capitalize tracking-tight text-pretty dark:text-white sm:text-4xl">
                               our team
                         </h2>
                         <p class="mt-6 text-lg/8">We're a dynamic group of individuals who are passionate
@@ -27,9 +27,8 @@
                   <ul role="list" class="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
                         <li v-fade-in v-for="person in people" :key="person.name">
                               <div class="flex items-center gap-x-6">
-                                    <img
-                                      class="size-16 backdrop-blur-2xl rounded-full outline-1 -outline-offset-1 outline-white/10"
-                                      :src="person.imageUrl" :alt="person.name" />
+                                    <NuxtImg :src="person.imageUrl" :alt="person.name" placeholder loading="lazy"
+                                      class="size-16 backdrop-blur-2xl rounded-full outline-1 -outline-offset-1 outline-white/10" />
                                     <div>
                                           <h3 class="text-base/8 font-semibold tracking-wide dark:text-white">
                                                 {{ person.name }}

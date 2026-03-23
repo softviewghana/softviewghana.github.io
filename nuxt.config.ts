@@ -5,8 +5,10 @@ import tailwindcssMangle from "unplugin-tailwindcss-mangle/vite";
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
+
   // modules: ["@nuxt/fonts"],
   css: ["./app/assets/css/app.css"],
+
   vite: {
     plugins: [
       tailwindcss(),
@@ -30,6 +32,7 @@ export default defineNuxtConfig({
       }),
     ],
   },
+
   app: {
     baseURL: "/",
     head: {
@@ -85,4 +88,6 @@ export default defineNuxtConfig({
       ],
     },
   },
+
+  modules: ["@nuxt/image"],
 });

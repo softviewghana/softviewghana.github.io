@@ -19,7 +19,7 @@
       const props = withDefaults(defineProps<Props>(), {
             heading: 'A flex list heading',
             text: 'A descriptive text for the heading',
-            headingClass: 'font-semibold capitalize',
+            // headingClass: 'font-semibold capitalize',
             to: '/'
       });
 
@@ -32,7 +32,7 @@
                   <component :is="props.icon" :class="['dark:text-zinc-100', props.iconClass]" />
             </span>
             <span class="flex flex-col gap-2">
-                  <h6 :class="['font-semibold capitalize dark:text-zinc-100', props.headingClass]">
+                  <h6 :class="['font-semibold dark:text-zinc-100', props.headingClass]">
                         {{ props.heading }}
                   </h6>
                   <p :class="['wrap-break-word first-letter:capitalize', props.textClass]">

@@ -17,14 +17,14 @@ html > body > #__nuxt {
 .light,
 :root {
   color-scheme: light;
-  --background: var(--color-zinc-100);
-  --text: var(--color-slate-900);
+  --background: oklch(0.98 0.01 240);
+  --text: oklch(0.2 0.02 240);
 }
 
 .dark {
   color-scheme: dark;
   --background: var(--color-slate-900);
-  --text: var(--color-zinc-300);
+  --text: oklch(0.98 0.01 240);
 }
 
 @media (width >= 40rem /* 640px */) {
