@@ -3,7 +3,7 @@
             {
                   name: 'Kingsley Osei Opoku',
                   role: 'Co-Founder / CTO / Software Engineer',
-                  imageUrl: 'image/img-cto.jpg'
+                  imageUrl: '/image/img-cto.jpg'
             },
             {
                   name: 'Douglas Boakye',
@@ -27,7 +27,7 @@
                   <ul role="list" class="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
                         <li v-fade-in v-for="person in people" :key="person.name">
                               <div class="flex items-center gap-x-6">
-                                    <NuxtImg :src="person.imageUrl" :alt="person.name" placeholder loading="lazy"
+                                    <img :src="person.imageUrl" :alt="person.name" loading="lazy"
                                       class="size-16 backdrop-blur-2xl rounded-full outline-1 -outline-offset-1 outline-white/10" />
                                     <div>
                                           <h3 class="text-base/8 font-semibold tracking-wide dark:text-white">

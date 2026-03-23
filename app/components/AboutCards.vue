@@ -32,7 +32,7 @@
 
 <template>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div v-for="item in statements" :key="item.title"
+            <div v-for="item in statements" :key="item.title" v-fade-in
               class="group relative p-8 rounded-4xl border border-[oklch(0.95_0.01_240)] dark:border-[oklch(0.35_0.01_240)] bg-[oklch(0.99_0.005_240)] dark:bg-body transition-all duration-500 hover:shadow-xl hover:border-transparent">
                   <div
                     class="absolute inset-0 rounded-4xl opacity-0 group-hover:opacity-5 transition-opacity duration-500"

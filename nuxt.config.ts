@@ -5,16 +5,18 @@ import tailwindcssMangle from "unplugin-tailwindcss-mangle/vite";
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
-
-  // modules: ["@nuxt/fonts"],
-  css: ["./app/assets/css/app.css"],
-
+  ssr: true,
+  // modules: ["@nuxt/image"],
+  css: ["~/assets/css/app.css"],
+  // image: {
+  //   provider: "ipxStatic",
+  // },
   vite: {
     plugins: [
       tailwindcss(),
       tailwindcssMangle({
         generator: {
-          classPrefix: "es-",
+          classPrefix: "sv-",
         },
         preserve: {
           classes: [],
@@ -55,12 +57,12 @@ export default defineNuxtConfig({
           href: "/manifest.json",
         },
         {
-          rel: 'preload',
-          as: 'font',
-          href: '/fonts/InstrumentSans-Regular.woff2',
-          type: 'font/woff2',
-          crossorigin: 'anonymous'
-        }
+          rel: "preload",
+          as: "font",
+          href: "/fonts/InstrumentSans-Regular.woff2",
+          type: "font/woff2",
+          crossorigin: "anonymous",
+        },
       ],
       meta: [
         {
@@ -88,6 +90,4 @@ export default defineNuxtConfig({
       ],
     },
   },
-
-  modules: ["@nuxt/image"],
 });
