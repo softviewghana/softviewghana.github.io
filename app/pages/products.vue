@@ -28,7 +28,7 @@
       <ESSection>
             <div class="mx-auto max-w-2xl py-8 sm:pt-16 lg:pt-32 overflow-hidden">
                   <h1 v-fade-in class="text-2xl md:text-3xl font-bold text-global-50 text-center">
-                        Innovative SaaS Products Built for the Ghanaian Market.
+                        Innovative Software-as-a-Service (SaaS) Products Built for the Ghanaian Market.
                   </h1>
             </div>
       </ESSection>

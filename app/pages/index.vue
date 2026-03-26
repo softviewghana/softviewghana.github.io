@@ -3,20 +3,21 @@
       import constants from '~/constants';
 
       useSeoMeta({
-            title: 'softview ghana'.toString().toUpperCase(),
-            ogTitle: 'softview ghana'.toString().toUpperCase(),
-            description: 'Softview Ghana. We are a forward-thinking software development firm committed to developing and delivering specialized software solutions that address the unique challenges of the Ghanaian market.',
-            ogDescription: 'Softview Ghana. We are a forward-thinking software development firm committed to developing and delivering specialized software solutions that address the unique challenges of the Ghanaian market.',
+            title: 'Softview Ghana' + " • Innovating the future of digital services • Softview Ghana",
+            ogTitle: 'Softview Ghana' + " • Innovating the future of digital services • Softview Ghana",
+            description: 'Softview Ghana is a forward-thinking software development firm committed to developing and delivering specialized software solutions that address the unique challenges of the Ghanaian market.',
+            ogDescription: 'Softview Ghana is a forward-thinking software development firm committed to developing and delivering specialized software solutions that address the unique challenges of the Ghanaian market.',
             twitterCard: 'summary_large_image',
             ogImage: {
                   url: constants.APP_URL + '/icon-192.png',
-                  type:'image/png',
+                  type: 'image/png',
                   width: 192,
                   height: 192,
                   alt: 'softview ghana logo'
             },
             ogUrl: constants.APP_URL,
-            ogType: 'profile'
+            ogType: 'website',
+            ogLocale: 'en_GH',
       });
       useHead({
             link: [
@@ -30,12 +31,12 @@
             <div class="mx-auto max-w-2xl py-8 sm:py-16 lg:py-32 overflow-hidden">
                   <div v-fade-in class="text-center">
                         <h1 class="text-5xl font-semibold tracking-tight text-balance text-global-50 sm:text-7xl">
-                              softview ghana
+                              Softview Ghana
                         </h1>
-                        <p class="mt-8 text-lg font-medium text-pretty sm:text-xl/8">
+                        <h1 class="mt-8 text-lg font-medium text-pretty sm:text-xl/8">
                               We are committed to developing and delivering specialized software solutions that
                               address the unique challenges of the Ghanaian market.
-                        </p>
+                        </h1>
                         <div class="mt-10 flex items-center justify-center gap-x-6">
                               <NuxtLink
                                 class="font-semibold dark:hover:text-white outline outline-offset-2 outline-global-50 hover:bg-global-50/80 py-3 px-8 rounded-md"
@@ -64,14 +65,15 @@
                               software.
                         </p>
                   </div>
-                  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 space-y-4 md:space-y-8 h-full relative overflow-hidden">
+                  <div
+                    class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 space-y-4 md:space-y-8 h-full relative overflow-hidden">
                         <CardLinkWithIcon header-text="eSchool Ghana"
-                          text="An all-in-one smart school management system for basic schools in Ghana" :icon="CrownIcon"
-                          href="//eschoolghana.com" />
+                          text="An all-in-one smart school management system for basic schools in Ghana"
+                          :icon="CrownIcon" href="//eschoolghana.com" />
 
                         <CardLinkWithIcon header-text="School-Based Assessment Pro"
-                          text="The smartest and efficient way of generating custom terminal report cards for students" :icon="CrownIcon"
-                          href="//sba.eschoolghana.com" />
+                          text="The smartest and efficient way of generating custom terminal report cards for students"
+                          :icon="CrownIcon" href="//sba.eschoolghana.com" />
 
                         <!-- <CardLinkWithIcon header-text="vote 360 online"
                           text="Organize swift, secure and transparent elections" :icon="CrownIcon"

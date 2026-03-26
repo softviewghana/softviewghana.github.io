@@ -1,6 +1,7 @@
 import tailwindcss from "@tailwindcss/vite";
 import tailwindcssMangle from "unplugin-tailwindcss-mangle/vite";
 
+import constant from "./app/constants";
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
@@ -45,12 +46,12 @@ export default defineNuxtConfig({
       link: [
         {
           rel: "icon",
-          href: "/favicon.ico",
+          href: constant.APP_URL + "/favicon.ico",
           sizes: "any",
         },
         {
           rel: "apple-touch-icon",
-          href: "/apple-touch-icon.png",
+          href: constant.APP_URL + "/apple-touch-icon.png",
         },
         {
           rel: "manifest",

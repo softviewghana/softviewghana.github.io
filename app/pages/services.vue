@@ -3,10 +3,10 @@
       import constants from '~/constants';
 
       useSeoMeta({
-            title: 'services • softview ghana'.toString().toUpperCase(),
-            ogTitle: 'services • softview ghana'.toString().toUpperCase(),
-            description: 'Empowering Ghanaian Businesses and Institutions with Intelligent Software Solutions. We build specialized, robust, and localized software (SaaS) tailored to meet the unique operational needs of the Ghanaian market. We are not just software architects; we provide comprehensive IT solutions that businesses need, from custom web apps and mobile development to computer networking, system installation, and digital marketing.',
-            ogDescription: 'Empowering Ghanaian Businesses and Institutions with Intelligent Software Solutions. We build specialized, robust, and localized software (SaaS) tailored to meet the unique operational needs of the Ghanaian market. We are not just software architects; we provide comprehensive IT solutions that businesses need, from custom web apps and mobile development to computer networking, system installation, and digital marketing.',
+            title: 'Services • Softview Ghana',
+            ogTitle: 'Services • Softview Ghana',
+            description: 'We build specialized, robust, and localized software (SaaS) tailored to meet the unique operational needs of the Ghanaian market. We are not just software architects.',
+            ogDescription: 'We build specialized, robust, and localized software (SaaS) tailored to meet the unique operational needs of the Ghanaian market. We are not just software architects.',
             twitterCard: 'summary_large_image',
             ogImage: {
                   url: constants.APP_URL + '/icon-192.png',
@@ -23,6 +23,10 @@
                   { rel: 'canonical', href: constants.APP_URL + '/services' }
             ]
       });
+      /**
+       * ; we provide comprehensive IT solutions that businesses need, from custom web apps and mobile development to computer networking, system installation, and digital marketing.
+       * ; we provide comprehensive IT solutions that businesses need, from custom web apps and mobile development to computer networking, system installation, and digital marketing.
+       */
 </script>
 
 <template>

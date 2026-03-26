@@ -3,8 +3,8 @@
       import { LightbulbIcon } from 'lucide-vue-next';
       import constants from '~/constants';
       useSeoMeta({
-            title: 'about • softview ghana'.toString().toUpperCase(),
-            ogTitle: 'about • softview ghana'.toString().toUpperCase(),
+            title: 'About • Softview Ghana',
+            ogTitle: 'About • Softview Ghana',
             description: 'We are more than just a tech firm; Softview Ghana is a forward-thinking software development firm committed to developing and delivering specialized software solutions that address the unique challenges of the Ghanaian market.',
             ogDescription: 'We are more than just a tech firm; Softview Ghana is a forward-thinking software development firm committed to developing and delivering specialized software solutions that address the unique challenges of the Ghanaian market.',
             twitterCard: 'summary_large_image',
@@ -33,17 +33,16 @@
                         <h1 class="text-2xl md:text-3xl font-extrabold tracking-tight text-global-50">
                               The Foundation of Softview Ghana
                         </h1>
-                        <p class="mt-4 text-xl max-w-3xl mx-auto">
+                        <h1 class="mt-4 text-xl max-w-3xl mx-auto">
                               Innovating the future of digital services for Ghana and beyond.
-                        </p>
+                        </h1>
                   </div>
             </div>
 
             <div v-fade-in class="max-w-3xl mx-auto">
-                  <div
-                    class="font-semibold text-2xl text-center lg:text-left uppercase text-global-50 tracking-wider">
+                  <p class="font-semibold text-2xl text-center lg:text-left uppercase text-global-50 tracking-wider">
                         Our Foundation
-                  </div>
+                  </p>
                   <p class="mt-4  leading-relaxed">
                         Founded in the heart of Ghana, softview ghana was born from a deep commitment to
                         solve pressing local challenges through world-class technology. We believe that

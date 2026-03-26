@@ -3,10 +3,10 @@
       import constants from '~/constants';
 
       useSeoMeta({
-            title: 'contact • softview ghana'.toString().toUpperCase(),
-            ogTitle: 'contact • softview ghana'.toString().toUpperCase(),
-            description: 'Get in Touch with softview ghana. Whether you need a demo for our specialized SaaS products, are planning a custom web or mobile app, or require expert support for your computer and network systems, softview ghana is here to help.',
-            ogDescription: 'Get in Touch with softview ghana. Whether you need a demo for our specialized SaaS products, are planning a custom web or mobile app, or require expert support for your computer and network systems, softview ghana is here to help.',
+            title: 'Contact • Softview Ghana',
+            ogTitle: 'Contact • Softview Ghana',
+            description: 'Get in Touch with softview ghana. Whether you need a demo for our specialized SaaS products, or you are planning a custom web or mobile app, or require expert support for your computer and network systems, softview ghana is here to help.',
+            ogDescription: 'Get in Touch with softview ghana. Whether you need a demo for our specialized SaaS products, or you are planning a custom web or mobile app, or require expert support for your computer and network systems, softview ghana is here to help.',
             twitterCard: 'summary_large_image',
             ogImage: {
                   url: constants.APP_URL + '/icon-192.png'
