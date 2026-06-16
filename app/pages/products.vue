@@ -2,8 +2,8 @@
       import constants from '~/constants';
 
       useSeoMeta({
-            title: 'products • softview ghana'.toString().toUpperCase(),
-            ogTitle: 'products • softview ghana'.toString().toUpperCase(),
+            title: 'products | Softview Ghana',
+            ogTitle: 'products | Softview Ghana',
             description: 'Innovative SaaS Products Built for the Ghanaian Market. Explore our suite of specialized software applications designed for high performance, localized relevance, and unparalleled user experience across healthcare, education, and digital governance.',
             ogDescription: 'Innovative SaaS Products Built for the Ghanaian Market. Explore our suite of specialized software applications designed for high performance, localized relevance, and unparalleled user experience across healthcare, education, and digital governance.',
             twitterCard: 'summary_large_image',

@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-      import { AtomIcon, BlocksIcon, CrownIcon, LockKeyholeIcon, ScalingIcon, Share2Icon } from 'lucide-vue-next';
+      import { AtomIcon, BlocksIcon, CrownIcon, LockKeyholeIcon, ScalingIcon } from 'lucide-vue-next';
       import constants from '~/constants';
 
       useSeoMeta({
-            title: 'Softview Ghana' + " • Innovating the future of digital services • Softview Ghana",
-            ogTitle: 'Softview Ghana' + " • Innovating the future of digital services • Softview Ghana",
+            title: 'Softview Ghana | Innovating the future of digital services',
+            ogTitle: 'Softview Ghana | Innovating the future of digital services',
             description: 'Softview Ghana is a forward-thinking software development firm committed to developing and delivering specialized software solutions that address the unique challenges of the Ghanaian market.',
             ogDescription: 'Softview Ghana is a forward-thinking software development firm committed to developing and delivering specialized software solutions that address the unique challenges of the Ghanaian market.',
             twitterCard: 'summary_large_image',
@@ -18,11 +18,39 @@
             ogUrl: constants.APP_URL,
             ogType: 'website',
             ogLocale: 'en_GH',
+            ogSiteName: 'Softview Ghana',
       });
       useHead({
             link: [
                   { rel: 'canonical', href: constants.APP_URL }
-            ]
+            ],
+            script: [
+                  {
+                        type: 'application/ld+json',
+                        innerHTML: JSON.stringify({
+                              "@context": "https://schema.org",
+                              "@type": "Organization",
+                              "name": "Softview Ghana",
+                              "url": constants.APP_URL,
+                              "logo": constants.APP_URL + '/icon-192.png',
+                              "sameAs": [
+                                    "https://www.facebook.com/softviewghana",
+                                    "https://www.twitter.com/softviewghana",
+                                    "https://www.linkedin.com/company/softviewghana"
+                              ]
+                        })
+                  },
+                  {
+                        type: "application/ld+json",
+                        innerHTML: JSON.stringify({
+                              "@context": "https://schema.org",
+                              "@type": "WebSite",
+                              "name": "Softview Ghana",
+                              "alternateName": "Softview",
+                              "url": "https://softviewghana.com",
+                        }),
+                  },
+            ],
       });
 </script>
 

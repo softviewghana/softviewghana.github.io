@@ -1,10 +1,9 @@
 <script lang="ts" setup>
-      import { LoaderIcon } from 'lucide-vue-next';
       import constants from '~/constants';
 
       useSeoMeta({
-            title: 'Contact • Softview Ghana',
-            ogTitle: 'Contact • Softview Ghana',
+            title: 'Contact | Softview Ghana',
+            ogTitle: 'Contact | Softview Ghana',
             description: 'Get in Touch with softview ghana. Whether you need a demo for our specialized SaaS products, or you are planning a custom web or mobile app, or require expert support for your computer and network systems, softview ghana is here to help.',
             ogDescription: 'Get in Touch with softview ghana. Whether you need a demo for our specialized SaaS products, or you are planning a custom web or mobile app, or require expert support for your computer and network systems, softview ghana is here to help.',
             twitterCard: 'summary_large_image',

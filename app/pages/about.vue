@@ -1,10 +1,9 @@
 <script lang="ts" setup>
 
-      import { LightbulbIcon } from 'lucide-vue-next';
       import constants from '~/constants';
       useSeoMeta({
-            title: 'About • Softview Ghana',
-            ogTitle: 'About • Softview Ghana',
+            title: 'About | Softview Ghana',
+            ogTitle: 'About | Softview Ghana',
             description: 'We are more than just a tech firm; Softview Ghana is a forward-thinking software development firm committed to developing and delivering specialized software solutions that address the unique challenges of the Ghanaian market.',
             ogDescription: 'We are more than just a tech firm; Softview Ghana is a forward-thinking software development firm committed to developing and delivering specialized software solutions that address the unique challenges of the Ghanaian market.',
             twitterCard: 'summary_large_image',
@@ -15,7 +14,7 @@
                   height: 192,
                   alt: 'softview ghana logo'
             },
-            ogUrl: constants.APP_URL + '/services',
+            ogUrl: constants.APP_URL + '/about',
             ogType: 'website'
       });
       useHead({
