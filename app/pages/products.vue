@@ -2,8 +2,8 @@
       import constants from '~/constants';
 
       useSeoMeta({
-            title: 'products | Softview Ghana',
-            ogTitle: 'products | Softview Ghana',
+            title: 'Products | Softview Ghana',
+            ogTitle: 'Products | Softview Ghana',
             description: 'Innovative SaaS Products Built for the Ghanaian Market. Explore our suite of specialized software applications designed for high performance, localized relevance, and unparalleled user experience across healthcare, education, and digital governance.',
             ogDescription: 'Innovative SaaS Products Built for the Ghanaian Market. Explore our suite of specialized software applications designed for high performance, localized relevance, and unparalleled user experience across healthcare, education, and digital governance.',
             twitterCard: 'summary_large_image',
