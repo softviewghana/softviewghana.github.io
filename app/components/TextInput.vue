@@ -55,8 +55,7 @@
             <label :for="props.id" class="block text-sm font-medium capitalize">
                   {{ props.label }}
             </label>
-            <input :type="props.type" :inputmode="inputmode ?? computedInputMode" :id="props.id"
-              :name="props.id || props.name" v-model="value" :placeholder="props.placeholder"
+            <input v-bind="props" v-model="value" :inputmode="props.inputmode || computedInputMode"
               class="mt-1 bg-inherit appearance-none! [-webkit-appearance:none]! [-moz-appearance:none]! inline-block w-full border-0 rounded-md shadow-sm p-3 outline outline-global focus:outline-2 focus:outline-global-50 focus:ring-0 focus:border-0">
       </div>
 </template>

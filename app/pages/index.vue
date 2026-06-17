@@ -33,22 +33,13 @@
                               "name": "Softview Ghana",
                               "url": constants.APP_URL,
                               "logo": constants.APP_URL + '/icon-192.png',
+                              "alternateName": "Softview",
                               "sameAs": [
                                     "https://www.facebook.com/softviewghana",
                                     "https://www.twitter.com/softviewghana",
                                     "https://www.linkedin.com/company/softviewghana"
                               ]
                         })
-                  },
-                  {
-                        type: "application/ld+json",
-                        innerHTML: JSON.stringify({
-                              "@context": "https://schema.org",
-                              "@type": "WebSite",
-                              "name": "Softview Ghana",
-                              "alternateName": "Softview",
-                              "url": "https://softviewghana.com",
-                        }),
                   },
             ],
       });
@@ -61,10 +52,10 @@
                         <h1 class="text-5xl font-semibold tracking-tight text-balance text-global-50 sm:text-7xl">
                               Softview Ghana
                         </h1>
-                        <h1 class="mt-8 text-lg font-medium text-pretty sm:text-xl/8">
+                        <h2 class="mt-8 text-lg font-medium text-pretty sm:text-xl/8">
                               We are committed to developing and delivering specialized software solutions that
                               address the unique challenges of the Ghanaian market.
-                        </h1>
+                        </h2>
                         <div class="mt-10 flex items-center justify-center gap-x-6">
                               <NuxtLink
                                 class="font-semibold dark:hover:text-white outline outline-offset-2 outline-global-50 hover:bg-global-50/80 py-3 px-8 rounded-md"

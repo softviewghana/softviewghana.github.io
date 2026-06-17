@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+      import { LoaderIcon } from 'lucide-vue-next';
       import constants from '~/constants';
 
       useSeoMeta({
@@ -12,19 +13,56 @@
             },
             ogUrl: constants.APP_URL + '/contact',
             ogType: 'website',
+            ogSiteName: 'Contact | Softview Ghana',
       });
+
       useHead({
             link: [
                   { rel: 'canonical', href: constants.APP_URL + '/contact' }
             ]
       });
+
+      const form = reactive({
+            fullName: '',
+            email: '',
+            organization: '',
+            phone: '',
+            interest: '',
+            message: ''
+      });
+
+      const isSubmitting = ref(false);
+
+      const responseMessage = ref('');
+
+      const handleFormSubmit = () => {
+            isSubmitting.value = true;
+            // Handle form submission logic here (e.g., send data to an API)
+            console.log('Form submitted:', form);
+            setTimeout(() => {
+                  responseMessage.value = 'Your inquiry has been submitted successfully!';
+                  // Reset form fields
+                  form.fullName = '';
+                  form.email = '';
+                  form.organization = '';
+                  form.phone = '';
+                  form.interest = '';
+                  form.message = '';
+                  isSubmitting.value = false;
+            }, 1000);
+
+            setTimeout(() => {
+                  responseMessage.value = '';
+            }, 5000);
+
+      }
 </script>
 
 <template>
       <ESSection>
             <div class="mx-auto max-w-2xl py-8 sm:pt-16 lg:pt-32 overflow-hidden">
                   <h1 v-fade-in class="text-2xl md:text-3xl font-bold text-global-50 text-center">
-                        Get in Touch with softview ghana
+                        Get in Touch with Softview Ghana
                   </h1>
             </div>
       </ESSection>
@@ -34,7 +72,7 @@
                   <div class="max-w-2xl mx-auto">
                         <p v-fade-in class="mt-4 text-justify text-lg">
                               Whether you need a demo for our specialized SaaS products, are planning a custom web or
-                              mobile app, or require expert support for your computer and network systems, Eaglesoft
+                              mobile app, or require expert support for your computer and network systems, Softview
                               Ghana is here to help.
                         </p>
 
@@ -83,13 +121,14 @@
                               <div class="space-y-2">
                                     <h3 class="font-semibold text-global dark:text-body">Phone & WhatsApp</h3>
                                     <p class="">General Enquiries:
-                                          <a href="tel:+"></a>
-                                          <NuxtLink href="tel:+233549289243" class="select-all hover:text-global">
+                                          <NuxtLink href="tel:+233549289243" external
+                                            class="select-all hover:text-global">
                                                 +233 54 928 9243
                                           </NuxtLink>
                                     </p>
                                     <p class="">Support Hotline:
-                                          <NuxtLink href="tel:+233543093942" class="select-all hover:text-global">
+                                          <NuxtLink href="tel:+233543093942" external
+                                            class="select-all hover:text-global">
                                                 +233 54 309 3942
                                           </NuxtLink>
                                     </p>
@@ -106,16 +145,16 @@
                               <div class="space-y-2">
                                     <h3 class="font-semibold text-global dark:text-body">Email</h3>
                                     <p class="">
-                                          <NuxtLink href="mailto:info@eaglesoftghana.com"
+                                          <NuxtLink href="mailto:info@softviewghana.com" external
                                             class="hover:text-global-50 select-all">
-                                                info@eaglesoftghana.com
+                                                info@softviewghana.com
                                           </NuxtLink>
                                           (General)
                                     </p>
                                     <p class="">
-                                          <NuxtLink href="mailto:support@eaglesoftghana.com"
+                                          <NuxtLink href="mailto:support@softviewghana.com" external
                                             class="hover:text-global-50 select-all">
-                                                support@eaglesoftghana.com
+                                                support@softviewghana.com
                                           </NuxtLink>
                                           (Technical)
                                     </p>
@@ -125,22 +164,24 @@
 
                   <div class="lg:col-span-3">
                         <h2 class="text-2xl font-bold mb-6">Send Us a Message</h2>
-                        <form @submit.prevent="" class="space-y-6">
+                        <form @submit.prevent="handleFormSubmit" class="space-y-6">
                               <div class="grid sm:grid-cols-2 gap-6">
-                                    <TextInput required label="full name" placeholder="enter full name here" />
-                                    <TextInput required label="work/personal email"
+                                    <TextInput required label="full name *" placeholder="enter full name here" />
+                                    <TextInput required label="work/personal email *" type="email"
                                       placeholder="enter personal/work email address" />
                               </div>
 
                               <div class="grid sm:grid-cols-2 gap-6">
                                     <TextInput label="organization name" placeholder="enter organization name" />
-                                    <TextInput label="phone number" placeholder="enter phone number" />
+                                    <TextInput required label="phone number *" type="tel"
+                                      placeholder="enter phone number" />
                               </div>
 
                               <div>
                                     <label for="interest" class="block text-sm font-medium">
-                                          What is your primary interest?</label>
-                                    <select id="interest" name="interest"
+                                          What is your primary interest? *
+                                    </label>
+                                    <select id="interest" name="interest" required
                                       class="bg-inherit appearance-none! [-webkit-appearance:none]! [-moz-appearance:none]! inline-block w-full border-0 rounded-md shadow-sm p-3! outline outline-global focus:outline-2 focus:outline-global-50 focus:ring-0 focus:border-0">
                                           <option class="bg-body" disabled selected>-- Select an option --</option>
                                           <option class="bg-body" value="">Request Demo: eSchool Ghana / SBA</option>
@@ -154,25 +195,30 @@
                               </div>
 
                               <div>
-                                    <label for="message" class="block text-sm font-medium">How can
-                                          we help you?</label>
-                                    <textarea id="message" name="message" rows="4" placeholder="Write your request here"
+                                    <label for="message" class="block text-sm font-medium">
+                                          How can we help you? *
+                                    </label>
+                                    <textarea required id="message" name="message" rows="4"
+                                      placeholder="Write your request here"
                                       class="mt-1 bg-inherit appearance-none! [-webkit-appearance:none]! [-moz-appearance:none]! inline-block w-full border-0 rounded-md shadow-sm p-3 outline outline-global focus:outline-2 focus:outline-global-50 focus:ring-0 focus:border-0"></textarea>
                               </div>
 
-                              <div class="flex items-center justify-end">
-                                    <button type="submit"
-                                      class="px-8 py-3 w-full md:w-auto text-lg border-0 border-transparent rounded-md shadow-sm text-md font-medium text-white bg-global hover:bg-global-50 focus:outline-none">
+                              <div class="flex items-center justify-end w-full">
+                                    <button type="submit" :disabled="isSubmitting"
+                                      class="py-3 sm:px-5 text-center text-lg w-full sm:w-auto inline-flex items-center justify-center-safe gap-3 border-0 rounded-md shadow-sm text-md font-medium text-white bg-global hover:bg-global-50 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50">
+                                          <span class="" v-if="isSubmitting">
+                                                <LoaderIcon class="animate-spin" />
+                                          </span>
                                           <span class="">
                                                 Submit Inquiry
                                           </span>
-                                          <!-- <span class="">
-                                                      <LoaderIcon class="animate-spin" />
-                                                </span> -->
                                     </button>
                               </div>
 
                         </form>
+                        <div v-if="responseMessage" class="mt-4 p-4 bg-green-100 text-green-800 rounded-md">
+                              {{ responseMessage }}
+                        </div>
                   </div>
             </div>
       </ESSection>
