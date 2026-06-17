@@ -3,7 +3,7 @@
   <url>
     <loc>https://softviewghana.com/</loc>
     <lastmod>2026-06-16</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
@@ -27,7 +27,7 @@
   <url>
     <loc>https://softviewghana.com/contact</loc>
     <lastmod>2026-06-16</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
 </urlset>
