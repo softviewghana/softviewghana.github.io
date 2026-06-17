@@ -1,5 +1,5 @@
 <script setup>
-  const { theme } = useTheme();
+  useTheme();
 </script>
 
 <template>

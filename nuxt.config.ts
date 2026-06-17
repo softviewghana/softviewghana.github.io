@@ -39,7 +39,7 @@ export default defineNuxtConfig({
   app: {
     baseURL: "/",
     head: {
-      title: "eaglesoft ghana",
+      title: "Softview Ghana",
       htmlAttrs: {
         lang: "en-GH",
       },

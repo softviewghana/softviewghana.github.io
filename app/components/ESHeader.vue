@@ -6,7 +6,7 @@
 
   const year = ref<Date>(new Date);
 
-  const { theme } = useTheme();
+  useTheme();
 
   // const fillColor = computed(() => theme.value === 'dark' ? 'white' : '#006837')
 
@@ -41,7 +41,7 @@
       <div class="flex lg:flex-1 items-center">
         <NuxtLink :to="{ name: 'index' }" active-class=" " exact-active-class=" "
           class="-m-1.5 p-1.5 flex items-center gap-2">
-          <span class="sr-only">Eaglesoft Logo</span>
+          <span class="sr-only">Softview Logo</span>
           <Logo class="h-8" fill-color="var(--color-global-50)" />
           <span class="font-semibold capitalize dark:text-slate-50">
             softview ghana
@@ -121,7 +121,7 @@
               <div class="flex items-center justify-between px-6 py-3">
                 <NuxtLink :to="{ name: 'index' }" active-class=" " exact-active-class=" "
                   class="-m-1.5 p-1.5 flex items-center gap-2">
-                  <span class="sr-only">Eaglesoft Logo</span>
+                  <span class="sr-only">Softview Logo</span>
                   <Logo class="h-8" fill-color="var(--color-global-50)" />
                   <span class="font-semibold capitalize dark:text-slate-50">
                     softview ghana
