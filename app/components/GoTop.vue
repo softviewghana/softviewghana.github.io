@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-      import { ArrowUpToLineIcon } from 'lucide-vue-next';
+      import { ArrowUpToLineIcon } from '@lucide/vue';
 
       const isShown = ref(false);
 

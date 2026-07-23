@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-      import { Share2Icon, type LucideIcon } from 'lucide-vue-next';
+      import { Share2Icon, type LucideIcon } from '@lucide/vue';
 
       interface Props {
             headerText: string,
@@ -12,7 +12,7 @@
 </script>
 
 <template>
-      <div v-fade-in class="flex flex-row gap-6 items-start justify-between">
+      <div  class="flex flex-row gap-6 items-start justify-between">
             <div class="relative bg-slate-300/20 text-global dark:text-white p-2 top-2 rounded-md border border-slate-400/60">
                   <!-- <Share2Icon class="size-8" /> -->
                   <component :is="props.icon" class="size-8" />

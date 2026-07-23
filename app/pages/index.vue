@@ -1,168 +1,69 @@
 <script lang="ts" setup>
-      import { AtomIcon, BlocksIcon, CrownIcon, LockKeyholeIcon, ScalingIcon } from 'lucide-vue-next';
-      import constants from '~/constants';
+      import { ArrowRight, SparklesIcon, SquareArrowOutUpRight } from '@lucide/vue';
+      import CONSTANTS from '~/constants';
 
-      useSeoMeta({
-            title: 'Softview Ghana | Innovating the future of digital services',
-            ogTitle: 'Softview Ghana | Innovating the future of digital services',
-            description: 'Softview Ghana is a forward-thinking software development firm committed to developing and delivering specialized software solutions that address the unique challenges of the Ghanaian market.',
-            ogDescription: 'Softview Ghana is a forward-thinking software development firm committed to developing and delivering specialized software solutions that address the unique challenges of the Ghanaian market.',
-            twitterCard: 'summary_large_image',
-            ogImage: {
-                  url: constants.APP_URL + '/icon-192.png',
-                  type: 'image/png',
-                  width: 192,
-                  height: 192,
-                  alt: 'softview ghana logo'
-            },
-            ogUrl: constants.APP_URL,
-            ogType: 'website',
-            ogLocale: 'en_GH',
-            ogSiteName: 'Softview Ghana',
-      });
-      useHead({
-            link: [
-                  { rel: 'canonical', href: constants.APP_URL }
-            ],
-            script: [
-                  {
-                        type: 'application/ld+json',
-                        innerHTML: JSON.stringify({
-                              "@context": "https://schema.org",
-                              "@type": "Organization",
-                              "name": "Softview Ghana",
-                              "url": constants.APP_URL,
-                              "logo": constants.APP_URL + '/icon-192.png',
-                              "alternateName": "Softview",
-                              "sameAs": [
-                                    "https://www.facebook.com/softviewghana",
-                                    "https://www.twitter.com/softviewghana",
-                                    "https://www.linkedin.com/company/softviewghana"
-                              ]
-                        })
-                  },
-            ],
+      const organization = useOrgSchema();
+
+      useJsonLD(organization, 'organization');
+
+      useJsonLD({
+            '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            '@id': CONSTANTS.APP_URL + '/#website',
+            name: 'Softview Ghana',
+            url: CONSTANTS.APP_URL,
+            description: 'Softview Ghana builds custom software, web applications, mobile apps, cloud solutions, and IT infrastructure for businesses across Ghana and Africa.'
       });
 </script>
 
 <template>
-      <ESSection>
-            <div class="mx-auto max-w-2xl py-8 sm:py-16 lg:py-32 overflow-hidden">
-                  <div v-fade-in class="text-center">
-                        <h1 class="text-5xl font-semibold tracking-tight text-balance text-global-50 sm:text-7xl">
-                              Softview Ghana
-                        </h1>
-                        <h2 class="mt-8 text-lg font-medium text-pretty sm:text-xl/8">
-                              We are committed to developing and delivering specialized software solutions that
-                              address the unique challenges of the Ghanaian market.
-                        </h2>
-                        <div class="mt-10 flex items-center justify-center gap-x-6">
-                              <NuxtLink
-                                class="font-semibold dark:hover:text-white outline outline-offset-2 outline-global-50 hover:bg-global-50/80 py-3 px-8 rounded-md"
-                                :to="{ name: 'about' }">
-                                    Learn more <span aria-hidden="true">→</span>
-                              </NuxtLink>
+      <section class="relative overflow-hidden py-16">
+            <div class="absolute inset-0 bg-grid opacity-60" />
+            <div class="absolute inset-0 bg-noise" />
+            <BaseContainer>
+                  <div class="grid gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:items-center lg:gap-16">
+                        <div class="flex flex-col items-start">
+                              <div class="inline-flex content-center items-center gap-2 
+                                rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 
+                                text-sm font-medium text-primary transition-all duration-1000 
+                                ease-out opacity-100 translate-y-0">
+                                    <SparklesIcon />
+                                    <span>
+                                          {{ CONSTANTS.APP_NAME }}
+                                    </span>
+                              </div>
+                              <h1
+                                class="mt-6 text-2xl font-semibold leading-[1.14] text-primary
+                                tracking-tight text-foreground sm:text-3xl lg:text-4xl 
+                                text-center sm:text-start transition-all duration-1000 ease-out opacity-100 translate-y-0">
+                                    We're innovating the future of digital services
+                              </h1>
+                              <p
+                                class="mt-5 max-w-lg text-lg leading-8 text-muted transition-all duration-1000 ease-out opacity-100 translate-y-0">
+                                    At <span class="text-primary">Softview Ghana</span>, we design and develop custom
+                                    software, web applications, mobile
+                                    apps, cloud infrastructure, and digital solutions that help organizations work
+                                    smarter and scale with confidence.
+                              </p>
+                              <div
+                                class="mt-8 flex flex-col w-full sm:flex-row gap-3 transition-all duration-1000 ease-out opacity-100 translate-y-0">
+                                    <BaseButton block variant="primary">
+                                          Start Your Project
+                                          <ArrowRight :size="16" />
+                                    </BaseButton>
+                                    <BaseButton variant="outline" class="border-primary/90 shadow" block>
+                                          Explore Our Services
+                                          <SquareArrowOutUpRight :size="16" />
+                                    </BaseButton>
+                              </div>
                         </div>
+                        <Hero />
                   </div>
-                  <!-- <div aria-hidden="true"
-                    class="blur-3xl transform-gpu -z-10 right-0 -top-2 sm:-top-24 absolute opacity-10">
-                        <div
-                          style="clip-path: polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)"
-                          class="dark:to-indigo-500 dark:from-cyan-400 from-purple-600 to-blue-300 bg-linear-to-tr w-351 aspect-1404/767">
-                        </div>
-                  </div> -->
-            </div>
-      </ESSection>
-      <ESSection>
-            <div class="relative py-8">
-                  <div v-fade-in class="py-4 md:py-8 lg:py-12">
-                        <h6 class="text-center capitalize text-2xl font-semibold dark:text-white">
-                              our SaaS ecosystem
-                        </h6>
-                        <p class="text-center text-lg pb-12">
-                              Streamline your operations and drive efficiency with our specialized, high-performance
-                              software.
-                        </p>
-                  </div>
-                  <div
-                    class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 space-y-4 md:space-y-8 h-full relative overflow-hidden">
-                        <CardLinkWithIcon header-text="eSchool Ghana"
-                          text="An all-in-one smart school management system for basic schools in Ghana"
-                          :icon="CrownIcon" href="//eschoolghana.com" />
-
-                        <CardLinkWithIcon header-text="School-Based Assessment Pro"
-                          text="The smartest and efficient way of generating custom terminal report cards for students"
-                          :icon="CrownIcon" href="//sba.eschoolghana.com" />
-
-                        <!-- <CardLinkWithIcon header-text="vote 360 online"
-                          text="Organize swift, secure and transparent elections" :icon="CrownIcon"
-                          href="//vote360online.com" /> -->
-
-                        <CardLinkWithIcon header-text="eChurch Flow"
-                          text="streamline church operations with ease and enhance community engagement"
-                          :icon="CrownIcon" href="//mychurch.softivew.app" />
-
-                        <!-- <div class="flex items-center justify-center">
-                              <NuxtLink class="text-lg capitalize hover:text-global dark:hover:text-white"
-                                :to="{ name: 'products' }">see
-                                    all products & features
-                              </NuxtLink>
-                        </div> -->
-                  </div>
-            </div>
-      </ESSection>
-      <div
-        class="relative overflow-hidden backdrop-blur-2xl my-8 py-8 md:my-16 border-y bg-slate-200/90 border-slate-300/40 dark:border-slate-500/20 dark:bg-slate-500/10 rounded-none">
-            <ESSection>
-                  <div v-fade-in class="py-4 md:py-8">
-                        <h6 class="text-center capitalize text-2xl font-semibold dark:text-white">
-                              why softview ghana matters?
-                        </h6>
-                        <p class="text-center text-lg/loose py-4 font-semibold text-global-50 tracking-wider">
-                              Excellence • Local • Secure
-                        </p>
-                        <p class="text-center text-lg pb-12">
-                              Streamline your operations and drive efficiency with our specialized, high-performance
-                              software.
-                        </p>
-                  </div>
-                  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 lg:gap-20">
-                        <GridList :icon="BlocksIcon" header-text="custom-built"
-                          text="Not just customized - our platforms are architected from the ground up to  address specific local challenges. including payment integrations and report formats" />
-
-                        <GridList :icon="LockKeyholeIcon" header-text="security & data integrity"
-                          text="We utilize industry best practices to ensure your sensitive data is always secure and private" />
-
-                        <GridList :icon="ScalingIcon" header-text="scalabilty for Growth"
-                          text="Wether you're a small clinic or a large school network, our solutions scale seamlessly as your institution grows" />
-
-                        <GridList :icon="AtomIcon" header-text="affordabilty"
-                          text="Get world-class software at a price made just for you that respects the local market" />
-                  </div>
-            </ESSection>
-            <div aria-hidden="true"
-              class="blur-[14rem] dark:blur-3xl transform-gpu -z-10 right-0 -top-2 sm:-top-24 absolute opacity-5">
-                  <div
-                    style="clip-path: polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)"
-                    class="dark:to-indigo-500 dark:from-cyan-400 from-purple-600 to-blue-300 bg-linear-to-tr w-351 aspect-1404/767">
-                  </div>
-            </div>
-      </div>
-      <ESSection class="@container">
-            <div v-fade-in class="py-4 md:py-8">
-                  <h6 class="text-center capitalize text-2xl font-semibold dark:text-white">
-                        what our clients say
-                  </h6>
-            </div>
-            <div v-fade-in
-              class="relative flex flex-row overflow-x-auto gap-x-4 space-x-4 scroll-smooth scrollbar-none py-4! rounded-md">
-                  <TestimonialCard />
-                  <TestimonialCard />
-                  <TestimonialCard />
-                  <TestimonialCard />
-                  <TestimonialCard />
-            </div>
-      </ESSection>
+            </BaseContainer>
+      </section>
+      <TrustedTechnologyPartner />
+      <OurServices />
+      <WhySoftviewGhana />
 </template>
 
 <style scoped></style>

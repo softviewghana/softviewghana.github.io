@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-      import { AtomIcon, ChartNoAxesCombinedIcon, CpuIcon, DraftingCompassIcon, GlobeLockIcon, HandshakeIcon } from 'lucide-vue-next';
+      import { AtomIcon, ChartNoAxesCombinedIcon, CpuIcon, DraftingCompassIcon, GlobeLockIcon, HandshakeIcon } from '@lucide/vue';
       import constants from '~/constants';
 
       useSeoMeta({
@@ -30,16 +30,16 @@
 </script>
 
 <template>
-      <ESSection>
+      <Section>
             <div class="mx-auto max-w-2xl py-8 sm:pt-16 lg:pt-32 overflow-hidden">
                   <h1 v-fade-in class="text-2xl md:text-3xl font-bold text-global-50 text-center">
                         Empowering Ghanaian Businesses and Institutions with Intelligent Software Solutions.
                   </h1>
             </div>
-      </ESSection>
+      </Section>
       <div
         class="mx-auto w-full overflow-hidden backdrop-blur-2xl backdrop-opacity-30 my-8 py-8 md:my-16 border-y bg-slate-200/90 border-slate-300/40 dark:border-slate-500/20 dark:bg-slate-500/10 rounded-none">
-            <ESSection>
+            <Section>
                   <div class="max-w-2xl mx-auto">
                         <p v-fade-in class="mt-4 text-justify text-lg">
                               We build specialized, robust, and localized software (SaaS) tailored to meet the unique
@@ -64,10 +64,10 @@
                               </div>
                         </div>
                   </div>
-            </ESSection>
+            </Section>
       </div>
 
-      <ESSection id="core-solutions" class="py-16">
+      <Section id="core-solutions" class="py-16">
             <h2 class="text-3xl dark:text-white font-bold text-center mb-12">
                   Extended IT Services & Digital Enablement
             </h2>
@@ -96,8 +96,8 @@
                   ]" />
 
             </div>
-      </ESSection>
-      <ESSection class="py-12 text-center">
+      </Section>
+      <Section class="py-12 text-center">
             <h2 v-fade-in class="text-3xl font-extrabold dark:text-white mb-4">
                   Need Custom Software or Full IT Support?
             </h2>
@@ -115,8 +115,8 @@
                         View Core SaaS Products
                   </NuxtLink>
             </div>
-      </ESSection>
-      <ESSection>
+      </Section>
+      <Section>
             <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto text-center">
 
                   <SimpleCard v-fade-in :icon="AtomIcon" header-text="local experise"
@@ -128,9 +128,9 @@
                   <SimpleCard v-fade-in :icon="HandshakeIcon" header-text="Dedicated Support"
                     text=" We offer dedicated on-the-ground support, implementation assistance, and training across the country." />
             </div>
-      </ESSection>
+      </Section>
 
-      <ESSection>
+      <Section>
             <section class="py-12 text-center">
                   <h2 v-fade-in class="text-2xl lg:text-3xl font-extrabold dark:text-white mb-4">
                         Ready to Digitalize with the Right Partner?
@@ -149,7 +149,7 @@
                         </NuxtLink>
                   </div>
             </section>
-      </ESSection>
+      </Section>
 
 </template>
 

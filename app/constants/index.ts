@@ -1,5 +1,6 @@
-const constants = {
+const CONSTANTS = {
+  APP_NAME: "Softview Ghana",
   APP_URL: "https://softviewghana.com",
 };
 
-export default constants;
+export default CONSTANTS;

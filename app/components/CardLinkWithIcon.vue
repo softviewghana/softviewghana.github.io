@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-      import { CrownIcon, type LucideIcon } from 'lucide-vue-next';
+      import { CrownIcon, type LucideIcon } from '@lucide/vue';
       import type { RouteLocationAsPathGeneric, RouteLocationAsRelativeGeneric } from 'vue-router';
 
 
@@ -21,7 +21,7 @@
 </script>
 
 <template>
-      <NuxtLink v-fade-in :href="props.href" :external="props.external" :target="props.target"
+      <NuxtLink  :href="props.href" :external="props.external" :target="props.target"
         class="relative overflow-hidden grid grid-cols-4 items-center dark:hover:border-slate-500 dark:hover:bg-slate-400/20 h-full p-4 backdrop-blur-xs border dark:border-slate-700 border-slate-300/80 dark:bg-slate-800/80 dark:backdrop-opacity-80 bg-slate-100/50 hover:bg-slate-100/80 transition duration-150 rounded-2xl">
             <div
               class="relative rounded-md border text-global-50 dark:text-white dark:border-slate-500 border-slate-400/80 flex justify-center items-center bg-slate-300/40 dark:bg-slate-400/20 p4 size-12 md:size-16 backdrop-blur-2xl">

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-  import { ChevronDown, PieChartIcon } from 'lucide-vue-next';
+  import { ChevronDown, PieChartIcon } from '@lucide/vue';
 
   const isProductListShown = ref<boolean>(false);
   const isMenuShown = ref<boolean>(false);

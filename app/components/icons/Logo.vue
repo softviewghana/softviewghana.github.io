@@ -9,7 +9,7 @@ import type { StyleValue } from 'vue';
             class?: StyleValue
       }
       const props = withDefaults(defineProps<Props>(), {
-            fillColor: 'w',
+            fillColor: 'primary',
             strokeColor: '',
             strokeWidth: 0,
             class: 'h-8'

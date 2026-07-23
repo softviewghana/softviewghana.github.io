@@ -25,7 +25,7 @@
 </script>
 
 <template>
-      <ESSection>
+      <Section>
             <div class="mx-auto max-w-2xl py-8 sm:py-16 lg:py-32 overflow-hidden">
 
                   <div v-fade-in class="text-center mb-16 pt-10">
@@ -55,20 +55,20 @@
                   </p>
             </div>
 
-      </ESSection>
+      </Section>
 
-      <ESSection>
+      <Section>
             <div v-fade-in class="py-4 md:py-8">
                   <h6 class="text-center capitalize text-2xl font-semibold dark:text-white">
                         Mission & Core Values
                   </h6>
             </div>
             <AboutCards />
-      </ESSection>
+      </Section>
 
       <TeamMembers />
 
-      <ESSection>
+      <Section>
             <div
               class="w-full mx-auto mt-20 text-center p-8 rounded-xl backdrop-blur-xs border border-slate-500/20 dark:bg-slate-400/10 bg-slate-300/40">
                   <h2 v-fade-in class="text-2xl md:text-3xl font-bold dark:text-white">
@@ -83,6 +83,6 @@
                         Get Started Today
                   </NuxtLink>
             </div>
-      </ESSection>
+      </Section>
 </template>
 <style scoped></style>

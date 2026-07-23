@@ -25,16 +25,16 @@
 </script>
 
 <template>
-      <ESSection>
+      <Section>
             <div class="mx-auto max-w-2xl py-8 sm:pt-16 lg:pt-32 overflow-hidden">
                   <h1 v-fade-in class="text-2xl md:text-3xl font-bold text-global-50 text-center">
                         Innovative Software-as-a-Service (SaaS) Products Built for the Ghanaian Market.
                   </h1>
             </div>
-      </ESSection>
+      </Section>
       <div
         class="mx-auto w-full overflow-hidden backdrop-blur-2xl backdrop-opacity-30 my-8 py-8 md:my-16 border-y bg-slate-200/90 border-slate-300/40 dark:border-slate-500/20 dark:bg-slate-500/10 rounded-none">
-            <ESSection>
+            <Section>
                   <div class="max-w-2xl mx-auto">
                         <p v-fade-in class="mt-4 text-justify text-lg">
                               Explore our suite of specialized software applications designed for high performance,
@@ -55,9 +55,9 @@
                           class="dark:to-indigo-500 dark:from-cyan-400 from-global-50 to-cyan-300 bg-linear-to-tr w-351 aspect-1404/767">
                         </div>
                   </div>
-            </ESSection>
+            </Section>
       </div>
-      <!-- <ESSection>
+      <!-- <Section>
             <h3 v-fade-in
               class="lg:text-3xl text-2xl text-center md:text-start font-bold flex items-center justify-center md:justify-start mb-6 text-global-50 dark:text-white">
                   Healthcare & Pharmacy Management
@@ -80,9 +80,9 @@
                         'Instant Sales Analytics'
                   ]" download-link="#" />
             </div>
-      </ESSection>
+      </Section>
 
-      <ESSection class="mt-12">
+      <Section class="mt-12">
             <h3 v-fade-in
               class="lg:text-3xl text-2xl text-center md:text-start font-bold flex items-center justify-center md:justify-start mb-6 text-global-50 dark:text-white">
                   Educational Systems
@@ -108,8 +108,8 @@
                         'Report Card customization'
                   ]" target="Basic and Senior High Schools" />
             </div>
-      </ESSection>
-      <ESSection class="mt-12">
+      </Section>
+      <Section class="mt-12">
             <h3 v-fade-in
               class="lg:text-3xl text-2xl text-center md:text-start font-bold flex items-center justify-center md:justify-start mb-6 text-global-50 dark:text-white">
                   Digital Election Management
@@ -128,11 +128,11 @@
                   ]" target="Unions, Associations, Corporate Bodies" />
 
             </div>
-      </ESSection> -->
+      </Section> -->
 
       <ProductSection />
 
-      <ESSection class="mt-12">
+      <Section class="mt-12">
             <h3 v-fade-in class="lg:text-3xl text-2xl text-center mb-6 text-global-50 dark:text-white">
                   Technology & Development Standards
             </h3>
@@ -144,9 +144,9 @@
                   <TechStackCard header-text="ghanaian localization"
                     text="Solutions are built to handle local compliance, currency (GHS), and payment methods effectively." />
             </div>
-      </ESSection>
+      </Section>
 
-      <ESSection>
+      <Section>
             <div
               class="w-full mx-auto mt-20 text-center p-8 rounded-xl backdrop-blur-xs border border-slate-500/20 dark:bg-slate-400/10 bg-slate-300/40">
                   <h2 v-fade-in class="text-2xl md:text-3xl font-bold dark:text-white">
@@ -160,7 +160,7 @@
                         Contact Our Sales Team
                   </NuxtLink>
             </div>
-      </ESSection>
+      </Section>
 </template>
 
 <style scoped></style>

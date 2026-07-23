@@ -1,41 +1,23 @@
+import { defineNuxtConfig } from "nuxt/config";
 import tailwindcss from "@tailwindcss/vite";
-import tailwindcssMangle from "unplugin-tailwindcss-mangle/vite";
 
-import constant from "./app/constants";
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
   ssr: true,
-  // modules: ["@nuxt/image"],
   css: ["~/assets/css/app.css"],
-  // image: {
-  //   provider: "ipxStatic",
-  // },
+
   vite: {
     plugins: [
-      tailwindcss(),
-      tailwindcssMangle({
-        generator: {
-          classPrefix: "sv-",
-        },
-        preserve: {
-          classes: [],
-        },
-        sources: {
-          include: [
-            "**/*.vue",
-            "**/*.ts",
-            "**/*.js",
-            "**/*.jsx",
-            "**/*.tsx",
-            "**/*.html",
-          ],
-        },
-      }),
+      tailwindcss()
     ],
   },
-
+  components:[{
+    path: '~/components',
+    pathPrefix: false
+  }],
+  modules: ["@nuxtjs/sitemap", "@nuxt/image", "@nuxt/fonts"],
   app: {
     baseURL: "/",
     head: {
@@ -46,35 +28,41 @@ export default defineNuxtConfig({
       link: [
         {
           rel: "icon",
-          href: constant.APP_URL + "/favicon.ico",
-          sizes: "any",
+          type: "image/x-icon",
+          href: "/favicon.ico",
+          sizes: "32x32",
         },
         {
           rel: "apple-touch-icon",
-          href: constant.APP_URL + "/apple-touch-icon.png",
+          href: "/apple-touch-icon.png",
+          sizes: "180x180",
         },
         {
           rel: "manifest",
           href: "/manifest.json",
         },
-        {
-          rel: "preload",
-          as: "font",
-          href: "/fonts/InstrumentSans-Regular.woff2",
-          type: "font/woff2",
-          crossorigin: "anonymous",
-        },
       ],
       meta: [
         {
-          name: "theme-color",
-          content: "#f4f4f5",
-          media: "(prefers-color-scheme: light)",
+          name: "description",
+          content:
+            "Softview Ghana builds custom software, web applications, mobile apps, cloud solutions, and IT infrastructure for businesses across Ghana and Africa.",
+        },
+        {
+          name: "keywords",
+          content:
+            "Softview Ghana, Softview Ghana Ltd, Softview Ghana Limited",
+        },
+        { name: "author", content: "Kingsley Osei Opoku" },
+        { name: "viewport", content: "width=device-width, initial-scale=1" },
+        {
+          name: "robots",
+          content:
+            "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
         },
         {
           name: "theme-color",
-          content: "#0f172b",
-          media: "(prefers-color-scheme: dark)",
+          content: "#f4f4f5",
         },
         {
           name: "mobile-web-app-capable",
@@ -86,7 +74,15 @@ export default defineNuxtConfig({
         },
         {
           name: "apple-mobile-web-app-status-bar-style",
-          content: "yes",
+          content: "#333",
+        },
+        {
+          name: "apple-mobile-web-app-title",
+          content: "Softview Ghana",
+        },
+        {
+          name: "application-name",
+          content: "Softview Ghana",
         },
       ],
     },

@@ -3,7 +3,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "prepare": "tw-patch install",
+    "prepare": "",
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
@@ -11,15 +11,16 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.1.18",
-    "lucide-vue-next": "^0.562.0",
-    "nuxt": "^4.2.2",
-    "tailwindcss": "^4.1.18",
-    "vue": "^3.5.25",
-    "vue-router": "^4.6.4"
-  },
-  "devDependencies": {
-    "tailwindcss-patch": "^8.6.1",
-    "unplugin-tailwindcss-mangle": "^5.0.0"
+    "@lucide/vue": "^1.23.0",
+    "@nuxt/eslint": "^1.16.0",
+    "@nuxt/fonts": "^0.14.0",
+    "@nuxt/image": "^2.0.0",
+    "@nuxtjs/sitemap": "^8.2.2",
+    "@tailwindcss/vite": "^4.3.2",
+    "eslint": "^10.6.0",
+    "nuxt": "^4.5.0",
+    "tailwindcss": "^4.3.2",
+    "vue": "^3.5.38",
+    "vue-router": "^5.1.0"
   }
 }

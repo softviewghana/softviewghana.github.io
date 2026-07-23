@@ -1,92 +1,208 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: "Instrument Sans";
-  src: url("../fonts/InstrumentSans-Regular.woff2") format("woff2");
-  font-weight: normal;
+  font-family: "Geist";
+  src: url("~/assets/fonts/Geist.ttf") format("woff2");
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
-html > body > #__nuxt {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
+@font-face {
+  font-family: "Geist";
+  src: url("~/assets/fonts/Geist-Italic.ttf") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
 }
 
-.light,
 :root {
-  color-scheme: light;
-  --background: oklch(0.98 0.01 240);
-  --text: oklch(0.2 0.02 240);
-}
-
-.dark {
   color-scheme: dark;
-  --background: var(--color-slate-900);
-  --text: oklch(0.98 0.01 240);
+  --background: oklab(17.629% -0.00283 -0.01375);
+  --surface: oklab(22.022% -0.00358 -0.01531);
+  --border: oklab(31.862000000000002% -0.0041 -0.01607);
+  --foreground: #f5f7fa;
+  /* --muted-foreground: #9CA3AF; */
+  --muted: #6b7280;
+  --brand: oklab(73.825% -0.15665 0.07305);
+  --brand-subtle: oklab(65.792% -0.145 0.07017);
 }
 
-@layer base {
-  html {
-    @apply h-dvh;
-  }
-  body {
-    @apply bg-body text-body antialiased;
-  }
-
-  .scrollbar-none {
-    scrollbar-width: none;
-    &::-webkit-scrollbar {
-      height: 0;
-    }
-  }
+.hero {
+  background:
+    radial-gradient(circle at top, rgba(34, 197, 94, 0.1), transparent 45%),
+    #0d1117;
 }
 
-@custom-variant dark (&:where(.dark, .dark *));
-
-@utility text-body {
-  color: var(--text);
-}
-@utility bg-body {
-  background-color: var(--background);
-}
-
-@utility glass {
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+@theme inline {
+  --color-background: var(--background);
+  --color-text: var(--foreground);
+  --color-primary: var(--brand);
+  --color-primary-hover: var(--brand-subtle);
+  --color-border: var(--border);
 }
 
 @theme {
-  --color-background: var(--background);
-  --color-text: var(--text);
-  --default-font-family: "Instrument Sans", "sans-serif";
-  --color-global: oklch(45.392% 0.11464 153.948);
-  --color-global-50: oklab(61.605% -0.14087 0.07085);
+  --default-font-family: "Geist", "sans-serif";
 }
 
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.2s ease, transform 0.2s ease;
-  transform: translateY(0);
+html {
+  @apply bg-background text-text;
 }
 
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-  transform: translateY(-5px);
+@layer utilities {
+  .bg-grid {
+    background-image:
+      linear-gradient(rgba(36, 199, 107, 0.217) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(31, 185, 98, 0.117) 1px, transparent 1px);
+
+    background-size: 44px 44px;
+  }
+
+  .bg-noise {
+    position: relative;
+  }
+
+  .bg-noise::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: 0.02;
+
+    background-image: radial-gradient(
+      circle at 25% 25%,
+      white 1px,
+      transparent 1px
+    );
+
+    background-size: 8px 8px;
+  }
 }
 
-.slide-in-enter-active,
-.slide-in-leave-active {
-  transition: opacity 0.3s ease, transform 0.2s ease;
-  transform: translateX(0);
+@keyframes reflectionMove {
+  0% {
+    transform: translateX(-25%) rotate(-18deg);
+  }
+
+  50% {
+    transform: translateX(10%) rotate(-18deg);
+  }
+
+  100% {
+    transform: translateX(-25%) rotate(-18deg);
+  }
 }
 
-.slide-in-enter-from,
-.slide-in-leave-to {
-  opacity: 0;
-  /* transform: translateX(5px); */
+@layer base {
+  * {
+    @apply focus-visible:outline-primary focus-visible:outline-2 focus-visible:outline-offset-2;
+  }
+
+  ::selection {
+    @apply bg-primary text-text;
+  }
+
+  img {
+    @apply select-none;
+  }
+
+  button {
+    @apply cursor-pointer;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+
+  .glass-reflection {
+    position: absolute;
+
+    inset: -35%;
+
+    background: linear-gradient(
+      120deg,
+      transparent 20%,
+      rgba(255, 255, 255, 0.06) 42%,
+      rgba(255, 255, 255, 0.14) 50%,
+      rgba(255, 255, 255, 0.06) 58%,
+      transparent 80%
+    );
+
+    transform: rotate(-18deg);
+
+    animation: reflectionMove 12s ease-in-out infinite;
+  }
+
+  @keyframes reflectionMove {
+    0% {
+      transform: translateX(-25%) rotate(-18deg);
+    }
+
+    50% {
+      transform: translateX(10%) rotate(-18deg);
+    }
+
+    100% {
+      transform: translateX(-25%) rotate(-18deg);
+    }
+  }
+
+  .metric-card {
+    transform: translateZ(35px);
+  }
+
+  .metric-card:hover {
+    transform: translateZ(45px) translateY(-4px);
+  }
+
+  .chart-card {
+    transform: translateZ(28px);
+  }
+
+  .activity-card {
+    transform: translateZ(24px);
+  }
+
+  .fade-enter-active,
+  .fade-leave-active {
+    transition:
+      opacity 0.2s ease,
+      transform 0.2s ease;
+    transform: translateY(0);
+  }
+
+  .fade-enter-from,
+  .fade-leave-to {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  .slide-in-enter-active,
+  .slide-in-leave-active {
+    transition:
+      opacity 0.3s ease,
+      transform 0.2s ease;
+    transform: translateX(0);
+  }
+
+  .slide-in-enter-from,
+  .slide-in-leave-to {
+    opacity: 0;
+    /* transform: translateX(5px); */
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
