@@ -33,8 +33,8 @@
                                     </span>
                               </div>
                               <h1
-                                class="mt-6 text-2xl font-semibold leading-[1.14] text-primary
-                                tracking-tight text-foreground sm:text-3xl lg:text-4xl 
+                                class="mt-6 text-2xl md:text-4xl font-semibold leading-[1.14] text-primary
+                                tracking-tight text-foreground
                                 text-center sm:text-start transition-all duration-1000 ease-out opacity-100 translate-y-0">
                                     We're innovating the future of digital services
                               </h1>
@@ -51,7 +51,7 @@
                                           Start Your Project
                                           <ArrowRight :size="16" />
                                     </BaseButton>
-                                    <BaseButton variant="outline" class="border-primary/90 shadow" block>
+                                    <BaseButton variant="outline" class="border-primary/90 shadow text-primary" block>
                                           Explore Our Services
                                           <SquareArrowOutUpRight :size="16" />
                                     </BaseButton>
