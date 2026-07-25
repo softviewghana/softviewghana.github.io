@@ -85,6 +85,11 @@ export default defineNuxtConfig({
           content: "Softview Ghana",
         },
       ],
+      
     },
+  },
+  site: {
+    url: "https://softviewghana.com",
+    name: "Softview Ghana",
   },
 });

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-  useDisableContentAccess();
+  // useDisableContentAccess();
 </script>
 <template>
   <div class="relative min-h-screen overflow-x-hidden bg-background text-foreground print:hidden">
@@ -11,7 +11,7 @@
 
     <div class="relative grid grid-rows-[1fr_auto] min-h-screen">
       <Header />
-      <main class="relative pt-22 md:pt-24">
+      <main class="relative pt-6 md:pt-18">
         <NuxtPage />
       </main>
       <Footer />

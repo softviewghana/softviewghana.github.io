@@ -55,7 +55,7 @@
 
       <section class="relative flex items-center justify-center" @mousemove="handleMouseMove" @mouseleave="resetTilt">
 
-            <div class="relative">
+            <div class="relative w-full">
 
                   <!-- Floating Cards -->
 

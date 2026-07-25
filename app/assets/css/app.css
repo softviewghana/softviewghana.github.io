@@ -23,7 +23,7 @@
   --border: oklab(31.862000000000002% -0.0041 -0.01607);
   --foreground: #f5f7fa;
   /* --muted-foreground: #9CA3AF; */
-  --muted: #6b7280;
+  --muted: #82b590;
   --brand: oklab(73.825% -0.15665 0.07305);
   --brand-subtle: oklab(65.792% -0.145 0.07017);
 }
@@ -40,6 +40,7 @@
   --color-primary: var(--brand);
   --color-primary-hover: var(--brand-subtle);
   --color-border: var(--border);
+  --color-muted: var(--muted)
 }
 
 @theme {

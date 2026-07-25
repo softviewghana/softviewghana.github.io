@@ -44,7 +44,7 @@
                   description:
                         'Cross-platform mobile apps designed for Android and iOS.',
                   icon: Smartphone,
-                  href: '/services/mobile-development',
+                  href: '/services/mobile-apps-development',
                   features: [
                         'Android',
                         'iOS',
@@ -102,14 +102,14 @@
 </script>
 
 <template>
-      <section class="py-28">
+      <section class="py-22">
 
             <div class="mx-auto max-w-7xl px-6">
 
                   <div class="mx-auto max-w-3xl text-center">
 
                         <span
-                          class="rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-sm text-primary">
+                          class="rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-primary">
                               Our Services
                         </span>
 

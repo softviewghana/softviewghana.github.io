@@ -51,18 +51,18 @@
 
                         <div class="relative z-10">
 
-                              <span
+                              <span v-fadeIn
                                 class="inline-flex items-center rounded-full border border-primary/25 bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
                                     Trusted Technology Partner
                               </span>
 
-                              <h2
+                              <h2 v-fadeIn
                                 class="mt-8 max-w-xl text-2xl md:text-4xl font-semibold leading-tight tracking-tight text-white">
                                     Technology that moves
                                     <span class="text-primary">your business forward.</span>
                               </h2>
 
-                              <p class="mt-8 max-w-xl text-lg leading-8 text-white/70">
+                              <p v-fadeIn class="mt-8 max-w-xl text-lg leading-8 text-white/70">
                                     Whether you're launching a startup, modernizing legacy
                                     systems, or digitizing operations, Softview Ghana builds
                                     software that delivers real business value—not unnecessary
@@ -71,8 +71,8 @@
 
                               <div class="mt-12 grid gap-5">
 
-                                    <div v-for="item in highlights" :key="item.title"
-                                      class="group flex items-start gap-5 rounded-2xl border border-white/10 bg-white/5 p-5 transition-all duration-300 hover:border-primary/30 hover:bg-primary/5">
+                                    <div v-for="item in highlights" :key="item.title" v-fadeIn
+                                      class="group flex items-start gap-5 rounded-2xl border border-white/10 bg-white/5 p-5 transition-all duration-300 hover:border-primary/30 hover:bg-primary/5 backdrop-blur-xs">
 
                                           <div
                                             class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary transition-transform duration-300 group-hover:scale-110">
@@ -112,7 +112,7 @@
 
                                     <div class="relative space-y-8">
 
-                                          <div v-for="(step, index) in process" :key="step.title" class="flex gap-5">
+                                          <div v-for="(step, index) in process" :key="step.title" class="flex gap-5" v-fadeIn>
 
                                                 <div class="flex flex-col items-center">
 
@@ -124,7 +124,7 @@
                                                       </div>
 
                                                       <div v-if="index !== process.length - 1"
-                                                        class="mt-3 h-14 w-px bg-gradient-to-b from-primary to-transparent" />
+                                                        class="mt-3 h-14 w-px bg-linear-to-b from-primary to-transparent" />
 
                                                 </div>
 
@@ -156,7 +156,7 @@
 
                               <!-- Floating Badge -->
 
-                              <div
+                              <div v-fadeIn
                                 class="absolute -bottom-6 -left-6 rounded-2xl border border-primary/20 bg-neutral-900/90 p-5 shadow-xl backdrop-blur">
 
                                     <p class="text-sm text-white/60">

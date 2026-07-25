@@ -41,7 +41,7 @@
 
 <template>
 
-      <section class="py-28">
+      <section class="py-22">
 
             <div class="mx-auto max-w-7xl px-6">
 
@@ -77,7 +77,7 @@
                                           Reliable
                                     </h3>
 
-                                    <p class="mt-2 text-white/60">
+                                    <p class="mt-2 text-muted">
                                           Digital Solutions
                                     </p>
 
@@ -85,7 +85,7 @@
 
                         </div>
 
-                        <div class="grid gap-8 xl:grid-cols-2">
+                        <div class="grid gap-18 xl:grid-cols-2">
 
                               <ValueCard v-for="value in values" :key="value.title" v-bind="value" />
 

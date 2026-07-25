@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-      import { CheckCircle2Icon, type LucideIcon } from 'lucide-vue-next';
+      import { CheckCircle2Icon, type LucideIcon } from '@lucide/vue';
       import type { StyleValue } from 'vue';
 
       interface Props {

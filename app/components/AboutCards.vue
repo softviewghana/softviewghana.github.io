@@ -1,5 +1,5 @@
 <script setup lang="ts">
-      import { AtomIcon, GemIcon, RocketIcon, type LucideIcon } from 'lucide-vue-next';
+      import { AtomIcon, GemIcon, RocketIcon, type LucideIcon } from '@lucide/vue';
 
       interface Statement {
             title: string;

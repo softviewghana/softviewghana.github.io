@@ -2,6 +2,39 @@
       import CONSTANTS from '~/constants/index.ts';
       import MobileMenu from './MobileMenu.vue';
 
+      const links = [
+            {
+                  label: 'About',
+                  href: '/about',
+                  title: '',
+            }, {
+                  label: 'Services',
+                  href: '/services',
+                  title: '',
+            }, {
+                  label: 'Industries',
+                  href: '/industries',
+                  title: '',
+            }, {
+                  label: 'Products',
+                  href: '/products',
+                  title: '',
+            }, {
+                  label: 'Insights',
+                  href: '/insights',
+                  title: '',
+            }, {
+                  label: 'Contact',
+                  href: '/contact',
+                  title: '',
+            },
+            // {
+            //       label: 'About',
+            //       href: '/services',
+            // title: '',
+            // }
+      ];
+
 </script>
 
 <template>
@@ -16,12 +49,16 @@
                               </span>
                         </NuxtLink>
                         <div class="hidden items-center gap-7 lg:flex">
-                              links
+                              <NuxtLink exact-active-class="text-primary" active-class="text-primary-hover"
+                                v-for="link in links" :key="link.href" :href="link.href" :title="link.title"
+                                class="text-sm font-semibold hover:text-primary transition">
+                                    {{ link.label }}
+                              </NuxtLink>
                         </div>
                         <!-- <div class="hidden items-center gap-2.5 lg:flex">
                               actions
                         </div> -->
-                        <MobileMenu :links="[]"/>
+                        <MobileMenu :links="links" />
                   </nav>
             </div>
       </header>
