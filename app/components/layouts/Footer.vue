@@ -5,13 +5,13 @@
   <footer class="relative overflow-hidden border-t border-white/10 bg-slate-950">
     <!-- Background -->
 
-    <div class="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-950 to-black" />
+    <div class="absolute inset-0 bg-linear-to-b from-slate-900 via-slate-950 to-black" />
 
     <!-- Giant Typography -->
 
     <div aria-hidden="true"
-      class="pointer-events-none absolute left-1/2 top-24 -translate-x-1/2 select-none text-[180px] font-black uppercase tracking-[0.25em] text-white/[0.02] xl:text-[240px]">
-      ENGINEER
+      class="pointer-events-none absolute left-1/2 top-24 -translate-x-1/2 select-none text-[180px] font-black uppercase tracking-[0.25em] text-white/2">
+      SOFTVIEW GHANA
     </div>
 
     <!-- Grid -->
@@ -25,7 +25,7 @@
 
     <!-- Glow -->
 
-    <div class="absolute left-1/2 top-0 h-[500px] w-[700px] -translate-x-1/2 rounded-full bg-primary/10 blur-[150px]" />
+    <div class="absolute left-1/2 top-0 h-125 w-175 -translate-x-1/2 rounded-full bg-primary/10 blur-[150px]" />
 
     <div class="relative z-10">
 
@@ -39,11 +39,11 @@
 
       <!-- Technologies -->
 
-      <FooterTechnologies />
+      <!-- <FooterTechnologies /> -->
 
       <!-- Engineering Journey -->
 
-      <FooterJourney />
+      <!-- <FooterJourney /> -->
 
       <!-- Bottom -->
 

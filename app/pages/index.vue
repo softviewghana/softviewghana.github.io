@@ -66,7 +66,7 @@
       <WhySoftviewGhana />
       <FeatureProduct />
       <DevelopmentProcess />
-      <HomeCTA />
+      <!-- <HomeCTA /> -->
 </template>
 
 <style scoped></style>

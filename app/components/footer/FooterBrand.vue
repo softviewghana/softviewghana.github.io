@@ -1,63 +1,79 @@
 <script setup lang="ts">
       import {
             ArrowRight,
-            Clock3,
-            Layers3,
-            Handshake,
+            CheckCircle2,
       } from '@lucide/vue'
 
+      const highlights = [
+            'Custom Software',
+            'Cloud Infrastructure',
+            'Web & Mobile Apps',
+            'Long-Term Support',
+      ]
 </script>
 
 <template>
-      <section class="mx-auto max-w-7xl px-6 pt-24">
+      <section class="border-t border-border bg-white/3  backdrop-blur-xl">
 
-            <div class="grid items-center gap-16 border-b border-white/10 pb-20 lg:grid-cols-[1.4fr_.8fr]">
+            <div class="mx-auto max-w-7xl p-6">
 
-                  <!-- Left -->
+                  <div class="flex flex-col gap-12 lg:flex-row lg:items-center lg:justify-between">
 
-                  <div>
+                        <!-- Left -->
 
-                        <span
-                          class="inline-flex rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
-                              Software Engineering Company
-                        </span>
+                        <div class="max-w-2xl">
 
-                        <h2 class="mt-8 text-5xl font-black tracking-tight text-white lg:text-6xl">
-                              Softview
-                              <span class="text-primary">
-                                    Ghana
+                              <span
+                                class="inline-flex rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
+                                    Your Trusted IT Solutions Partner
                               </span>
-                        </h2>
 
-                        <p class="mt-8 max-w-2xl text-lg leading-8 text-white/65">
-                              We build reliable software, scalable cloud infrastructure,
-                              and modern digital experiences that help organizations
-                              innovate, streamline operations, and grow with confidence.
-                        </p>
+                              <h2 class="mt-1 text-4xl font-black tracking-tight text-white">
+                                    Softview
+                                    <span class="text-primary">
+                                          Ghana
+                                    </span>
+                              </h2>
 
-                        <div class="mt-10">
-                              <NuxtLink to="/contact"
-                                class="inline-flex items-center gap-3 rounded-xl bg-primary px-6 py-4 font-medium text-white transition-all duration-300 hover:scale-[1.02]">
-                                    Start Your Project
+                              <p class="mt-8 max-w-2xl text-lg leading-8 text-white/65">
+                                    We build reliable software, scalable cloud infrastructure,
+                                    and modern digital experiences that help organizations
+                                    innovate, streamline operations, and grow with confidence.
+                              </p>
 
-                                    <ArrowRight class="size-5" />
-                              </NuxtLink>
+                              <div class="mt-8 flex flex-wrap gap-3">
+
+                                    <NuxtLink to="/contact"
+                                      class="inline-flex items-center gap-2 rounded-xl bg-primary/90 px-6 py-3 font-medium text-white transition hover:scale-[1.02]">
+                                          Start Your Project
+                                          <ArrowRight class="size-5" />
+                                    </NuxtLink>
+
+                                    <NuxtLink to="/services"
+                                      class="inline-flex items-center rounded-xl border border-white/10 px-6 py-3 font-medium text-white/80 transition hover:border-primary/40 hover:text-white">
+                                          Explore Services
+                                    </NuxtLink>
+
+                              </div>
+
                         </div>
 
-                  </div>
+                        <!-- Right -->
 
-                  <!-- Right -->
+                        <div class="grid gap-4 sm:grid-cols-2">
 
-                  <div class="space-y-5">
+                              <div v-for="item in highlights" :key="item"
+                                class="flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.02] px-5 py-4">
 
-                        <FooterStatusCard title="Response Time" value="< 24 Hours" description="Initial consultation"
-                          :icon="Clock3" />
+                                    <CheckCircle2 class="size-5 text-primary" />
 
-                        <FooterStatusCard title="End-to-End" value="Solutions" description="Strategy to deployment"
-                          :icon="Layers3" />
+                                    <span class="text-sm text-white/80">
+                                          {{ item }}
+                                    </span>
 
-                        <FooterStatusCard title="Long-Term" value="Partnership" description="Support & maintenance"
-                          :icon="Handshake" />
+                              </div>
+
+                        </div>
 
                   </div>
 

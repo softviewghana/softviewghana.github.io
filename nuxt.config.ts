@@ -9,19 +9,19 @@ export default defineNuxtConfig({
   css: ["~/assets/css/app.css"],
 
   vite: {
-    plugins: [
-      tailwindcss()
-    ],
+    plugins: [tailwindcss()],
   },
-  components:[{
-    path: '~/components',
-    pathPrefix: false
-  }],
+  components: [
+    {
+      path: "~/components",
+      pathPrefix: false,
+    },
+  ],
   modules: ["@nuxtjs/sitemap", "@nuxt/image", "@nuxt/fonts"],
   app: {
     baseURL: "/",
     head: {
-      title: "Softview Ghana",
+      title: "Softview Ghana | Your Trusted IT Solutions Partner",
       htmlAttrs: {
         lang: "en-GH",
       },
@@ -50,8 +50,7 @@ export default defineNuxtConfig({
         },
         {
           name: "keywords",
-          content:
-            "Softview Ghana, Softview Ghana Ltd, Softview Ghana Limited",
+          content: "Softview Ghana, Softview Ghana Ltd, Softview Ghana Limited",
         },
         { name: "author", content: "Kingsley Osei Opoku" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -62,7 +61,7 @@ export default defineNuxtConfig({
         },
         {
           name: "theme-color",
-          content: "#f4f4f5",
+          content: "#27c978",
         },
         {
           name: "mobile-web-app-capable",
@@ -74,7 +73,7 @@ export default defineNuxtConfig({
         },
         {
           name: "apple-mobile-web-app-status-bar-style",
-          content: "#333",
+          content: "#27c978",
         },
         {
           name: "apple-mobile-web-app-title",
@@ -84,8 +83,11 @@ export default defineNuxtConfig({
           name: "application-name",
           content: "Softview Ghana",
         },
+        {
+          property: "fb:pages",
+          content: "1251627600454694",
+        },
       ],
-      
     },
   },
   site: {

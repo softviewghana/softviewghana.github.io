@@ -79,42 +79,67 @@
 
       const contact = [
             {
-                  icon: Mail,
                   title: 'Email',
-                  value: 'hello@softviewghana.com',
-                  href: 'mailto:hello@softviewghana.com',
+                  icon: Mail,
+                  items: [
+                        {
+                              label: '',
+                              value: 'softviewghana@gmail.com',
+                              href: 'mailto:softviewghana@gmail.com',
+                        },
+                        {
+                              label: '',
+                              value: 'info@softviewghana.com',
+                              href: 'mailto:info@softviewghana.com',
+                        },
+                  ],
             },
             {
+                  title: 'Call Us',
                   icon: Phone,
-                  title: 'Phone',
-                  value: '+233 XX XXX XXXX',
-                  href: 'tel:+233000000000',
+                  items: [
+                        {
+                              label: '',
+                              value: '+233 543 093 942',
+                              href: 'tel:+233543093942',
+                        },
+                        {
+                              label: '',
+                              value: '+233 549 289 243',
+                              href: 'tel:+233549289243',
+                        },
+                  ],
             },
             {
-                  icon: MapPin,
                   title: 'Location',
-                  value: 'Accra, Ghana',
-                  href: '#',
+                  icon: MapPin,
+                  items: [
+                        {
+                              label: '',
+                              value: 'Accra, Ghana',
+                              href: null
+                        },
+                  ],
             },
       ]
 </script>
 
 <template>
-      <section class="mx-auto max-w-7xl px-6 py-20">
+      <section class="mx-auto max-w-7xl px-6 py-3">
 
-            <div class="grid gap-12 border-b border-white/10 pb-20 md:grid-cols-2 xl:grid-cols-4">
+            <div class="grid grid-cols-1 gap-12 border-b border-white/10 pb-5 sm:grid-cols-2 xl:grid-cols-4">
 
                   <!-- Link Groups -->
 
                   <div v-for="section in sections" :key="section.title">
                         <div class="mb-6 flex items-center gap-3">
 
-                              <div
+                              <!-- <div
                                 class="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
                                     <component :is="section.icon" class="size-5" />
-                              </div>
+                              </div> -->
 
-                              <h3 class="font-semibold text-white">
+                              <h3 class="font-semibold text-white/85">
                                     {{ section.title }}
                               </h3>
 
@@ -140,40 +165,51 @@
 
                         <div class="mb-6 flex items-center gap-3">
 
-                              <div
-                                class="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                                    <Mail class="size-5" />
-                              </div>
-
-                              <h3 class="font-semibold text-white">
+                              <h3 class="font-semibold text-white/85">
                                     Contact
                               </h3>
 
                         </div>
 
-                        <div class="space-y-5">
+                        <div class="space-y-3">
 
-                              <a v-for="item in contact" :key="item.title" :href="item.href"
-                                class="group flex items-start gap-4 rounded-xl border border-transparent p-3 transition-all duration-300 hover:border-white/10 hover:bg-white/5">
+                              <div v-for="group in contact" :key="group.title" class="flex gap-4">
+
                                     <div
-                                      class="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white/5 text-primary">
-                                          <component :is="item.icon" class="size-5" />
+                                      class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white/10 text-primary">
+                                          <component :is="group.icon" class="size-5" />
                                     </div>
 
-                                    <div>
+                                    <div class="min-w-0 flex-1">
 
-                                          <p class="text-xs uppercase tracking-[0.15em] text-white/40">
-                                                {{ item.title }}
+                                          <p class="mb-1 text-xs font-medium uppercase tracking-[0.15em] text-white/40">
+                                                {{ group.title }}
                                           </p>
 
-                                          <p
-                                            class="mt-1 text-sm text-white/70 transition-colors group-hover:text-white">
-                                                {{ item.value }}
-                                          </p>
+                                          <div>
+
+                                                <div v-for="item in group.items" :key="item.label">
+
+                                                      <p class="text-xs text-white/40">
+                                                            {{ item.label }}
+                                                      </p>
+
+                                                      <NuxtLink v-if="item.href && item.href" :href="item.href"
+                                                        class="text-sm text-white/70 transition-colors hover:text-primary">
+                                                            {{ item.value }}
+                                                      </NuxtLink>
+
+                                                      <p v-else class="text-sm text-white/70">
+                                                            {{ item.value }}
+                                                      </p>
+
+                                                </div>
+
+                                          </div>
 
                                     </div>
 
-                              </a>
+                              </div>
 
                         </div>
 
