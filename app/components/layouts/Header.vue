@@ -4,8 +4,8 @@
 
       const links = [
             {
-                  label: 'About',
-                  href: '/about',
+                  label: 'Home',
+                  href: '/',
                   title: '',
             }, {
                   label: 'Services',
@@ -28,11 +28,6 @@
                   href: '/contact',
                   title: '',
             },
-            // {
-            //       label: 'About',
-            //       href: '/services',
-            // title: '',
-            // }
       ];
 
 </script>
@@ -55,9 +50,12 @@
                                     {{ link.label }}
                               </NuxtLink>
                         </div>
-                        <!-- <div class="hidden items-center gap-2.5 lg:flex">
-                              actions
-                        </div> -->
+                        <div class="hidden items-center gap-3 lg:flex">
+                              <NuxtLink to="/contact"
+                                class="inline-flex h-10 items-center justify-center rounded-2xl bg-primary px-5 text-sm font-semibold text-white transition hover:bg-primary-hover">
+                                    Start a Project
+                              </NuxtLink>
+                        </div>
                         <MobileMenu :links="links" />
                   </nav>
             </div>

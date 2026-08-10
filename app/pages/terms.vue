@@ -1,6 +1,6 @@
 <script setup lang="ts">
       usePageSeo({
-            title: 'Terms of Service — Softview Ghana',
+            title: 'Terms of Service | Softview Ghana',
             description: 'The terms governing the use of Softview Ghana websites, products, and services.',
             path: '/terms',
       });
@@ -27,8 +27,8 @@
 
 <template>
       <LegalLayout eyebrow="Legal" title="Terms of Service"
-        description="The terms governing the use of Softview Ghana websites, products, and services."
-        last-updated="August 10, 2026" :items="tocItems">
+          description="The terms governing the use of Softview Ghana websites, products, and services."
+          last-updated="August 10, 2026" :items="tocItems">
             <section id="01" class="mb-10 scroll-mt-24">
                   <h2 class="mb-3 text-2xl font-semibold tracking-[-0.04em] text-foreground">1. Introduction</h2>
                   <p class="text-base leading-8 text-muted">
@@ -165,9 +165,9 @@
             <section id="15" class="mb-10 scroll-mt-24">
                   <h2 class="mb-3 text-2xl font-semibold tracking-[-0.04em] text-foreground">15. Governing Law</h2>
                   <p class="text-base leading-8 text-muted">
-                        These terms are governed by the laws of the Republic of Ghana without regard to conflict of law
-                        principles. Any legal action arising from these terms will be subject to the competent
-                        jurisdiction as permitted by applicable law.
+                        The governing law and jurisdiction applicable to these Terms will be specified here based on
+                        Softview Ghana's actual legal structure. This section is pending legal review and should not
+                        be relied upon until finalized.
                   </p>
             </section>
 

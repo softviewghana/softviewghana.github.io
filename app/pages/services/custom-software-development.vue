@@ -1,59 +1,71 @@
 <script setup lang="ts">
       usePageSeo({
             title: 'Custom Software Development — Softview Ghana',
-            description: 'Tailored custom software solutions designed around your business processes, workflows, and long-term growth.',
+            description: 'Tailored software solutions built around your unique business processes, workflows, and goals.',
             path: '/services/custom-software-development',
       });
 
       const capabilities = [
-            'Business process automation',
-            'Operations and workflow systems',
-            'Inventory, HR, and finance management',
-            'Reporting and dashboarding',
-            'Role-based access and permission models',
+            'ERP Systems',
+            'CRM Solutions',
+            'Business Automation',
+            'Customer Portals',
+            'Internal Management Systems',
+            'Workflow Management',
+            'Business Intelligence',
+            'API Integrations',
       ];
 
       const outcomes = [
-            'Replace spreadsheet-heavy operations with controlled workflows',
-            'Give teams a single source of truth for daily work',
-            'Reduce manual work and improve service delivery',
-            'Scale operations with thoughtful architecture',
+            'Replace manual work with connected, reliable systems',
+            'Improve visibility across teams and departments',
+            'Connect disconnected tools into one workflow',
+            'Build software that grows with your organization',
+      ];
+
+      const breadcrumbs = [
+            { label: 'Home', href: '/' },
+            { label: 'Services', href: '/services' },
+            { label: 'Custom Software Development', href: '/services/custom-software-development' },
       ];
 </script>
 
 <template>
       <div class="pb-20">
-            <PageHero eyebrow="Custom Software" title="Software Designed Around Your Business"
-              description="We build business-critical software that reflects how your team actually works, helping you simplify complexity and operate with more clarity." />
+            <PageHero eyebrow="Services" title="Custom Software Development" :breadcrumbs="breadcrumbs"
+                description="Tailored software solutions built around your unique business processes, workflows, and goals." />
 
             <BaseContainer class="mt-8 md:mt-12">
                   <section class="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
-                        <div class="rounded-4xl border border-border bg-white/2 p-6 md:p-8">
+                        <div class="rounded-4xl border border-border bg-surface p-6 md:p-8">
                               <p class="text-xs font-semibold uppercase tracking-[0.22em] text-primary">What we build
                               </p>
                               <h2 class="mt-4 text-3xl font-semibold tracking-tighter text-foreground md:text-4xl">
-                                    Operations software that fits real workflows</h2>
+                                    Software built around how you actually work</h2>
                               <p class="mt-5 text-base leading-8 text-muted md:text-lg">
-                                    Off-the-shelf platforms often force teams to adapt to rigid processes. We design
-                                    software around the way your organization already operates, creating systems that
-                                    are practical, scalable, and measurable.
+                                    Off-the-shelf software can be useful, but it doesn't always fit the way your
+                                    business works. We design and develop custom software around your actual
+                                    processes, helping you replace manual work, connect disconnected systems,
+                                    improve visibility, and create more efficient operations. From internal
+                                    management platforms to complex business systems, we build software that grows
+                                    with your organization.
                               </p>
 
                               <div class="mt-7 grid gap-3 sm:grid-cols-2">
                                     <div v-for="item in capabilities" :key="item"
-                                      class="rounded-2xl border border-border bg-background/80 px-4 py-3 text-sm text-foreground/85">
+                                        class="rounded-2xl border border-border bg-background/80 px-4 py-3 text-sm text-foreground/85">
                                           {{ item }}
                                     </div>
                               </div>
                         </div>
 
-                        <div class="rounded-4xl border border-border bg-slate-950/80 p-6">
-                              <div class="rounded-2xl border border-border bg-white/2 p-4">
+                        <div class="rounded-4xl border border-border bg-background p-6">
+                              <div class="rounded-2xl border border-border bg-surface p-4">
                                     <div class="flex items-center justify-between pb-3">
                                           <span class="text-xs uppercase tracking-[0.2em] text-muted">System
                                                 Overview</span>
                                           <span
-                                            class="rounded-full border border-primary/20 bg-primary/10 px-2 py-1 text-[10px] font-semibold text-primary">Live</span>
+                                              class="rounded-full border border-primary/20 bg-primary/10 px-2 py-1 text-[10px] font-semibold text-primary">Live</span>
                                     </div>
                                     <div class="space-y-3">
                                           <div class="h-9 rounded-xl bg-primary/10" />
@@ -75,13 +87,13 @@
                                                       Pipeline</div>
                                                 <div class="flex items-end gap-2">
                                                       <span class="w-full rounded-t-md bg-primary/60"
-                                                        style="height: 35%" />
+                                                          style="height: 35%" />
                                                       <span class="w-full rounded-t-md bg-primary/70"
-                                                        style="height: 52%" />
+                                                          style="height: 52%" />
                                                       <span class="w-full rounded-t-md bg-primary/85"
-                                                        style="height: 76%" />
+                                                          style="height: 76%" />
                                                       <span class="w-full rounded-t-md bg-primary"
-                                                        style="height: 100%" />
+                                                          style="height: 100%" />
                                                 </div>
                                           </div>
                                     </div>
@@ -89,14 +101,14 @@
                         </div>
                   </section>
 
-                  <section class="mt-16 rounded-4xl border border-border bg-white/2 p-6 md:p-10">
+                  <section class="mt-16 rounded-4xl border border-border bg-surface p-6 md:p-10">
                         <h3 class="text-3xl font-semibold tracking-tighter text-foreground md:text-4xl">What this
                               unlocks</h3>
                         <div class="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
                               <div v-for="item in outcomes" :key="item"
-                                class="rounded-2xl border border-border bg-background/80 p-5">
+                                  class="rounded-2xl border border-border bg-background/80 p-5">
                                     <div
-                                      class="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
+                                        class="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
                                           •</div>
                                     <p class="text-base leading-7 text-foreground/85">{{ item }}</p>
                               </div>
@@ -107,8 +119,8 @@
                         <h3 class="text-3xl font-semibold tracking-tighter text-foreground md:text-4xl">Need a system
                               that fits how you work?</h3>
                         <NuxtLink to="/contact"
-                          class="mt-8 inline-flex items-center justify-center rounded-2xl bg-primary px-6 py-3.5 font-medium text-white transition hover:bg-primary-hover">
-                              Talk to our team
+                            class="mt-8 inline-flex items-center justify-center rounded-2xl bg-primary px-6 py-3.5 font-medium text-white transition hover:bg-primary-hover">
+                              Discuss Your Software Project
                         </NuxtLink>
                   </section>
             </BaseContainer>

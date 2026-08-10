@@ -4,10 +4,10 @@
             Building2,
             BookOpen,
             Mail,
-            Phone,
             MapPin,
             ArrowUpRight,
       } from '@lucide/vue'
+      import CONSTANTS from '~/constants'
 
       const sections = [
             {
@@ -45,11 +45,10 @@
                   title: 'Company',
                   icon: Building2,
                   links: [
-                        { label: 'About', href: '/about' },
                         { label: 'Industries', href: '/industries' },
+                        { label: 'Products', href: '/products' },
+                        { label: 'Insights', href: '/insights' },
                         { label: 'Contact', href: '/contact' },
-                        { label: 'Privacy Policy', href: '/privacy-policy' },
-                        { label: 'Terms of Service', href: '/terms' },
                   ],
             },
 
@@ -58,20 +57,12 @@
                   icon: BookOpen,
                   links: [
                         {
-                              label: 'Blog',
-                              href: '/blog',
+                              label: 'Privacy Policy',
+                              href: '/privacy-policy',
                         },
                         {
-                              label: 'Case Studies',
-                              href: '/case-studies',
-                        },
-                        {
-                              label: 'FAQs',
-                              href: '/faqs',
-                        },
-                        {
-                              label: 'Documentation',
-                              href: '/documentation',
+                              label: 'Terms of Service',
+                              href: '/terms',
                         },
                   ],
             },
@@ -84,29 +75,8 @@
                   items: [
                         {
                               label: '',
-                              value: 'softviewghana@gmail.com',
-                              href: 'mailto:softviewghana@gmail.com',
-                        },
-                        {
-                              label: '',
-                              value: 'info@softviewghana.com',
-                              href: 'mailto:info@softviewghana.com',
-                        },
-                  ],
-            },
-            {
-                  title: 'Call Us',
-                  icon: Phone,
-                  items: [
-                        {
-                              label: '',
-                              value: '+233 543 093 942',
-                              href: 'tel:+233543093942',
-                        },
-                        {
-                              label: '',
-                              value: '+233 549 289 243',
-                              href: 'tel:+233549289243',
+                              value: CONSTANTS.CONTACT_EMAIL,
+                              href: `mailto:${CONSTANTS.CONTACT_EMAIL}`,
                         },
                   ],
             },
@@ -116,7 +86,7 @@
                   items: [
                         {
                               label: '',
-                              value: 'Accra, Ghana',
+                              value: CONSTANTS.LOCATION,
                               href: null
                         },
                   ],

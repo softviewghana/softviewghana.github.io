@@ -1,6 +1,6 @@
 <script setup lang="ts">
       usePageSeo({
-            title: 'Privacy Policy — Softview Ghana',
+            title: 'Privacy Policy | Softview Ghana',
             description: 'How Softview Ghana collects, uses, protects, and manages information.',
             path: '/privacy-policy',
       });
@@ -26,8 +26,8 @@
 
 <template>
       <LegalLayout eyebrow="Legal" title="Privacy Policy"
-        description="How Softview Ghana collects, uses, protects, and manages information."
-        last-updated="August 10, 2026" :items="tocItems">
+          description="How Softview Ghana collects, uses, protects, and manages information."
+          last-updated="August 10, 2026" :items="tocItems">
             <section id="01" class="mb-10 scroll-mt-24">
                   <h2 class="mb-3 text-2xl font-semibold tracking-[-0.04em] text-foreground">1. Introduction</h2>
                   <p class="text-base leading-8 text-muted">

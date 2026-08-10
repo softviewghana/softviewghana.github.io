@@ -69,30 +69,16 @@
 
                                                 <div class="relative px-6 space-y-6 py-10">
 
-                                                      <!-- <button
-                                                        class="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-border bg-surface px-4 py-3 text-sm font-semibold"
-                                                        type="button" @click="$emit('toggle-theme')">
-                                                          <SunMedium v-if="theme === 'dark'" :size="16" />
-                                                          <Moon v-else :size="16" />
-                                                          {{ theme === 'dark' ? 'Light mode' : 'Dark mode' }}
-                                                    </button> -->
-
-                                                      <!-- <BaseButton variant="outline" block
-                                                        @click="navigateTo('https://web.eschoolghana.com/login', { external: true })">
-                                                            Login
+                                                      <BaseButton block @click="() => { open = false; navigateTo('/contact') }">
+                                                            Start a Project
                                                       </BaseButton>
-
-                                                      <BaseButton block
-                                                        @click="navigateTo('https://web.eschoolghana.com/signup', { external: true })">
-                                                            Get Started
-                                                      </BaseButton> -->
 
                                                 </div>
 
                                           </span>
                                           <div class="relative bottom-0 lg:py-6 py-3">
                                                 <p class="text-sm text-center">
-                                                      &copy; {{ new Date().getFullYear() }} eSchool Ghana. All rights
+                                                      &copy; {{ new Date().getFullYear() }} Softview Ghana. All rights
                                                       reserved.
                                                 </p>
                                           </div>
