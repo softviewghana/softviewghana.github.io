@@ -85,7 +85,7 @@ export default defineNuxtConfig({
         },
         {
           property: "fb:pages",
-          content: "1251627600454694",
+          content: "490345395101904",
         },
       ],
     },

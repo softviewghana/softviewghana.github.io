@@ -1,166 +1,298 @@
-<script lang="ts" setup>
-      import constants from '~/constants';
+<script setup lang="ts">
+      usePageSeo({
+            title: 'Products — Softview Ghana',
+            description: 'Explore software products built and operated by Softview Ghana, including eSchool Ghana.',
+            path: '/products',
+      });
 
-      useSeoMeta({
-            title: 'Products | Softview Ghana',
-            ogTitle: 'Products | Softview Ghana',
-            description: 'Innovative SaaS Products Built for the Ghanaian Market. Explore our suite of specialized software applications designed for high performance, localized relevance, and unparalleled user experience across healthcare, education, and digital governance.',
-            ogDescription: 'Innovative SaaS Products Built for the Ghanaian Market. Explore our suite of specialized software applications designed for high performance, localized relevance, and unparalleled user experience across healthcare, education, and digital governance.',
-            twitterCard: 'summary_large_image',
-            ogImage: {
-                  url: constants.APP_URL + '/icon-192.png',
-                  type: 'image/png',
-                  width: 192,
-                  height: 192,
-                  alt: 'softview ghana logo'
-            },
-            ogUrl: constants.APP_URL + '/products',
-            ogType: 'website'
-      });
-      useHead({
-            link: [
-                  { rel: 'canonical', href: constants.APP_URL + '/products' }
-            ]
-      });
+      const productCapabilities = [
+            'Admissions',
+            'Student Management',
+            'Academics',
+            'Attendance',
+            'Fees & Payments',
+            'Examinations',
+            'Communication',
+            'Reports',
+            'User & Role Management',
+            'School Administration',
+      ];
+
+      const productBenefits = [
+            'Centralized school operations',
+            'Reduced administrative workload',
+            'Better access to information',
+            'Improved communication',
+            'Financial visibility',
+            'Academic visibility',
+            'Role-based access',
+            'Cloud accessibility',
+            'Scalable architecture',
+      ];
 </script>
 
 <template>
-      <Section>
-            <div class="mx-auto max-w-2xl py-8 sm:pt-16 lg:pt-32 overflow-hidden">
-                  <h1 v-fade-in class="text-2xl md:text-3xl font-bold text-global-50 text-center">
-                        Innovative Software-as-a-Service (SaaS) Products Built for the Ghanaian Market.
-                  </h1>
-            </div>
-      </Section>
-      <div
-        class="mx-auto w-full overflow-hidden backdrop-blur-2xl backdrop-opacity-30 my-8 py-8 md:my-16 border-y bg-slate-200/90 border-slate-300/40 dark:border-slate-500/20 dark:bg-slate-500/10 rounded-none">
-            <Section>
-                  <div class="max-w-2xl mx-auto">
-                        <p v-fade-in class="mt-4 text-justify text-lg">
-                              Explore our suite of specialized software applications designed for high performance,
-                              localized relevance, and unparalleled user experience across healthcare, education, and
-                              digital governance.
+      <div class="pb-20">
+            <PageHero eyebrow="Our Products" title="Technology We Build, Own, and Operate"
+              description="We don't only build software for businesses. We create and operate digital products designed to solve real problems and create lasting value.">
+                  <template #visual>
+                        <div class="grid gap-5 bg-slate-950/70 p-4 md:grid-cols-[0.9fr_1.1fr] md:p-6">
+                              <div class="rounded-2xl border border-border bg-white/2 p-4">
+                                    <div
+                                      class="mb-4 flex items-center justify-between text-xs font-medium uppercase tracking-[0.2em] text-muted">
+                                          <span>Product</span>
+                                          <span
+                                            class="rounded-full border border-primary/30 bg-primary/10 px-2 py-1 text-primary">Live</span>
+                                    </div>
+                                    <div class="space-y-3">
+                                          <div class="h-2.5 w-20 rounded-full bg-primary/30" />
+                                          <div class="h-2 w-32 rounded-full bg-white/10" />
+                                          <div class="grid grid-cols-2 gap-3 pt-2">
+                                                <div class="rounded-xl border border-border bg-background/80 p-3">
+                                                      <div class="text-[10px] uppercase tracking-[0.2em] text-muted">
+                                                            Revenue</div>
+                                                      <div class="mt-2 text-xl font-semibold text-foreground">GHS 45k
+                                                      </div>
+                                                </div>
+                                                <div class="rounded-xl border border-border bg-background/80 p-3">
+                                                      <div class="text-[10px] uppercase tracking-[0.2em] text-muted">
+                                                            Active Users</div>
+                                                      <div class="mt-2 text-xl font-semibold text-foreground">2.4k</div>
+                                                </div>
+                                          </div>
+                                    </div>
+                              </div>
+
+                              <div class="rounded-2xl border border-border bg-background/80 p-4">
+                                    <div class="mb-4 flex items-center justify-between border-b border-border pb-3">
+                                          <div>
+                                                <div class="text-[10px] uppercase tracking-[0.2em] text-muted">Overview
+                                                </div>
+                                                <div class="mt-1 text-lg font-semibold text-foreground">School Operating
+                                                      System</div>
+                                          </div>
+                                          <div class="flex items-center gap-2 text-xs text-primary">
+                                                <span class="size-2 rounded-full bg-primary" />
+                                                Live
+                                          </div>
+                                    </div>
+                                    <div class="grid grid-cols-3 gap-3 text-center">
+                                          <div class="rounded-xl border border-border bg-white/2 p-3">
+                                                <div class="text-[10px] uppercase tracking-[0.2em] text-muted">Students
+                                                </div>
+                                                <div class="mt-2 text-2xl font-semibold text-foreground">2,431</div>
+                                          </div>
+                                          <div class="rounded-xl border border-border bg-white/2 p-3">
+                                                <div class="text-[10px] uppercase tracking-[0.2em] text-muted">
+                                                      Attendance</div>
+                                                <div class="mt-2 text-2xl font-semibold text-foreground">96.2%</div>
+                                          </div>
+                                          <div class="rounded-xl border border-border bg-white/2 p-3">
+                                                <div class="text-[10px] uppercase tracking-[0.2em] text-muted">Fees
+                                                </div>
+                                                <div class="mt-2 text-2xl font-semibold text-foreground">84.6%</div>
+                                          </div>
+                                    </div>
+                                    <div class="mt-4 rounded-2xl border border-border bg-slate-900/80 p-4">
+                                          <div
+                                            class="mb-3 flex items-center justify-between text-xs uppercase tracking-[0.2em] text-muted">
+                                                <span>Student performance</span>
+                                                <span>Q3</span>
+                                          </div>
+                                          <div
+                                            class="h-20 rounded-xl bg-[linear-gradient(135deg,rgba(39,201,120,0.16),rgba(255,255,255,0.02))] p-3">
+                                                <div class="flex h-full items-end gap-2">
+                                                      <span class="w-full rounded-t-md bg-primary/60"
+                                                        style="height: 35%" />
+                                                      <span class="w-full rounded-t-md bg-primary/40"
+                                                        style="height: 58%" />
+                                                      <span class="w-full rounded-t-md bg-primary/50"
+                                                        style="height: 72%" />
+                                                      <span class="w-full rounded-t-md bg-primary/70"
+                                                        style="height: 86%" />
+                                                      <span class="w-full rounded-t-md bg-primary/80"
+                                                        style="height: 100%" />
+                                                </div>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                  </template>
+            </PageHero>
+
+            <BaseContainer class="mt-8 md:mt-16">
+                  <section id="eschool-ghana" class="rounded-4xl border border-border bg-white/2 p-6 md:p-10">
+                        <div class="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+                              <div>
+                                    <p class="text-xs font-semibold uppercase tracking-[0.22em] text-primary">Featured
+                                          Product</p>
+                                    <h2
+                                      class="mt-4 text-3xl font-semibold tracking-tighter text-foreground md:text-5xl">
+                                          eSchool
+                                          Ghana</h2>
+                              </div>
+                              <p class="max-w-xl text-base leading-8 text-muted md:text-lg">
+                                    The modern School Operating System for private basic schools.
+                              </p>
+                        </div>
+
+                        <div class="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
+                              <div>
+                                    <p class="text-base leading-8 text-muted md:text-lg">
+                                          eSchool Ghana brings the essential operations of a school into one integrated
+                                          platform—from admissions and academics to attendance, communication, fees,
+                                          examinations,
+                                          and reporting.
+                                    </p>
+
+                                    <div class="mt-8 grid gap-3 sm:grid-cols-2">
+                                          <div v-for="item in productCapabilities" :key="item"
+                                            class="rounded-2xl border border-border bg-background/70 px-4 py-3 text-sm text-foreground/85">
+                                                {{ item }}
+                                          </div>
+                                    </div>
+                              </div>
+
+                              <div
+                                class="rounded-[28px] border border-border bg-slate-950/80 p-4 shadow-[0_30px_80px_rgba(0,0,0,0.3)]">
+                                    <div class="flex items-center justify-between border-b border-border pb-3">
+                                          <div class="flex items-center gap-2">
+                                                <div class="h-2.5 w-2.5 rounded-full bg-primary" />
+                                                <span class="text-sm font-medium text-foreground">eSchool Ghana</span>
+                                          </div>
+                                          <span
+                                            class="rounded-full border border-primary/30 bg-primary/10 px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-primary">Live</span>
+                                    </div>
+
+                                    <div class="mt-4 grid grid-cols-[180px_1fr] gap-4">
+                                          <aside class="rounded-2xl border border-border bg-white/2 p-3">
+                                                <div class="space-y-2 text-sm text-foreground/80">
+                                                      <div class="rounded-lg bg-white/2 px-2 py-2">Dashboard</div>
+                                                      <div class="rounded-lg bg-white/2 px-2 py-2">Students</div>
+                                                      <div class="rounded-lg bg-white/2 px-2 py-2">Admissions</div>
+                                                      <div class="rounded-lg bg-white/2 px-2 py-2">Academics</div>
+                                                      <div class="rounded-lg bg-white/2 px-2 py-2">Attendance</div>
+                                                      <div class="rounded-lg bg-white/2 px-2 py-2">Finance</div>
+                                                </div>
+                                          </aside>
+
+                                          <div class="rounded-2xl border border-border bg-background/80 p-3">
+                                                <div
+                                                  class="mb-3 flex items-center justify-between text-xs uppercase tracking-[0.2em] text-muted">
+                                                      <span>Overview</span>
+                                                      <span>Today</span>
+                                                </div>
+                                                <div class="grid grid-cols-3 gap-3">
+                                                      <div
+                                                        class="rounded-xl border border-border bg-white/2 p-2 text-center">
+                                                            <div
+                                                              class="text-[10px] uppercase tracking-[0.18em] text-muted">
+                                                                  Students
+                                                            </div>
+                                                            <div class="mt-2 text-xl font-semibold text-foreground">2431
+                                                            </div>
+                                                      </div>
+                                                      <div
+                                                        class="rounded-xl border border-border bg-white/2 p-2 text-center">
+                                                            <div
+                                                              class="text-[10px] uppercase tracking-[0.18em] text-muted">
+                                                                  Fees
+                                                            </div>
+                                                            <div class="mt-2 text-xl font-semibold text-foreground">
+                                                                  84.6%</div>
+                                                      </div>
+                                                      <div
+                                                        class="rounded-xl border border-border bg-white/2 p-2 text-center">
+                                                            <div
+                                                              class="text-[10px] uppercase tracking-[0.18em] text-muted">
+                                                                  Attendance</div>
+                                                            <div class="mt-2 text-xl font-semibold text-foreground">
+                                                                  96.2%</div>
+                                                      </div>
+                                                </div>
+                                                <div class="mt-4 rounded-xl border border-border bg-slate-900/70 p-3">
+                                                      <div
+                                                        class="mb-2 text-[10px] uppercase tracking-[0.2em] text-muted">
+                                                            Performance</div>
+                                                      <div class="flex h-24 items-end gap-2">
+                                                            <span class="w-full rounded-t-md bg-primary/50"
+                                                              style="height: 35%" />
+                                                            <span class="w-full rounded-t-md bg-primary/60"
+                                                              style="height: 52%" />
+                                                            <span class="w-full rounded-t-md bg-primary/70"
+                                                              style="height: 69%" />
+                                                            <span class="w-full rounded-t-md bg-primary/80"
+                                                              style="height: 86%" />
+                                                            <span class="w-full rounded-t-md bg-primary"
+                                                              style="height: 100%" />
+                                                      </div>
+                                                </div>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                  </section>
+
+                  <section class="mt-16 rounded-4xl border border-border bg-white/2 p-6 md:p-10">
+                        <h3 class="text-3xl font-semibold tracking-tighter text-foreground md:text-4xl">Built Around
+                              How Schools
+                              Actually Operate</h3>
+                        <p class="mt-4 max-w-3xl text-base leading-8 text-muted md:text-lg">
+                              eSchool Ghana is designed specifically for private basic schools and the realities of
+                              daily school
+                              administration—fast decisions, shared responsibilities, and a need for accurate
+                              operational
+                              visibility.
                         </p>
-                        <div v-fade-in class="mt-6 text-center">
-                              <NuxtLink :to="{ hash: '#saas-products' }" active-class=" " exact-active-class=" "
-                                class="dark:text-white text-global text-lg font-semibold transition duration-300">
-                                    Explore Our SaaS Products Below ↓
+
+                        <div class="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+                              <div v-for="benefit in productBenefits" :key="benefit"
+                                class="rounded-2xl border border-border bg-background/80 p-5">
+                                    <div
+                                      class="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
+                                          <span class="text-lg">✓</span>
+                                    </div>
+                                    <p class="text-base font-medium text-foreground">{{ benefit }}</p>
+                              </div>
+                        </div>
+                  </section>
+
+                  <section class="mt-16 rounded-4xl border border-primary/20 bg-primary/5 p-8 text-center md:p-12">
+                        <h3 class="text-3xl font-semibold tracking-tighter text-foreground md:text-5xl">Ready to
+                              modernize your
+                              school?</h3>
+                        <div class="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+                              <NuxtLink to="/products/eschool-ghana"
+                                class="inline-flex items-center justify-center rounded-2xl bg-primary px-6 py-3.5 font-medium text-white transition hover:bg-primary-hover">
+                                    Discover eSchool Ghana
+                              </NuxtLink>
+                              <NuxtLink to="/contact"
+                                class="inline-flex items-center justify-center rounded-2xl border border-border bg-background/70 px-6 py-3.5 font-medium text-foreground transition hover:border-primary hover:text-primary">
+                                    Request a Demo
                               </NuxtLink>
                         </div>
-                  </div>
-                  <div aria-hidden="true"
-                    class="blur-3xl transform-gpu -z-10 right-0 -top-2 sm:-top-24 absolute opacity-5 dark:opacity-25">
-                        <div
-                          style="clip-path: polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)"
-                          class="dark:to-indigo-500 dark:from-cyan-400 from-global-50 to-cyan-300 bg-linear-to-tr w-351 aspect-1404/767">
+                  </section>
+
+                  <section class="mt-16 rounded-4xl border border-border bg-white/2 p-8 md:p-10">
+                        <h3 class="text-3xl font-semibold tracking-tighter text-foreground md:text-4xl">More Products
+                              Are Coming
+                        </h3>
+                        <p class="mt-4 max-w-2xl text-base leading-8 text-muted md:text-lg">
+                              We're continuously exploring new software products that solve meaningful problems for
+                              businesses and
+                              organizations.
+                        </p>
+
+                        <div class="mt-8 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+                              <p class="text-lg font-medium text-foreground">Have a problem worth solving?</p>
+                              <NuxtLink to="/contact"
+                                class="inline-flex items-center gap-2 text-primary hover:text-primary-hover">
+                                    Talk to us <span aria-hidden="true">→</span>
+                              </NuxtLink>
                         </div>
-                  </div>
-            </Section>
+                  </section>
+            </BaseContainer>
       </div>
-      <!-- <Section>
-            <h3 v-fade-in
-              class="lg:text-3xl text-2xl text-center md:text-start font-bold flex items-center justify-center md:justify-start mb-6 text-global-50 dark:text-white">
-                  Healthcare & Pharmacy Management
-            </h3>
-            <p v-fade-in class="text-lg lg:text-start text-center mb-8">
-                  Driving efficiency and improving patient care quality across clinics and pharmacies
-                  with specialized, compliant software.
-            </p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 space-y-8 md:gap-12">
-                  <ProductListCard name="Clinic Plus"
-                    description="Comprehensive Health Information Management System (HIMS) for Clinics and Healthcare Providers."
-                    :features="[
-                        'Streamlines patient registration, appointments, and billing.',
-                        'Secure Electronic Health Records (EHR) and E-Prescribing.',
-                        'NHIS and localized insurance claims processing support.'
-                  ]" target="Healthcare Providers" download-link="#" />
-                  <ProductListCard name="Pharma Plus (Inventory & Sales)" target="Pharmacies & Dispensaries" :features="[
-                        'Accurate Drug Inventory & Expiry Tracking',
-                        'Point-of-Sale (POS) Transactions',
-                        'Instant Sales Analytics'
-                  ]" download-link="#" />
-            </div>
-      </Section>
-
-      <Section class="mt-12">
-            <h3 v-fade-in
-              class="lg:text-3xl text-2xl text-center md:text-start font-bold flex items-center justify-center md:justify-start mb-6 text-global-50 dark:text-white">
-                  Educational Systems
-            </h3>
-            <p v-fade-in class="text-lg lg:text-start text-center mb-8">
-                  Integrated school management systems streamlining administration, academics, and
-                  communication for schools across Ghana.
-            </p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-                  <ProductListCard name="Soft School Manager" link="//eschoolghana.com" link-name="explore" :features="[
-                        'Student Information System (SIS)',
-                        'Fee Collection & Tracking',
-                        'Report Card Generation',
-                        'Communication (SMS and Email)',
-                        'Parental Portal (Mobile App)',
-                        'Click on the button below to see all the features'
-                  ]" target="Ghanaian Basic Schools" />
-                  <ProductListCard name="eTerminal Report Manager" link="//terminal-report.eschoolghana.com"
-                    link-name="explore" :features="[
-                        'Pay As You Go Service',
-                        'SMS and Email notifications for report cards',
-                        'Automated reports generation',
-                        'Report Card customization'
-                  ]" target="Basic and Senior High Schools" />
-            </div>
-      </Section>
-      <Section class="mt-12">
-            <h3 v-fade-in
-              class="lg:text-3xl text-2xl text-center md:text-start font-bold flex items-center justify-center md:justify-start mb-6 text-global-50 dark:text-white">
-                  Digital Election Management
-            </h3>
-            <p v-fade-in class="text-lg lg:text-start text-center mb-8">
-                  Providing secure, transparent, and convenient online voting platforms for private
-                  institutions and associations.
-            </p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-                  <ProductListCard name="Vote360 (Online Voting System)" link="//eschoolghana.com" link-name="explore"
-                    :features="[
-                        'Secure Voter Verification and List Management',
-                        'Tamper-Proof Balloting & Instant Tally',
-                        'Detailed Audit Trails for Transparency',
-                        'Click on the button below to see all the features'
-                  ]" target="Unions, Associations, Corporate Bodies" />
-
-            </div>
-      </Section> -->
-
-      <ProductSection />
-
-      <Section class="mt-12">
-            <h3 v-fade-in class="lg:text-3xl text-2xl text-center mb-6 text-global-50 dark:text-white">
-                  Technology & Development Standards
-            </h3>
-            <div v-fade-in class="grid md:grid-cols-3 gap-8 text-center">
-                  <TechStackCard header-text="modern stack"
-                    text="We use Vue.js, React.js, Nuxt.js, Express.js and Laravel to build fast, reactive, and scalable applications." />
-                  <TechStackCard header-text="intuitive design"
-                    text="Styling with Tailwind CSS ensures responsive, clean, and accessible user interfaces on every device." />
-                  <TechStackCard header-text="ghanaian localization"
-                    text="Solutions are built to handle local compliance, currency (GHS), and payment methods effectively." />
-            </div>
-      </Section>
-
-      <Section>
-            <div
-              class="w-full mx-auto mt-20 text-center p-8 rounded-xl backdrop-blur-xs border border-slate-500/20 dark:bg-slate-400/10 bg-slate-300/40">
-                  <h2 v-fade-in class="text-2xl md:text-3xl font-bold dark:text-white">
-                        Ready to Digitize Your Operations?
-                  </h2>
-                  <p v-fade-in class="mt-4">
-                        Get a personalized tour of the software solution that best fits your institution's needs.
-                  </p>
-                  <NuxtLink v-fade-in exact-active-class=" " active-class=" " :to="{ name: 'contact' }"
-                    class="mt-6 inline-block sm:w-max w-full bg-global text-white font-semibold py-3 px-8 rounded-md shadow-lg hover:bg-global/90 transition duration-300 transform hover:scale-105">
-                        Contact Our Sales Team
-                  </NuxtLink>
-            </div>
-      </Section>
 </template>
 
 <style scoped></style>

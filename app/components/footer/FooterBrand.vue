@@ -63,7 +63,7 @@
                         <div class="grid gap-4 sm:grid-cols-2">
 
                               <div v-for="item in highlights" :key="item"
-                                class="flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.02] px-5 py-4">
+                                class="flex items-center gap-3 rounded-xl border border-white/10 bg-white/2 px-5 py-4">
 
                                     <CheckCircle2 class="size-5 text-primary" />
 

@@ -16,11 +16,11 @@
                   href: 'https://github.com/softviewghana',
                   icon: GithubIcon,
             },
-            // {
-            //       label: 'X',
-            //       href: '#',
-            //       icon: XTwitterIcon,
-            // },
+            {
+                  label: 'X',
+                  href: 'https://x.com/SoftviewGhana',
+                  icon: XTwitterIcon,
+            },
             {
                   label: 'Facebook',
                   href: 'https://facebook.com/softviewghana',
@@ -61,8 +61,9 @@
                         </p>
 
                         <p class="mt-2">
-                              Crafted with precision by <NuxtLink class="text-primary hover:text-white" target="_blank" title="Code with Kingsley"
-                                href="https://kingsley.softviewghana.com" external active-class="" exact-active-class="">
+                              Crafted with precision by <NuxtLink class="text-primary hover:text-white" target="_blank"
+                                title="Code with Kingsley" href="https://kingsley.softviewghana.com" external
+                                active-class="" exact-active-class="">
                                     Kingsley
                               </NuxtLink>
                         </p>
@@ -86,14 +87,14 @@
 
                   <div class="flex items-center gap-3">
 
-                        <a v-for="social in socials" :key="social.label" :href="social.href" :aria-label="social.label"
-                          target="_blank" rel="noopener noreferrer"
-                          class="group flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white/60 transition-all duration-300 hover:border-primary/30 hover:bg-primary/10 hover:text-primary">
+                        <NuxtLink external v-for="social in socials" :key="social.label" :href="social.href"
+                          :aria-label="social.label" target="_blank"
+                          class="group flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/12 text-white/60 transition-all duration-300 hover:border-primary/30 hover:bg-primary/10 hover:text-primary">
 
                               <component :is="social.icon"
                                 class="size-5 transition-transform duration-300 group-hover:scale-110" />
 
-                        </a>
+                        </NuxtLink>
 
                   </div>
 

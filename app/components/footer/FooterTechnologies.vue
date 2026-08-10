@@ -56,7 +56,7 @@
 <template>
       <section class="mx-auto max-w-7xl px-6 py-20">
 
-            <div class="rounded-3xl border border-white/10 bg-white/[0.03] p-8 backdrop-blur-xl">
+            <div class="rounded-3xl border border-white/10 bg-white/3 p-8 backdrop-blur-xl">
 
                   <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
 

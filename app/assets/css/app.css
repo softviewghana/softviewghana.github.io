@@ -23,7 +23,7 @@
   --border: oklab(31.862000000000002% -0.0041 -0.01607);
   --foreground: #f5f7fa;
   /* --muted-foreground: #9CA3AF; */
-  --muted: #82b590;
+  --muted: #a9b6ac;
   --brand: oklab(73.825% -0.15665 0.07305);
   --brand-subtle: oklab(65.792% -0.145 0.07017);
 }
@@ -58,10 +58,6 @@ html {
       linear-gradient(90deg, rgba(31, 185, 98, 0.117) 1px, transparent 1px);
 
     background-size: 44px 44px;
-  }
-
-  .bg-noise {
-    position: relative;
   }
 
   .bg-noise::before {

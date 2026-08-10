@@ -1,3 +1,5 @@
+import constants from '~/constants';
+
 interface BreadcrumbItem {
       name: string;
       url: string;
@@ -12,15 +14,15 @@ interface PageSeoOptions {
 }
 
 export function usePageSeo(options: PageSeoOptions) {
-      const baseUrl = 'https://eschoolghana.com';
+      const baseUrl = constants.APP_URL;
       const canonical = `${baseUrl}${options.path}`;
-      const image = options.image ?? `${baseUrl}/icon-512-maskable.png`;
+      const image = options.image ?? `${baseUrl}/softviewghana-og-image.png`;
 
       useSeoMeta({
             title: options.title,
             description: options.description,
             ogType: 'website',
-            ogSiteName: 'eSchool Ghana',
+            ogSiteName: 'Softview Ghana',
             ogTitle: options.title,
             ogDescription: options.description,
             ogUrl: canonical,

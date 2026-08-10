@@ -13,13 +13,13 @@
       <section class="relative py-8 sm:py-14">
             <div class="mx-auto max-w-7xl px-6 lg:px-8">
                   <div
-                    class="relative overflow-hidden rounded-[2rem] border border-border bg-linear-to-b from-primary/6 to-primary-hover/3 px-6 py-16 shadow-[0_24px_100px_rgba(0,0,0,0.45)] backdrop-blur-2xl sm:px-10 lg:px-16 lg:py-20">
+                    class="relative overflow-hidden rounded-4xl border border-border bg-linear-to-b from-primary/6 to-primary-hover/3 px-6 py-16 shadow-[0_24px_100px_rgba(0,0,0,0.45)] backdrop-blur-2xl sm:px-10 lg:px-16 lg:py-20">
                         <!-- Background layers -->
                         <div class="pointer-events-none absolute inset-0">
                               <div
-                                class="absolute left-[-8rem] top-[-8rem] h-[22rem] w-[22rem] rounded-full bg-primary/12 blur-[130px]" />
+                                class="absolute -left-32 -top-32 h-88 w-88 rounded-full bg-primary/12 blur-[130px]" />
                               <div
-                                class="absolute bottom-[-10rem] right-[-8rem] h-[24rem] w-[24rem] rounded-full bg-primary/6 blur-[150px]" />
+                                class="absolute -bottom-40 -right-32 h-96 w-96 rounded-full bg-primary/6 blur-[150px]" />
                               <div
                                 class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.08),transparent_45%)]" />
                               <div class="absolute inset-0 opacity-[0.05]" style="
@@ -60,7 +60,7 @@
                                           </NuxtLink>
 
                                           <NuxtLink to="/contact"
-                                            class="inline-flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-6 py-4 font-medium text-white transition-all duration-300 hover:border-primary/30 hover:bg-white/[0.07]">
+                                            class="inline-flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/4 px-6 py-4 font-medium text-white transition-all duration-300 hover:border-primary/30 hover:bg-white/[0.07]">
                                                 Contact Us
                                           </NuxtLink>
                                     </div>
@@ -69,20 +69,20 @@
                               <!-- Highlights panel -->
                               <div class="relative">
                                     <div
-                                      class="rounded-[1.75rem] border border-white/10 bg-white/[0.04] p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] backdrop-blur-xl sm:p-8">
+                                      class="rounded-3xl border border-white/10 bg-white/4 p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] backdrop-blur-xl sm:p-8">
                                           <div class="mb-6 flex items-center justify-between">
                                                 <h3 class="text-lg font-semibold tracking-tight text-white">
                                                       What We Bring
                                                 </h3>
                                                 <span
-                                                  class="rounded-full border border-white/10 bg-white/[0.05] px-3 py-1 text-xs text-white/50">
+                                                  class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/50">
                                                       Built for growth
                                                 </span>
                                           </div>
 
                                           <div class="grid gap-3">
                                                 <div v-for="item in highlights" :key="item"
-                                                  class="group flex items-center gap-3 rounded-2xl border border-white/8 bg-white/[0.03] px-4 py-4 transition-all duration-300 hover:border-primary/20 hover:bg-white/[0.05]">
+                                                  class="group flex items-center gap-3 rounded-2xl border border-white/8 bg-white/3 px-4 py-4 transition-all duration-300 hover:border-primary/20 hover:bg-white/5">
                                                       <div
                                                         class="flex size-9 items-center justify-center rounded-xl border border-primary/15 bg-primary/10 text-primary transition-transform duration-300 group-hover:scale-105">
                                                             <Check class="size-4" />

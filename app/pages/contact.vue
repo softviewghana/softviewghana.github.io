@@ -1,227 +1,199 @@
 <script lang="ts" setup>
-      import { LoaderIcon } from '@lucide/vue';
-      import constants from '~/constants';
+      import { Check, Mail, MapPin, MessageSquareText, Phone, Send } from '@lucide/vue';
 
-      useSeoMeta({
-            title: 'Contact | Softview Ghana',
-            ogTitle: 'Contact | Softview Ghana',
-            description: 'Get in Touch with softview ghana. Whether you need a demo for our specialized SaaS products, or you are planning a custom web or mobile app, or require expert support for your computer and network systems, softview ghana is here to help.',
-            ogDescription: 'Get in Touch with softview ghana. Whether you need a demo for our specialized SaaS products, or you are planning a custom web or mobile app, or require expert support for your computer and network systems, softview ghana is here to help.',
-            twitterCard: 'summary_large_image',
-            ogImage: {
-                  url: constants.APP_URL + '/icon-192.png'
-            },
-            ogUrl: constants.APP_URL + '/contact',
-            ogType: 'website',
-            ogSiteName: 'Contact | Softview Ghana',
-      });
-
-      useHead({
-            link: [
-                  { rel: 'canonical', href: constants.APP_URL + '/contact' }
-            ]
+      usePageSeo({
+            title: 'Contact Softview Ghana',
+            description: 'Have a software or technology project in mind? Talk to Softview Ghana.',
+            path: '/contact',
       });
 
       const form = reactive({
             fullName: '',
             email: '',
-            organization: '',
             phone: '',
-            interest: '',
-            message: ''
+            company: '',
+            projectType: '',
+            budgetRange: '',
+            message: '',
       });
 
       const isSubmitting = ref(false);
+      const isSuccess = ref(false);
 
-      const responseMessage = ref('');
+      const projectOptions = [
+            'Custom Software',
+            'Web Application',
+            'Mobile Application',
+            'Cloud & DevOps',
+            'IT Infrastructure',
+            'UI/UX Design',
+            'Other',
+      ];
 
       const handleFormSubmit = () => {
             isSubmitting.value = true;
-            // Handle form submission logic here (e.g., send data to an API)
-            console.log('Form submitted:', form);
-            setTimeout(() => {
-                  responseMessage.value = 'Your inquiry has been submitted successfully!';
-                  // Reset form fields
-                  form.fullName = '';
-                  form.email = '';
-                  form.organization = '';
-                  form.phone = '';
-                  form.interest = '';
-                  form.message = '';
+
+            window.setTimeout(() => {
                   isSubmitting.value = false;
-            }, 1000);
-
-            setTimeout(() => {
-                  responseMessage.value = '';
-            }, 5000);
-
-      }
+                  isSuccess.value = true;
+                  Object.keys(form).forEach((key) => {
+                        form[key as keyof typeof form] = '';
+                  });
+            }, 700);
+      };
 </script>
 
 <template>
-      <Section>
-            <div class="mx-auto max-w-2xl py-8 sm:pt-16 lg:pt-32 overflow-hidden">
-                  <h1 v-fade-in class="text-2xl md:text-3xl font-bold text-global-50 text-center">
-                        Get in Touch with Softview Ghana
-                  </h1>
-            </div>
-      </Section>
-      <div
-        class="mx-auto w-full overflow-hidden backdrop-blur-2xl backdrop-opacity-30 my-8 py-8 md:my-16 border-y bg-slate-200/90 border-slate-300/40 dark:border-slate-500/20 dark:bg-slate-500/10 rounded-none">
-            <Section>
-                  <div class="max-w-2xl mx-auto">
-                        <p v-fade-in class="mt-4 text-justify text-lg">
-                              Whether you need a demo for our specialized SaaS products, are planning a custom web or
-                              mobile app, or require expert support for your computer and network systems, Softview
-                              Ghana is here to help.
-                        </p>
+      <div class="pb-20">
+            <PageHero eyebrow="Let's Talk" title="Have a Project in Mind?"
+              description="Tell us what you're building, what you're trying to improve, or where technology is getting in the way. We'll help you figure out the next step." />
 
-                  </div>
-                  <div aria-hidden="true"
-                    class="blur-3xl transform-gpu -z-10 right-0 -top-2 sm:-top-24 absolute opacity-5 dark:opacity-25">
+            <BaseContainer class="mt-8 md:mt-12">
+                  <div v-if="isSuccess"
+                    class="mx-auto max-w-2xl rounded-4xl border border-primary/20 bg-primary/5 p-8 text-center shadow-[0_28px_60px_rgba(0,0,0,0.28)]">
                         <div
-                          style="clip-path: polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)"
-                          class="dark:to-indigo-500 dark:from-cyan-400 from-global-50 to-cyan-300 bg-linear-to-tr w-351 aspect-1404/767">
+                          class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
+                              <Check class="size-8" />
                         </div>
-                  </div>
-            </Section>
-      </div>
-      <Section class="lg:my-12">
-            <div class="grid lg:grid-cols-5 gap-12">
-                  <div class="lg:col-span-2 space-y-8">
-                        <h2 class="text-2xl font-bold">Contact Details</h2>
-                        <div class="flex items-start">
-                              <svg class="w-6 h-6 text-global-50 mr-4 shrink-0 mt-1" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z">
-                                    </path>
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                              </svg>
-                              <div class="space-y-2">
-                                    <h3 class="font-semibold text-global dark:text-body">Office Location</h3>
-                                    <p class="">
-                                          Bubiashie, Swanlake Oldstop
-                                          <br>
-                                          GA-309-5296
-                                          <br>
-                                          Accra, Ghana
-                                    </p>
-                              </div>
-                        </div>
-
-                        <div class="flex items-start">
-                              <svg class="w-6 h-6 text-global-50 mr-4 shrink-0 mt-1" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.144a11.002 11.002 0 0010.518 10.518l1.144-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
-                                    </path>
-                              </svg>
-                              <div class="space-y-2">
-                                    <h3 class="font-semibold text-global dark:text-body">Phone & WhatsApp</h3>
-                                    <p class="">General Enquiries:
-                                          <NuxtLink href="tel:+233549289243" external
-                                            class="select-all hover:text-global">
-                                                +233 54 928 9243
-                                          </NuxtLink>
-                                    </p>
-                                    <p class="">Support Hotline:
-                                          <NuxtLink href="tel:+233543093942" external
-                                            class="select-all hover:text-global">
-                                                +233 54 309 3942
-                                          </NuxtLink>
-                                    </p>
-                              </div>
-                        </div>
-
-                        <div class="flex items-start">
-                              <svg class="w-6 h-6 text-global-50 mr-4 shrink-0 mt-1" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
-                                    </path>
-                              </svg>
-                              <div class="space-y-2">
-                                    <h3 class="font-semibold text-global dark:text-body">Email</h3>
-                                    <p class="">
-                                          <NuxtLink href="mailto:info@softviewghana.com" external
-                                            class="hover:text-global-50 select-all">
-                                                info@softviewghana.com
-                                          </NuxtLink>
-                                          (General)
-                                    </p>
-                                    <p class="">
-                                          <NuxtLink href="mailto:support@softviewghana.com" external
-                                            class="hover:text-global-50 select-all">
-                                                support@softviewghana.com
-                                          </NuxtLink>
-                                          (Technical)
-                                    </p>
-                              </div>
-                        </div>
+                        <h2 class="mt-6 text-3xl font-semibold tracking-tighter text-foreground md:text-4xl">Message
+                              Received</h2>
+                        <p class="mt-4 text-lg text-muted">Thanks for reaching out.</p>
+                        <p class="mt-2 text-base leading-8 text-muted">
+                              We've received your message and will get back to you as soon as possible.
+                        </p>
+                        <NuxtLink to="/"
+                          class="mt-8 inline-flex items-center justify-center rounded-2xl bg-primary px-6 py-3 font-medium text-white transition hover:bg-primary-hover">
+                              Back to Homepage
+                        </NuxtLink>
                   </div>
 
-                  <div class="lg:col-span-3">
-                        <h2 class="text-2xl font-bold mb-6">Send Us a Message</h2>
-                        <form @submit.prevent="handleFormSubmit" class="space-y-6">
-                              <div class="grid sm:grid-cols-2 gap-6">
-                                    <TextInput required label="full name *" placeholder="enter full name here" />
-                                    <TextInput required label="work/personal email *" type="email"
-                                      placeholder="enter personal/work email address" />
-                              </div>
+                  <div v-else class="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+                        <aside class="rounded-4xl border border-border bg-white/2 p-6 md:p-8">
+                              <h2 class="text-2xl font-semibold tracking-[-0.04em] text-foreground md:text-3xl">Talk to
+                                    us</h2>
 
-                              <div class="grid sm:grid-cols-2 gap-6">
-                                    <TextInput label="organization name" placeholder="enter organization name" />
-                                    <TextInput required label="phone number *" type="tel"
-                                      placeholder="enter phone number" />
-                              </div>
+                              <div class="mt-8 space-y-6">
+                                    <div class="flex items-start gap-4">
+                                          <div
+                                            class="mt-1 flex h-11 w-11 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+                                                <Mail class="size-5" />
+                                          </div>
+                                          <div>
+                                                <p class="text-sm font-medium uppercase tracking-[0.18em] text-muted">
+                                                      Email</p>
+                                                <NuxtLink href="mailto:hello@softviewghana.com"
+                                                  class="mt-2 block text-base text-foreground hover:text-primary">
+                                                      hello@softviewghana.com</NuxtLink>
+                                          </div>
+                                    </div>
 
-                              <div>
-                                    <label for="interest" class="block text-sm font-medium">
-                                          What is your primary interest? *
+                                    <div class="flex items-start gap-4">
+                                          <div
+                                            class="mt-1 flex h-11 w-11 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+                                                <Phone class="size-5" />
+                                          </div>
+                                          <div>
+                                                <p class="text-sm font-medium uppercase tracking-[0.18em] text-muted">
+                                                      Phone</p>
+                                                <p class="mt-2 text-base text-foreground">Available on request</p>
+                                          </div>
+                                    </div>
+
+                                    <div class="flex items-start gap-4">
+                                          <div
+                                            class="mt-1 flex h-11 w-11 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+                                                <MapPin class="size-5" />
+                                          </div>
+                                          <div>
+                                                <p class="text-sm font-medium uppercase tracking-[0.18em] text-muted">
+                                                      Location</p>
+                                                <p class="mt-2 text-base text-foreground">Accra, Ghana</p>
+                                          </div>
+                                    </div>
+
+                                    <div class="flex items-start gap-4">
+                                          <div
+                                            class="mt-1 flex h-11 w-11 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+                                                <MessageSquareText class="size-5" />
+                                          </div>
+                                          <div>
+                                                <p class="text-sm font-medium uppercase tracking-[0.18em] text-muted">
+                                                      Response Time</p>
+                                                <p class="mt-2 text-base text-foreground">Typically within 24 hours</p>
+                                          </div>
+                                    </div>
+                              </div>
+                        </aside>
+
+                        <form @submit.prevent="handleFormSubmit"
+                          class="rounded-4xl border border-border bg-white/2 p-6 md:p-8">
+                              <div class="grid gap-5 md:grid-cols-2">
+                                    <label class="block text-sm text-muted">
+                                          <span class="mb-2 block font-medium text-foreground">Full Name *</span>
+                                          <input v-model="form.fullName" required type="text"
+                                            class="w-full rounded-2xl border border-border bg-background/80 px-4 py-3 text-foreground placeholder:text-muted/70 focus:border-primary"
+                                            placeholder="Your full name" />
                                     </label>
-                                    <select id="interest" name="interest" required
-                                      class="bg-inherit appearance-none! [-webkit-appearance:none]! [-moz-appearance:none]! inline-block w-full border-0 rounded-md shadow-sm p-3! outline outline-global focus:outline-2 focus:outline-global-50 focus:ring-0 focus:border-0">
-                                          <option class="bg-body" disabled selected>-- Select an option --</option>
-                                          <option class="bg-body" value="">Request Demo: eSchool Ghana / SBA</option>
-                                          <!-- <option class="bg-body" value="">Request Demo: Clinic Plus (Premises)</option> -->
-                                          <!-- <option class="bg-body" value="">Request Demo: Pharma Plus</option> -->
-                                          <!-- <option class="bg-body" value="">Request Demo: Vote360 (SaaS)</option> -->
-                                          <option class="bg-body" value="">General Sales Enquiry</option>
-                                          <option class="bg-body" value="">Technical Support</option>
-                                          <option class="bg-body" value="">Partnership Inquiry</option>
-                                    </select>
-                              </div>
 
-                              <div>
-                                    <label for="message" class="block text-sm font-medium">
-                                          How can we help you? *
+                                    <label class="block text-sm text-muted">
+                                          <span class="mb-2 block font-medium text-foreground">Email Address *</span>
+                                          <input v-model="form.email" required type="email"
+                                            class="w-full rounded-2xl border border-border bg-background/80 px-4 py-3 text-foreground placeholder:text-muted/70 focus:border-primary"
+                                            placeholder="you@example.com" />
                                     </label>
-                                    <textarea required id="message" name="message" rows="4"
-                                      placeholder="Write your request here"
-                                      class="mt-1 bg-inherit appearance-none! [-webkit-appearance:none]! [-moz-appearance:none]! inline-block w-full border-0 rounded-md shadow-sm p-3 outline outline-global focus:outline-2 focus:outline-global-50 focus:ring-0 focus:border-0"></textarea>
+
+                                    <label class="block text-sm text-muted">
+                                          <span class="mb-2 block font-medium text-foreground">Phone Number</span>
+                                          <input v-model="form.phone" type="tel"
+                                            class="w-full rounded-2xl border border-border bg-background/80 px-4 py-3 text-foreground placeholder:text-muted/70 focus:border-primary"
+                                            placeholder="Optional" />
+                                    </label>
+
+                                    <label class="block text-sm text-muted">
+                                          <span class="mb-2 block font-medium text-foreground">Company /
+                                                Organization</span>
+                                          <input v-model="form.company" type="text"
+                                            class="w-full rounded-2xl border border-border bg-background/80 px-4 py-3 text-foreground placeholder:text-muted/70 focus:border-primary"
+                                            placeholder="Optional" />
+                                    </label>
+
+                                    <label class="block text-sm text-muted md:col-span-2">
+                                          <span class="mb-2 block font-medium text-foreground">Project Type *</span>
+                                          <select v-model="form.projectType" required
+                                            class="w-full rounded-2xl border border-border bg-background/80 px-4 py-3 text-foreground focus:border-primary">
+                                                <option value="" disabled>Select a project type</option>
+                                                <option v-for="option in projectOptions" :key="option" :value="option">
+                                                      {{ option }}
+                                                </option>
+                                          </select>
+                                    </label>
+
+                                    <label class="block text-sm text-muted md:col-span-2">
+                                          <span class="mb-2 block font-medium text-foreground">Budget Range</span>
+                                          <input v-model="form.budgetRange" type="text"
+                                            class="w-full rounded-2xl border border-border bg-background/80 px-4 py-3 text-foreground placeholder:text-muted/70 focus:border-primary"
+                                            placeholder="Optional" />
+                                    </label>
+
+                                    <label class="block text-sm text-muted md:col-span-2">
+                                          <span class="mb-2 block font-medium text-foreground">Message *</span>
+                                          <textarea v-model="form.message" required rows="6"
+                                            class="w-full rounded-2xl border border-border bg-background/80 px-4 py-3 text-foreground placeholder:text-muted/70 focus:border-primary"
+                                            placeholder="Tell us about your project or challenge" />
+                                    </label>
                               </div>
 
-                              <div class="flex items-center justify-end w-full">
+                              <div class="mt-6 flex justify-end">
                                     <button type="submit" :disabled="isSubmitting"
-                                      class="py-3 sm:px-5 text-center text-lg w-full sm:w-auto inline-flex items-center justify-center-safe gap-3 border-0 rounded-md shadow-sm text-md font-medium text-white bg-global hover:bg-global-50 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50">
-                                          <span class="" v-if="isSubmitting">
-                                                <LoaderIcon class="animate-spin" />
-                                          </span>
-                                          <span class="">
-                                                Submit Inquiry
-                                          </span>
+                                      class="inline-flex items-center justify-center gap-2 rounded-2xl bg-primary px-6 py-3.5 font-medium text-white transition hover:bg-primary-hover disabled:cursor-not-allowed disabled:opacity-60">
+                                          <Send class="size-4" />
+                                          <span>{{ isSubmitting ? 'Sending...' : 'Send Message' }}</span>
                                     </button>
                               </div>
-
                         </form>
-                        <div v-if="responseMessage" class="mt-4 p-4 bg-green-100 text-green-800 rounded-md">
-                              {{ responseMessage }}
-                        </div>
                   </div>
-            </div>
-      </Section>
+            </BaseContainer>
+      </div>
 </template>
 
 <style scoped></style>

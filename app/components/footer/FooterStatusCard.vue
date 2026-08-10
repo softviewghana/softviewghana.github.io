@@ -13,7 +13,7 @@
 
 <template>
       <article
-        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] p-5 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:bg-white/[0.06]">
+        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/4 p-5 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:bg-white/6">
             <!-- Glow -->
 
             <div

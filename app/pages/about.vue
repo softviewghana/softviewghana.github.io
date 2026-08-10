@@ -1,31 +1,13 @@
 <script lang="ts" setup>
-
-      import constants from '~/constants';
-      useSeoMeta({
-            title: 'About | Softview Ghana',
-            ogTitle: 'About | Softview Ghana',
-            description: 'We are more than just a tech firm; Softview Ghana is a forward-thinking software development firm committed to developing and delivering specialized software solutions that address the unique challenges of the Ghanaian market.',
-            ogDescription: 'We are more than just a tech firm; Softview Ghana is a forward-thinking software development firm committed to developing and delivering specialized software solutions that address the unique challenges of the Ghanaian market.',
-            twitterCard: 'summary_large_image',
-            ogImage: {
-                  url: constants.APP_URL + '/icon-192.png',
-                  type: 'image/png',
-                  width: 192,
-                  height: 192,
-                  alt: 'softview ghana logo'
-            },
-            ogUrl: constants.APP_URL + '/about',
-            ogType: 'website'
-      });
-      useHead({
-            link: [
-                  { rel: 'canonical', href: constants.APP_URL + '/about' }
-            ]
+      usePageSeo({
+            title: "About | Softview Ghana",
+            description: "Explore Softview Ghana's professional software development, cloud, networking, mobile app, web development, and UI/UX design services.",
+            path: '/about',
       });
 </script>
 
 <template>
-      <Section>
+      <!-- <Section>
             <div class="mx-auto max-w-2xl py-8 sm:py-16 lg:py-32 overflow-hidden">
 
                   <div v-fade-in class="text-center mb-16 pt-10">
@@ -64,11 +46,11 @@
                   </h6>
             </div>
             <AboutCards />
-      </Section>
+      </Section> -->
 
       <TeamMembers />
 
-      <Section>
+      <!-- <Section>
             <div
               class="w-full mx-auto mt-20 text-center p-8 rounded-xl backdrop-blur-xs border border-slate-500/20 dark:bg-slate-400/10 bg-slate-300/40">
                   <h2 v-fade-in class="text-2xl md:text-3xl font-bold dark:text-white">
@@ -83,6 +65,6 @@
                         Get Started Today
                   </NuxtLink>
             </div>
-      </Section>
+      </Section> -->
 </template>
 <style scoped></style>

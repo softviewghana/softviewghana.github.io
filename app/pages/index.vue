@@ -18,8 +18,6 @@
 
 <template>
       <section class="relative overflow-hidden py-16">
-            <div class="absolute inset-0 bg-grid opacity-60" />
-            <div class="absolute inset-0 bg-noise" />
             <BaseContainer>
                   <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:gap-16">
                         <div class="flex flex-col items-start">
@@ -51,7 +49,7 @@
                                           Start Your Project
                                           <ArrowRight :size="16" />
                                     </BaseButton>
-                                    <BaseButton variant="outline" class="border-primary/90 shadow text-primary" block>
+                                    <BaseButton variant="outline" class="border-primary/90 shadow text-primary hover:text-white" block>
                                           Explore Our Services
                                           <SquareArrowOutUpRight :size="16" />
                                     </BaseButton>
