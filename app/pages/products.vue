@@ -114,7 +114,7 @@
                                                 <span>Q3</span>
                                           </div>
                                           <div
-                                              class="h-20 rounded-xl bg-[linear-gradient(135deg,_color-mix(in_oklab,_var(--brand)_16%,_transparent),_color-mix(in_oklab,_var(--foreground)_2%,_transparent))] p-3">
+                                              class="h-20 rounded-xl bg-[linear-gradient(135deg,color-mix(in_oklab,var(--brand)_16%,transparent),color-mix(in_oklab,var(--foreground)_2%,transparent))] p-3">
                                                 <div class="flex h-full items-end gap-2">
                                                       <span class="w-full rounded-t-md bg-primary/60"
                                                           style="height: 35%" />

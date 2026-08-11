@@ -2,14 +2,14 @@
       const people = [
             {
                   name: 'Kingsley Osei Opoku',
-                  role: 'Co-Founder / CTO / Software Engineer',
+                  role: 'CEO / Software Engineer',
                   imageUrl: '/image/img-cto.jpg'
             },
-            {
-                  name: 'Douglas Boakye',
-                  role: 'Co-Founder / Designer / Product Manager',
-                  imageUrl: ''
-            },
+            // {
+            //       name: 'Douglas Boakye',
+            //       role: 'Co-Founder / Designer / Product Manager',
+            //       imageUrl: ''
+            // },
       ]
 </script>
 <template>
