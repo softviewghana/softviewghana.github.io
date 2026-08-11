@@ -65,124 +65,38 @@
 <template>
       <div class="pb-20">
             <PageHero eyebrow="Industries" title="Technology That Understands Your Industry"
-              description="We build technology around the way organizations actually work, combining software engineering with an understanding of industry-specific challenges and workflows." />
+                description="We build technology around the way organizations actually work, combining software engineering with an understanding of industry-specific challenges and workflows." />
 
-            <!-- <BaseContainer class="mt-8 md:mt-12">
-                  <section class="rounded-4xl border border-border bg-surface p-6 md:p-10">
-                        <p class="text-xs font-semibold uppercase tracking-[0.22em] text-primary">Different
-                              Industries. Different Challenges.</p>
-                        <h2 class="mt-4 max-w-2xl text-3xl font-semibold tracking-tighter text-foreground md:text-4xl">
-                              Different Industries. Different Challenges.</h2>
-                        <div class="mt-6 max-w-3xl space-y-4 text-base leading-8 text-muted md:text-lg">
-                              <p>
-                                    Technology is most effective when it reflects the realities of the people and
-                                    organizations using it.
-                              </p>
-                              <p>
-                                    We work with businesses across different sectors to understand their processes,
-                                    identify opportunities for improvement, and build practical digital solutions
-                                    around their needs.
-                              </p>
-                        </div>
-                  </section>
-            </BaseContainer>
-
-            <div class="mx-auto mt-16 w-full overflow-hidden border-y border-border/70 bg-background/80 py-10 md:py-16">
-                  <BaseContainer>
-                        <div class="grid gap-8 lg:grid-cols-2">
-                              <NuxtLink v-for="industry in industries" :key="industry.title" :to="industry.href"
-                                class="group rounded-3xl border border-border bg-surface p-8 shadow-[0_18px_50px_rgba(0,0,0,0.12)] transition duration-300 hover:-translate-y-1 hover:border-primary/30">
-                                    <div class="flex items-center gap-4">
-                                          <div
-                                            class="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary">
-                                                <component :is="industry.icon" class="size-7" />
-                                          </div>
-                                          <h2 class="text-2xl font-semibold text-foreground">
-                                                {{ industry.title }}
-                                          </h2>
-                                    </div>
-
-                                    <p class="mt-5 text-base leading-7 text-muted">
-                                          {{ industry.description }}
-                                    </p>
-
-                                    <ul class="mt-6 flex flex-wrap gap-2">
-                                          <li v-for="item in industry.areas" :key="item"
-                                            class="rounded-full border border-border bg-background/70 px-3 py-1.5 text-xs font-medium text-foreground/80">
-                                                {{ item }}
-                                          </li>
-                                    </ul>
-
-                                    <span class="mt-7 inline-flex items-center gap-2 text-sm font-medium text-primary">
-                                          Explore {{ industry.title }} Solutions
-                                          <ArrowRight
-                                            class="size-4 transition-transform duration-300 group-hover:translate-x-1" />
-                                    </span>
-                              </NuxtLink>
-                        </div>
-                  </BaseContainer>
-            </div>
-
-            <BaseContainer class="mt-16">
-                  <section
-                    class="rounded-4xl border border-border bg-linear-to-b from-primary/8 to-primary-hover/3 px-6 py-16 text-center shadow-[0_24px_100px_rgba(0,0,0,0.35)] backdrop-blur-2xl sm:px-10">
-                        <h2 class="text-3xl font-semibold tracking-tighter text-foreground md:text-4xl">Don't See
-                              Your Industry?</h2>
-                        <p class="mx-auto mt-4 max-w-2xl text-lg leading-8 text-muted">
-                              Our approach starts with understanding your organization rather than forcing your
-                              requirements into a predefined solution.
-                        </p>
-                        <div class="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-                              <NuxtLink to="/contact"
-                                class="inline-flex items-center justify-center gap-2 rounded-2xl bg-primary px-6 py-4 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_40px_rgba(0,0,0,0.35)]">
-                                    Tell Us About Your Business
-                                    <ArrowRight class="size-5" />
-                              </NuxtLink>
-                        </div>
-                  </section>
-            </BaseContainer> -->
-            <BaseContainer class="mt-8 md:mt-12">
-                  <section
-                    class="relative overflow-hidden rounded-4xl border border-border bg-surface px-6 py-14 md:px-12 md:py-20">
-                        <!-- decorative ruler ticks, purely atmospheric -->
-                        <div
-                          class="pointer-events-none absolute inset-x-0 top-0 h-24 opacity-70 mask-[linear-gradient(to_bottom,black,transparent)]"
-                          aria-hidden="true">
-                              <div
-                                class="h-full w-full bg-[repeating-linear-gradient(90deg,var(--color-border)_0px,var(--color-border)_1px,transparent_1px,transparent_56px)]" />
-                        </div>
-
+            <BaseContainer class="mt-6 md:mt-10">
+                  <section v-fadeIn class="softview-panel overflow-hidden px-6 py-14 md:px-12 md:py-20">
                         <div class="relative grid gap-10 md:grid-cols-[1.1fr_0.9fr] md:items-end">
-                              <div>
-                                    <p
-                                      class="inline-flex items-center gap-2 rounded-full border border-border px-3 py-1 font-mono text-[11px] uppercase tracking-[0.28em] text-primary">
+                              <div v-fadeIn>
+                                    <p class="softview-kicker">
                                           <span class="h-1.5 w-1.5 rounded-full bg-primary" />
                                           Sector Index
                                     </p>
                                     <h2
-                                      class="mt-6 max-w-xl text-4xl font-medium leading-[1.05] tracking-tight text-foreground md:text-5xl lg:text-6xl">
+                                        class="mt-6 max-w-xl text-4xl font-semibold leading-[1.05] tracking-[-0.03em] text-foreground md:text-5xl lg:text-6xl">
                                           Different industries.
                                           <span class="block text-muted">Different challenges.</span>
                                     </h2>
                               </div>
 
-                              <div class="space-y-4 text-base leading-8 text-muted md:pb-1 md:text-lg">
+                              <div v-fadeIn class="space-y-4 text-base leading-8 text-muted md:pb-1 md:text-lg">
                                     <p>
                                           Technology is most effective when it reflects the realities of the people and
                                           organizations using it.
                                     </p>
                                     <p>
                                           We work with businesses across different sectors to understand their
-                                          processes,
-                                          identify opportunities for improvement, and build practical digital solutions
-                                          around
-                                          their needs.
+                                          processes, identify opportunities for improvement, and build practical digital
+                                          solutions around their needs.
                                     </p>
                               </div>
                         </div>
 
                         <div
-                          class="relative mt-12 flex items-center gap-4 border-t border-border/70 pt-6 font-mono text-xs uppercase tracking-[0.2em] text-muted">
+                            class="relative mt-12 flex items-center gap-4 border-t border-border/70 pt-6 font-mono text-xs uppercase tracking-[0.2em] text-muted">
                               <span>Registry</span>
                               <span class="h-px flex-1 bg-border/70" />
                               <span>{{ industries.length }} sectors listed</span>
@@ -190,24 +104,20 @@
                   </section>
             </BaseContainer>
 
-            <div class="mx-auto mt-16 w-full border-y border-border/70 bg-background/80">
+            <div class="mx-auto mt-10 w-full py-4 md:mt-12">
                   <BaseContainer>
-                        <div class="divide-y divide-border/70">
+                        <div class="divide-y divide-border/70 rounded-[1.6rem] border border-border/60 bg-surface/70">
                               <NuxtLink v-for="industry in industries" :key="industry.title" :to="industry.href"
-                                class="group grid gap-6 py-10 transition-colors duration-300 hover:bg-surface/60 focus-visible:bg-surface/60 focus-visible:outline-none md:-mx-6 md:grid-cols-[140px_1fr_auto] md:items-center md:gap-10 md:px-6">
-                                    <div class="flex items-center gap-4 md:block">
+                                  class="group grid gap-6 px-5 py-8 transition-colors duration-300 hover:bg-surface/80 md:grid-cols-[140px_1fr_auto] md:items-center md:gap-10 md:px-8 md:py-10">
+                                    <div v-fadeIn class="flex items-center gap-4 md:block">
                                           <div
-                                            class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-border bg-surface text-primary transition-colors duration-300 group-hover:border-primary/40 group-hover:bg-primary/10 md:h-14 md:w-14">
+                                              class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-border bg-background/70 text-primary transition-colors duration-300 group-hover:border-primary/40 group-hover:bg-primary/10 md:h-14 md:w-14">
                                                 <component :is="industry.icon" class="size-6" aria-hidden="true" />
                                           </div>
-                                          <!-- <span
-                                            class="font-mono text-xs uppercase tracking-[0.2em] text-muted md:mt-4 md:block">
-                                                {{ industry.code }}
-                                          </span> -->
                                     </div>
 
-                                    <div>
-                                          <h3 class="text-2xl font-medium text-foreground md:text-3xl">
+                                    <div v-fadeIn>
+                                          <h3 class="text-2xl font-semibold text-foreground md:text-3xl">
                                                 {{ industry.title }}
                                           </h3>
                                           <p class="mt-2 max-w-2xl text-base leading-7 text-muted">
@@ -215,32 +125,28 @@
                                           </p>
                                           <ul class="mt-4 flex flex-wrap gap-2">
                                                 <li v-for="area in industry.areas" :key="area"
-                                                  class="rounded-full border border-primary/30 bg-background/70 px-3 py-1.5 text-xs font-medium text-foreground/80">
+                                                    class="rounded-full border border-primary/20 bg-background/70 px-3 py-1.5 text-xs font-medium text-foreground/80">
                                                       {{ area }}
                                                 </li>
                                           </ul>
                                     </div>
 
                                     <div
-                                      class="flex items-center gap-2 text-sm font-medium text-primary md:justify-self-end">
+                                        class="flex items-center gap-2 text-sm font-medium text-primary md:justify-self-end">
                                           <span class="hidden md:inline">Explore</span>
                                           <ArrowUpRight
-                                            class="size-5 transition-transform duration-300 motion-safe:group-hover:-translate-y-1 motion-safe:group-hover:translate-x-1" />
+                                              class="size-5 transition-transform duration-300 motion-safe:group-hover:-translate-y-1 motion-safe:group-hover:translate-x-1" />
                                     </div>
                               </NuxtLink>
                         </div>
                   </BaseContainer>
             </div>
 
-            <BaseContainer class="mt-16">
-                  <section
-                    class="relative overflow-hidden rounded-4xl border border-dashed border-border bg-linear-to-b from-primary/8 to-primary-hover/3 px-6 py-16 text-center shadow-[0_24px_100px_rgba(0,0,0,0.35)] backdrop-blur-2xl sm:px-10">
-                        <p
-                          class="mx-auto inline-flex items-center gap-2 rounded-full border border-border px-3 py-1 font-mono text-[11px] uppercase tracking-[0.28em] text-primary">
-                              <Plus class="size-3.5" />
-                              New Entry
-                        </p>
-                        <h2 class="mt-5 text-3xl font-medium tracking-tight text-foreground md:text-4xl">
+            <BaseContainer class="mt-10">
+                  <section v-fadeIn
+                      class="rounded-4xl border border-primary/15 bg-linear-to-br from-primary/10 via-surface/60 to-background px-8 py-12 text-center shadow-[0_24px_80px_rgba(0,0,0,0.25)] sm:px-10 lg:px-14 lg:py-16">
+                        <p class="softview-kicker">New Entry</p>
+                        <h2 class="mt-5 text-3xl font-semibold tracking-[-0.03em] text-foreground md:text-4xl">
                               Don't see your industry?
                         </h2>
                         <p class="mx-auto mt-4 max-w-2xl text-lg leading-8 text-muted">
@@ -249,7 +155,7 @@
                         </p>
                         <div class="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
                               <NuxtLink to="/contact"
-                                class="inline-flex items-center justify-center gap-2 rounded-2xl bg-primary px-6 py-4 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_40px_rgba(0,0,0,0.35)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background">
+                                  class="inline-flex items-center justify-center gap-2 rounded-2xl bg-primary px-6 py-4 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-hover">
                                     Tell Us About Your Business
                                     <ArrowRight class="size-5" />
                               </NuxtLink>

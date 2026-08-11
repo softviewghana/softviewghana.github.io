@@ -11,7 +11,7 @@
 
     <div class="relative grid grid-rows-[1fr_auto] min-h-screen">
       <Header />
-      <main class="relative pt-6 md:pt-18">
+      <main class="relative pt-6 md:pt-15">
         <NuxtPage />
       </main>
       <Footer />

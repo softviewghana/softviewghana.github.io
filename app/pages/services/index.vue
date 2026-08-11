@@ -64,40 +64,40 @@
 <template>
       <div class="pb-20">
             <PageHero eyebrow="Our Services" title="Technology Built Around Your Business"
-              description="We design and build software, digital products, and technology infrastructure that solve real business problems and create long-term value." />
+                description="We design and build software, digital products, and technology infrastructure that solve real business problems and create long-term value." />
 
-            <BaseContainer class="mt-8 md:mt-12">
-                  <section class="rounded-4xl border border-border bg-surface p-6 md:p-10">
-                        <p class="text-xs font-semibold uppercase tracking-[0.22em] text-primary">From Ideas to
-                              Reliable Technology</p>
-                        <h2 class="mt-4 max-w-2xl text-3xl font-semibold tracking-tighter text-foreground md:text-4xl">
-                              From Ideas to Reliable Technology</h2>
+            <BaseContainer class="mt-6 md:mt-10">
+                  <section v-fadeIn class="softview-panel p-8 sm:p-10 lg:p-12">
+                        <p v-fadeIn class="softview-kicker">From Ideas to Reliable Technology</p>
+                        <h2 v-fadeIn
+                            class="mt-5 max-w-2xl text-3xl font-semibold tracking-[-0.03em] text-foreground md:text-4xl">
+                              A practical approach to technology that actually works.</h2>
                         <div class="mt-6 max-w-3xl space-y-4 text-base leading-8 text-muted md:text-lg">
-                              <p>
+                              <p v-fadeIn>
                                     Every business operates differently. That's why we don't believe in
                                     one-size-fits-all technology.
                               </p>
-                              <p>
-                                    We take the time to understand your goals, processes, challenges, and users
-                                    before designing a solution around them.
+                              <p v-fadeIn>
+                                    We take the time to understand your goals, processes, challenges, and users before
+                                    designing a solution around them.
                               </p>
-                              <p>
-                                    Whether you need a custom business system, a customer-facing application, a
-                                    mobile product, or reliable infrastructure, we bring the technical expertise and
-                                    business thinking needed to take it from idea to reality.
+                              <p v-fadeIn>
+                                    Whether you need a custom business system, a customer-facing application, a mobile
+                                    product, or reliable infrastructure, we bring the technical expertise and business
+                                    thinking needed to take it from idea to reality.
                               </p>
                         </div>
                   </section>
             </BaseContainer>
 
-            <div class="mx-auto mt-16 w-full overflow-hidden border-y border-border/70 bg-background/80 py-10 md:py-16">
+            <div class="mx-auto mt-10 w-full py-6 md:mt-12 md:py-8">
                   <BaseContainer>
-                        <div class="grid gap-8 lg:grid-cols-2">
+                        <div class="grid gap-6 lg:grid-cols-2">
                               <NuxtLink v-for="service in serviceCards" :key="service.title" :to="service.href"
-                                class="group rounded-3xl border border-border bg-surface p-8 shadow-[0_18px_50px_rgba(0,0,0,0.12)] transition duration-300 hover:-translate-y-1 hover:border-primary/30">
+                                  class="group rounded-[1.6rem] border border-border/60 bg-surface/70 p-8 shadow-[0_20px_60px_rgba(0,0,0,0.18)] transition duration-300 hover:-translate-y-1 hover:border-primary/25" v-fadeIn>
                                     <div class="flex items-center gap-4">
                                           <div
-                                            class="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+                                              class="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary">
                                                 <component :is="service.icon" class="size-7" />
                                           </div>
                                           <h2 class="text-2xl font-semibold text-foreground">
@@ -111,39 +111,38 @@
 
                                     <ul class="mt-6 flex flex-wrap gap-2">
                                           <li v-for="item in service.list" :key="item"
-                                            class="rounded-full border border-border bg-background/70 px-3 py-1.5 text-xs font-medium text-foreground/80">
+                                              class="rounded-full border border-border/60 bg-background/70 px-3 py-1.5 text-xs font-medium text-foreground/80">
                                                 {{ item }}
                                           </li>
                                     </ul>
 
-                                    <span
-                                      class="mt-7 inline-flex items-center gap-2 text-sm font-medium text-primary">
+                                    <span class="mt-7 inline-flex items-center gap-2 text-sm font-medium text-primary">
                                           Learn about this service
                                           <ArrowRight
-                                            class="size-4 transition-transform duration-300 group-hover:translate-x-1" />
+                                              class="size-4 transition-transform duration-300 group-hover:translate-x-1" />
                                     </span>
                               </NuxtLink>
                         </div>
                   </BaseContainer>
             </div>
 
-            <BaseContainer class="mt-16">
+            <BaseContainer class="mt-10">
                   <section
-                    class="rounded-4xl border border-border bg-linear-to-b from-primary/8 to-primary-hover/3 px-6 py-16 text-center shadow-[0_24px_100px_rgba(0,0,0,0.35)] backdrop-blur-2xl sm:px-10">
-                        <h2 class="text-3xl font-semibold tracking-tighter text-foreground md:text-4xl">Have a
+                      class="rounded-4xl  backdrop-blur-xs border border-primary/15 bg-linear-to-br from-primary/10 via-surface/60 to-background px-8 py-12 text-center shadow-[0_24px_80px_rgba(0,0,0,0.25)] sm:px-10 lg:px-14 lg:py-16">
+                        <h2 class="text-3xl font-semibold tracking-[-0.03em] text-foreground md:text-4xl">Have a
                               Technology Challenge?</h2>
                         <p class="mx-auto mt-4 max-w-2xl text-lg leading-8 text-muted">
-                              Tell us what you're trying to build, improve, or automate. We'll help you understand
-                              the options and determine the right path forward.
+                              Tell us what you're trying to build, improve, or automate. We'll help you understand the
+                              options and determine the right path forward.
                         </p>
                         <div class="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
                               <NuxtLink to="/contact"
-                                class="inline-flex items-center justify-center gap-2 rounded-2xl bg-primary px-6 py-4 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_40px_rgba(0,0,0,0.35)]">
+                                  class="inline-flex items-center justify-center gap-2 rounded-2xl bg-primary px-6 py-4 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-hover">
                                     Start a Project
                                     <ArrowRight class="size-5" />
                               </NuxtLink>
                               <NuxtLink to="/contact"
-                                class="inline-flex items-center justify-center gap-2 rounded-2xl border border-border bg-surface px-6 py-4 font-medium text-foreground transition-all duration-300 hover:border-primary/30">
+                                  class="inline-flex items-center justify-center gap-2 rounded-2xl border border-border/70 bg-background/60 px-6 py-4 font-medium text-foreground transition-all duration-300 hover:border-primary/25 hover:text-primary">
                                     Contact Us
                               </NuxtLink>
                         </div>

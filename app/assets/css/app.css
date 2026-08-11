@@ -79,6 +79,30 @@ html {
 
             background-size: 8px 8px;
       }
+
+      .softview-panel {
+            border-radius: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            background-color: rgba(255, 255, 255, 0.04);
+            box-shadow: 0 24px 90px rgba(0, 0, 0, 0.24);
+            backdrop-filter: blur(20px);
+      }
+
+      .softview-card {
+            border-radius: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background-color: rgba(255, 255, 255, 0.03);
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+            backdrop-filter: blur(12px);
+      }
+
+      .softview-kicker {
+            @apply inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.24em] text-primary;
+      }
+
+      .softview-divider {
+            @apply h-px w-10 bg-linear-to-r from-primary/0 via-primary/80 to-primary/0;
+      }
 }
 
 @keyframes reflectionMove {
@@ -97,7 +121,8 @@ html {
 
 @layer base {
       * {
-            @apply focus-visible:outline-primary focus-visible:outline-2 focus-visible:outline-offset-2;
+            @apply focus-visible:outline-primary/50 focus-visible:outline;
+             /* focus-visible:outline-offset-2; */
       }
 
       ::selection {

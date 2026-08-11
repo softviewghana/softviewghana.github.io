@@ -15,16 +15,18 @@
 </script>
 
 <template>
-      <div
-        class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(39,201,120,0.20),transparent_38%)]" />
-        <div class="pointer-events-none absolute inset-0 bg-grid opacity-25" />
-      <section class="relative overflow-hidden pb-12 pt-16 md:pb-16 md:pt-20">
+      <section class="relative isolate overflow-hidden pb-16 pt-20 md:pb-20 md:pt-24">
+            <div
+                class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(39,201,120,0.16),transparent_40%)]" />
+            <div class="pointer-events-none absolute inset-0 bg-grid opacity-20" />
+            <div
+                class="pointer-events-none absolute inset-y-0 right-0 hidden w-1/2 bg-linear-to-l from-primary/8 to-transparent lg:block" />
 
             <BaseContainer class="relative">
                   <div v-if="breadcrumbs && breadcrumbs.length"
-                    class="mb-6 flex flex-wrap items-center gap-2 text-sm text-muted">
+                      class="mb-6 flex flex-wrap items-center gap-2 text-sm text-muted">
                         <template v-for="(item, index) in breadcrumbs" :key="item.href">
-                              <NuxtLink :to="item.href" class="hover:text-primary">
+                              <NuxtLink :to="item.href" class="transition hover:text-primary">
                                     {{ item.label }}
                               </NuxtLink>
                               <span v-if="index < breadcrumbs.length - 1" class="text-muted/60">/</span>
@@ -32,13 +34,12 @@
                   </div>
 
                   <div class="max-w-4xl">
-                        <p v-if="eyebrow" v-fadeIn
-                          class="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+                        <p v-if="eyebrow" v-fadeIn class="softview-kicker">
                               {{ eyebrow }}
                         </p>
 
-                        <h1  v-fadeIn
-                          class="mt-6 text-4xl font-semibold  text-foreground md:text-6xl md:leading-[0.95]">
+                        <h1 v-fadeIn
+                            class="mt-6 text-4xl font-semibold leading-[0.95] tracking-[-0.04em] text-foreground md:text-6xl">
                               {{ title }}
                         </h1>
 
@@ -47,9 +48,10 @@
                         </p>
                   </div>
 
-                  <div v-if="$slots.visual"  v-fadeIn
-                    class="mt-10 overflow-hidden">
-                        <slot name="visual" />
+                  <div v-if="$slots.visual" v-fadeIn class="mt-10">
+                        <div class="softview-card max-w-2xl p-5 sm:p-6">
+                              <slot name="visual" />
+                        </div>
                   </div>
             </BaseContainer>
       </section>

@@ -45,14 +45,13 @@
 
             <BaseContainer class="mt-8 md:mt-10">
                   <template v-if="insights.length">
-                        <section v-if="featuredInsight" class="rounded-4xl border border-border bg-surface p-6 md:p-8">
+                        <section v-if="featuredInsight" class="softview-panel p-6 md:p-8">
                               <div class="mb-5 flex items-center justify-between gap-3">
-                                    <p class="text-xs font-semibold uppercase tracking-[0.18em] text-primary">Featured
-                                    </p>
+                                    <span class="softview-kicker">Featured</span>
                               </div>
 
                               <div
-                                  class="rounded-[28px] border border-border bg-[radial-gradient(circle_at_top,_color-mix(in_oklab,_var(--brand)_18%,_transparent),_transparent_45%)] bg-background p-6 md:p-8">
+                                  class="softview-card rounded-[28px] bg-[radial-gradient(circle_at_top,_color-mix(in_oklab,_var(--brand)_18%,_transparent),_transparent_45%)] p-6 md:p-8">
                                     <p class="text-xs font-medium uppercase tracking-[0.22em] text-primary/80">
                                           {{ featuredInsight.category }}
                                     </p>
@@ -91,7 +90,7 @@
                         <section class="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
                               <NuxtLink v-for="insight in filteredInsights" :key="insight.slug"
                                   :to="`/insights/${insight.slug}`"
-                                  class="rounded-3xl border border-border bg-surface p-6 transition duration-300 hover:-translate-y-1 hover:border-primary/30">
+                                  class="softview-card p-6 transition duration-300 hover:-translate-y-1 hover:border-primary/30">
                                     <p class="text-xs font-semibold uppercase tracking-[0.18em] text-primary/80">
                                           {{ insight.category }}
                                     </p>
@@ -109,8 +108,7 @@
                         </section>
                   </template>
 
-                  <section v-else
-                      class="rounded-4xl border border-dashed border-border bg-surface p-8 text-center md:p-16">
+                  <section v-else class="softview-panel border border-dashed border-border/70 p-8 text-center md:p-16">
                         <h3 class="text-3xl font-semibold tracking-tighter text-foreground md:text-4xl">We're
                               Working on Something Worth Reading</h3>
                         <p class="mx-auto mt-5 max-w-2xl text-base leading-8 text-muted md:text-lg">

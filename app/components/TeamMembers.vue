@@ -2,7 +2,7 @@
       const people = [
             {
                   name: 'Kingsley Osei Opoku',
-                  role: 'CEO / Software Engineer',
+                  role: 'CEO / Full-Stack Software Engineer',
                   imageUrl: '/image/img-cto.jpg'
             },
             // {
@@ -43,7 +43,7 @@
               class="blur-[14rem] dark:blur-3xl transform-gpu -z-10 right-0 -top-2 sm:-top-24 absolute opacity-25">
                   <div
                     style="clip-path: polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)"
-                    class="dark:to-indigo-500 dark:from-cyan-400 from-purple-600 to-blue-300 bg-linear-to-tr w-351 aspect-1404/767">
+                    class="dark:to-primary/50 dark:from-cyan-400 from-purple-600 to-blue-300 bg-linear-to-tr w-351 aspect-1404/767">
                   </div>
             </div>
       </div>

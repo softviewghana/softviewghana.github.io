@@ -29,24 +29,45 @@
       const capabilities = [
             {
                   index: '01',
-                  title: 'Software Products',
+                  title: 'Custom Software Development',
                   description:
-                        'We design and build digital products that solve specific problems and create lasting value.',
-                  tags: ['SaaS', 'Platforms', 'Web applications'],
+                        'We turn unique business processes, workflows, and goals into dependable software built around the way your organization works.',
+                  tags: ['ERP systems', 'CRM solutions', 'Automation'],
             },
             {
                   index: '02',
-                  title: 'Custom Software',
+                  title: 'Web Application Development',
                   description:
-                        'We turn unique business requirements into software that fits the way an organization actually works.',
-                  tags: ['Business systems', 'Automation', 'Integrations'],
+                        'We create responsive, scalable web applications that help customers, teams, and partners get meaningful work done.',
+                  tags: ['Business websites', 'Portals', 'SaaS platforms'],
             },
             {
                   index: '03',
-                  title: 'Digital Experiences',
+                  title: 'Mobile Application Development',
                   description:
-                        'We create fast, thoughtful digital experiences that help organizations communicate, connect, and grow.',
-                  tags: ['Websites', 'UX / UI', 'Digital presence'],
+                        'We design cross-platform mobile apps that keep services, information, and business processes available wherever users are.',
+                  tags: ['Customer apps', 'Staff tools', 'Offline-ready products'],
+            },
+            {
+                  index: '04',
+                  title: 'Cloud & DevOps',
+                  description:
+                        'We build the cloud infrastructure and delivery practices that keep applications secure, resilient, and ready to scale.',
+                  tags: ['Cloud migration', 'CI/CD', 'Monitoring'],
+            },
+            {
+                  index: '05',
+                  title: 'IT Infrastructure & Networking',
+                  description:
+                        'We design and support the networks, systems, and security foundations that keep businesses connected and productive.',
+                  tags: ['Networking', 'Wi-Fi', 'Security'],
+            },
+            {
+                  index: '06',
+                  title: 'UI/UX Design',
+                  description:
+                        'We create clear, intuitive digital experiences that connect user needs with the goals behind the product.',
+                  tags: ['Research', 'Interfaces', 'Design systems'],
             },
       ]
 
@@ -67,53 +88,11 @@
 
 <template>
       <div class="pb-20">
-            <!-- ============================================================
-         HERO
-    ============================================================= -->
-            <!-- <section class="relative isolate border-b border-white/6"> -->
-            <!-- 
-                  <div
-                    class="mx-auto flex min-h-[calc(100vh-5rem)] max-w-7xl flex-col justify-center px-6 py-24 sm:px-8 lg:px-12">
-                        <div class="max-w-5xl">
-                              <div
-                                class="mb-8 flex items-center gap-3 text-[11px] font-medium uppercase tracking-[0.24em] text-zinc-500">
-                                    <span class="h-px w-8 bg-emerald-400/70" />
-                                    <span>About Softview Ghana</span>
-                              </div>
-
-                              <h1
-                                class="max-w-5xl text-5xl font-medium leading-[0.98] tracking-[-0.045em] text-white sm:text-6xl md:text-7xl lg:text-[88px]">
-                                    Technology built
-                                    <span class="text-zinc-500"> with purpose.</span>
-                              </h1>
-
-                              <div class="mt-10 grid gap-10 lg:grid-cols-[1fr_360px] lg:items-end">
-                                    <p class="max-w-2xl text-lg leading-8 text-zinc-400 sm:text-xl">
-                                          Softview Ghana is an IT company building thoughtful
-                                          software, digital products, and experiences that solve real
-                                          problems and help organizations move forward.
-                                    </p>
-
-                                    <div class="border-l border-white/10 pl-5 text-xs leading-6 text-zinc-500">
-                                          <div class="font-mono text-zinc-400">
-                                                SOFTVIEW / GHANA
-                                          </div>
-                                          <div>Software · Digital Products · Technology</div>
-                                    </div>
-                              </div>
-                        </div>
-
-                        <div class="mt-20 flex items-center gap-4 text-[10px] uppercase tracking-[0.2em] text-zinc-600">
-                              <span>Scroll to explore</span>
-                              <span class="h-px w-16 bg-zinc-800" />
-                        </div>
-                  </div> -->
-            <!-- </section> -->
             <PageHero eyebrow="About Softview Ghana" title="Technology built with purpose"
                 description="Softview Ghana is an IT company building thoughtful software, digital products, and experiences that solve real problems and help organizations move forward.">
                   <template #visual>
-                        <div class="border-l border-white/10 pl-5 text-xs leading-6">
-                              <div class="font-mono text-muted">
+                        <div class="border-l border-border/70 pl-5 text-xs leading-6 text-muted">
+                              <div class="text-foreground">
                                     SOFTVIEW GHANA
                               </div>
                               <div>Software · Digital Products · Technology</div>
@@ -121,124 +100,134 @@
                   </template>
             </PageHero>
 
-            <section class="border-b border-white/6">
-                  <div class="mx-auto max-w-7xl px-6 py-24 sm:px-8 lg:px-12 lg:py-32">
-                        <div class="grid gap-16 lg:grid-cols-[280px_1fr] lg:gap-24">
-                              <div>
-                                    <p class="text-xs font-medium uppercase tracking-[0.22em] text-zinc-500">
-                                          Our story
-                                    </p>
+            <BaseContainer class="mt-4 md:mt-8">
+                  <section v-fadeIn class="softview-panel p-8 sm:p-10 lg:p-12">
+                        <div class="grid gap-10 lg:grid-cols-[260px_1fr] lg:gap-16">
+                              <div v-fadeIn>
+                                    <p class="softview-kicker">Our story</p>
+                                    <div class="mt-6 space-y-4 text-sm leading-7 text-muted">
+                                          <p>
+                                                Businesses are increasingly dependent on technology, yet technology
+                                                itself can often
+                                                become the source of unnecessary complexity.
+                                          </p>
+                                          <p>
+                                                We started Softview with a simple idea: build technology that is useful,
+                                                thoughtfully designed, and genuinely suited to the people and
+                                                organizations using
+                                                it.
+                                          </p>
+                                    </div>
                               </div>
 
-                              <div class="max-w-4xl">
-                                    <h2
-                                        class="text-3xl font-medium leading-tight tracking-[-0.03em] text-white sm:text-4xl lg:text-5xl">
+                              <div class="space-y-6">
+                                    <h2 v-fadeIn
+                                        class="text-3xl font-semibold leading-tight tracking-[-0.03em] text-foreground sm:text-4xl lg:text-5xl">
                                           Technology should make
-                                          <span class="text-zinc-500">things better.</span>
+                                          <span class="text-primary">things better.</span>
                                     </h2>
 
-                                    <div class="mt-10 grid gap-8 text-base leading-8 text-zinc-400 md:grid-cols-2">
+                                    <div v-fadeIn class="grid gap-4 text-base leading-8 text-muted md:grid-cols-2">
                                           <p>
-                                                Businesses are increasingly dependent on technology, yet
-                                                technology itself can often become the source of unnecessary
-                                                complexity.
+                                                That means looking beyond simply delivering software. We take time to
+                                                understand the
+                                                problem, the people involved, and the environment in which a solution
+                                                needs to work.
                                           </p>
-
                                           <p>
-                                                We started Softview with a simple idea: build technology that
-                                                is useful, thoughtfully designed, and genuinely suited to the
-                                                people and organizations using it.
+                                                From websites and business systems to products of our own, we approach
+                                                every project
+                                                with the same attention to detail: build something that works today and
+                                                has room to
+                                                grow tomorrow.
                                           </p>
+                                    </div>
 
-                                          <p>
-                                                That means looking beyond simply delivering software. We take
-                                                time to understand the problem, the people involved, and the
-                                                environment in which a solution needs to work.
-                                          </p>
-
-                                          <p>
-                                                From websites and business systems to products of our own, we
-                                                approach every project with the same attention to detail:
-                                                build something that works today and has room to grow
-                                                tomorrow.
+                                    <div v-fadeIn class="softview-card p-6">
+                                          <div
+                                              class="flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-primary">
+                                                <span class="softview-divider" />
+                                                <span>Why we do it</span>
+                                          </div>
+                                          <p class="mt-4 max-w-2xl text-sm leading-7 text-muted">
+                                                We believe good technology should feel clear, useful, and dependable —
+                                                not
+                                                overbuilt, not confusing, and never disconnected from the people who
+                                                rely on it.
                                           </p>
                                     </div>
                               </div>
                         </div>
-                  </div>
-            </section>
-            <section class="border-b border-white/6">
-                  <div class="mx-auto max-w-7xl px-6 py-24 sm:px-8 lg:px-12 lg:py-32">
-                        <div class="mb-16 max-w-2xl">
-                              <p class="text-xs font-medium uppercase tracking-[0.22em] text-zinc-500">
-                                    What guides us
-                              </p>
+                  </section>
+            </BaseContainer>
 
-                              <h2 class="mt-5 text-3xl font-medium tracking-[-0.03em] text-white sm:text-4xl">
+            <BaseContainer class="mt-6 md:mt-10">
+                  <section v-fadeIn class="softview-panel p-8 sm:p-10 lg:p-12">
+                        <div class="mb-10 max-w-2xl">
+                              <p class="softview-kicker">What guides us</p>
+                              <h2 class="mt-5 text-3xl font-semibold tracking-[-0.03em] text-foreground sm:text-4xl">
                                     Principles behind
-                                    <span class="text-zinc-500">the work.</span>
+                                    <span class="text-primary">the work.</span>
                               </h2>
                         </div>
 
-                        <div class="grid border-t border-white/8 md:grid-cols-2">
+                        <div class="grid gap-4 md:grid-cols-2">
                               <article v-for="value in values" :key="value.number"
-                                  class="group border-b border-white/8 py-10 md:px-8 md:first:pl-0 md:nth-child(odd):border-r md:nth-child(even):pr-0 lg:py-12">
-                                    <div class="flex gap-6">
-                                          <span
-                                              class="font-mono text-[11px] text-zinc-600 transition-colors duration-300 group-hover:text-emerald-400/70">
+                                  class="group rounded-[1.4rem] border border-border/60 bg-background/70 p-6 transition duration-300 hover:-translate-y-1 hover:border-primary/25"
+                                  v-fadeIn>
+                                    <div class="flex gap-4">
+                                          <span class="font-mono text-[11px] text-primary/70">
                                                 {{ value.number }}
                                           </span>
 
                                           <div>
-                                                <h3 class="text-xl font-medium tracking-tight text-zinc-100">
+                                                <h3 class="text-lg font-semibold tracking-tight text-foreground">
                                                       {{ value.title }}
                                                 </h3>
-
-                                                <p class="mt-4 max-w-md text-sm leading-7 text-zinc-500">
+                                                <p class="mt-3 text-sm leading-7 text-muted">
                                                       {{ value.description }}
                                                 </p>
                                           </div>
                                     </div>
                               </article>
                         </div>
-                  </div>
-            </section>
+                  </section>
+            </BaseContainer>
 
-            <section class="border-b border-white/6">
-                  <div class="mx-auto max-w-7xl px-6 py-24 sm:px-8 lg:px-12 lg:py-32">
-                        <div class="grid gap-16 lg:grid-cols-[280px_1fr] lg:gap-24">
+            <TeamMembers class="mt-6 md:mt-10" />
+
+            <BaseContainer class="mt-6 md:mt-10">
+                  <section v-fadeIn class="softview-panel p-8 sm:p-10 lg:p-12">
+                        <div class="grid gap-10 lg:grid-cols-[260px_1fr] lg:gap-16">
                               <div>
-                                    <p class="text-xs font-medium uppercase tracking-[0.22em] text-zinc-500">
-                                          What we do
-                                    </p>
-
-                                    <p class="mt-5 max-w-xs text-sm leading-7 text-zinc-600">
-                                          Different challenges require different solutions. Our work
-                                          spans products, software, and digital experiences.
+                                    <p class="softview-kicker">What we do</p>
+                                    <p class="mt-5 max-w-xs text-sm leading-7 text-muted">
+                                          From custom software and mobile products to cloud infrastructure and design,
+                                          we build technology that helps organizations operate with more confidence.
                                     </p>
                               </div>
 
-                              <div class="divide-y divide-white/8 border-y border-white/8">
+                              <div class="space-y-4">
                                     <article v-for="capability in capabilities" :key="capability.index"
-                                        class="group py-10 lg:py-12">
-                                          <div class="grid gap-8 lg:grid-cols-[72px_1fr_1fr] lg:items-start">
-                                                <span
-                                                    class="font-mono text-[11px] text-zinc-600 transition-colors group-hover:text-emerald-400/70">
+                                        class="rounded-[1.4rem] border border-border/60 bg-background/70 p-6 transition duration-300 hover:border-primary/25" 
+                                        v-fadeIn>
+                                          <div class="grid gap-6 lg:grid-cols-[72px_1fr_1fr] lg:items-start">
+                                                <span class="font-mono text-[11px] text-primary/70">
                                                       {{ capability.index }}
                                                 </span>
 
-                                                <h3 class="text-2xl font-medium tracking-tight text-white">
+                                                <h3 class="text-xl font-semibold tracking-tight text-foreground">
                                                       {{ capability.title }}
                                                 </h3>
 
                                                 <div>
-                                                      <p class="max-w-md text-sm leading-7 text-zinc-500">
+                                                      <p class="max-w-md text-sm leading-7 text-muted">
                                                             {{ capability.description }}
                                                       </p>
 
-                                                      <div class="mt-6 flex flex-wrap gap-2">
+                                                      <div class="mt-5 flex flex-wrap gap-2">
                                                             <span v-for="tag in capability.tags" :key="tag"
-                                                                class="rounded-full border border-white/8 px-3 py-1.5 text-[10px] uppercase tracking-[0.12em] text-zinc-600">
+                                                                class="rounded-full border border-border/60 bg-surface/70 px-3 py-1.5 text-[10px] uppercase tracking-[0.14em] text-muted">
                                                                   {{ tag }}
                                                             </span>
                                                       </div>
@@ -247,166 +236,97 @@
                                     </article>
                               </div>
                         </div>
-                  </div>
-            </section>
+                  </section>
+            </BaseContainer>
 
-
-            <section class="relative overflow-hidden border-b border-white/6">
-                  <div class="pointer-events-none absolute inset-y-0 right-0 w-1/2 bg-linear-to-l from-emerald-500/[0.035] to-transparent"
-                      aria-hidden="true" />
-
-                  <div class="mx-auto max-w-7xl px-6 py-24 sm:px-8 lg:px-12 lg:py-36">
-                        <div class="relative max-w-5xl">
-                              <p class="text-xs font-medium uppercase tracking-[0.22em] text-zinc-500">
-                                    Where we build
-                              </p>
-
-                              <h2
-                                  class="mt-8 text-4xl font-medium leading-[1.05] tracking-[-0.04em] text-white sm:text-5xl lg:text-7xl">
-                                    Built from Ghana.
-                                    <br />
-                                    <span class="text-zinc-600">Designed for what's next.</span>
-                              </h2>
-
-                              <div class="mt-12 grid gap-10 md:grid-cols-[1fr_280px] md:items-end">
-                                    <p class="max-w-2xl text-lg leading-8 text-zinc-400">
-                                          Ghana is where we build, learn, and understand the realities of
-                                          the businesses and communities we serve. But our ambition is not
-                                          limited by geography.
+            <BaseContainer class="mt-6 md:mt-10">
+                  <section v-fadeIn class="softview-panel overflow-hidden">
+                        <div
+                            class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.12),transparent_32%)]" />
+                        <div class="relative grid gap-8 p-8 sm:p-10 lg:grid-cols-[1fr_320px] lg:p-12">
+                              <div v-fadeIn>
+                                    <p class="softview-kicker">Built from Ghana</p>
+                                    <h2
+                                        class="mt-6 text-3xl font-semibold tracking-[-0.03em] text-foreground sm:text-4xl">
+                                          Built from Ghana.
+                                          <span class="text-primary">Designed for what's next.</span>
+                                    </h2>
+                                    <p class="mt-5 max-w-2xl text-base leading-8 text-muted">
+                                          Ghana is where we build, learn, and understand the realities of the businesses
+                                          and
+                                          communities we serve. But our ambition is not limited by geography.
                                     </p>
+                              </div>
 
-                                    <div class="font-mono text-[10px] uppercase tracking-[0.16em] text-zinc-600">
-                                          <div>05°33′N</div>
-                                          <div>00°12′W</div>
-                                          <div class="mt-2 text-zinc-500">Accra · Ghana</div>
-                                    </div>
+                              <div v-fadeIn class="rounded-[1.4rem] border border-border/60 bg-background/70 p-6">
+                                    <p class="font-mono text-[10px] uppercase tracking-[0.16em] text-primary/70">
+                                          05°33'N · 00°12'W
+                                    </p>
+                                    <p class="mt-3 text-sm leading-7 text-muted">
+                                          Accra, Ghana. A base for building with insight, discipline, and long-term
+                                          thinking.
+                                    </p>
                               </div>
                         </div>
-                  </div>
-            </section>
+                  </section>
+            </BaseContainer>
 
-
-            <section class="border-b border-white/6">
-                  <div class="mx-auto max-w-7xl px-6 py-24 sm:px-8 lg:px-12 lg:py-32">
-                        <div class="grid gap-16 lg:grid-cols-[280px_1fr] lg:gap-24">
+            <BaseContainer class="mt-6 md:mt-10">
+                  <section v-fadeIn class="softview-panel p-8 sm:p-10 lg:p-12">
+                        <div class="grid gap-10 lg:grid-cols-[260px_1fr] lg:gap-16">
                               <div>
-                                    <p class="text-xs font-medium uppercase tracking-[0.22em] text-zinc-500">
-                                          How we work
-                                    </p>
+                                    <p class="softview-kicker">How we work</p>
                               </div>
 
                               <div>
                                     <h2
-                                        class="max-w-3xl text-3xl font-medium leading-tight tracking-[-0.03em] text-white sm:text-4xl">
+                                        class="max-w-3xl text-3xl font-semibold leading-tight tracking-[-0.03em] text-foreground sm:text-4xl">
                                           Good technology starts with
-                                          <span class="text-zinc-500">understanding.</span>
+                                          <span class="text-primary">understanding.</span>
                                     </h2>
 
-                                    <div class="mt-14">
+                                    <div class="mt-10 space-y-4">
                                           <div v-for="(principle, index) in principles" :key="principle"
-                                              class="group flex items-center gap-6 border-t border-white/8 py-6">
-                                                <span class="w-8 font-mono text-[10px] text-zinc-700">
+                                              class="flex items-center gap-4 rounded-[1.2rem] border border-border/60 bg-background/70 px-5 py-4 transition duration-300 hover:border-primary/25" v-fadeIn>
+                                                <span class="w-8 font-mono text-[10px] text-primary/70">
                                                       0{{ index + 1 }}
                                                 </span>
-
-                                                <span
-                                                    class="text-lg text-zinc-400 transition-colors duration-300 group-hover:text-white">
+                                                <span class="text-base text-foreground">
                                                       {{ principle }}
                                                 </span>
-
-                                                <span
-                                                    class="ml-auto text-zinc-700 transition-all duration-300 group-hover:translate-x-1 group-hover:text-emerald-400">
-                                                      →
-                                                </span>
                                           </div>
                                     </div>
                               </div>
                         </div>
-                  </div>
-            </section>
+                  </section>
+            </BaseContainer>
 
-            <section class="border-b border-white/6">
-                  <div class="mx-auto max-w-7xl px-6 py-24 sm:px-8 lg:px-12 lg:py-32">
-                        <div class="relative overflow-hidden rounded-2xl border border-white/8 bg-white/2">
-                              <div class="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(16,185,129,0.07),transparent_35%)]"
-                                  aria-hidden="true" />
+            <BaseContainer class="mt-6 md:mt-10">
+                  <section v-fadeIn
+                      class="rounded-4xl border border-primary/15 bg-linear-to-br from-primary/10 via-surface/60 to-background px-8 py-12 text-center shadow-[0_24px_80px_rgba(0,0,0,0.25)] sm:px-10 lg:px-14 lg:py-16">
+                        <p class="softview-kicker">Let's build something meaningful</p>
+                        <h2
+                            class="mx-auto mt-6 max-w-4xl text-4xl font-semibold leading-[1.05] tracking-[-0.04em] text-foreground sm:text-5xl lg:text-6xl">
+                              Have an idea worth
+                              <span class="text-primary">building?</span>
+                        </h2>
+                        <p class="mx-auto mt-5 max-w-2xl text-base leading-8 text-muted">
+                              Whether you're starting something new or improving something that already exists, we'd
+                              love to hear
+                              what you're working on.
+                        </p>
 
-                              <div class="relative grid gap-12 p-8 sm:p-12 lg:grid-cols-[1fr_320px] lg:p-16">
-                                    <div>
-                                          <div
-                                              class="flex items-center gap-3 text-[10px] font-medium uppercase tracking-[0.2em] text-emerald-400/70">
-                                                <span class="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-                                                Building our own
-                                          </div>
-
-                                          <h2
-                                              class="mt-7 max-w-2xl text-3xl font-medium tracking-[-0.03em] text-white sm:text-4xl">
-                                                We don't just build for others.
-                                                <span class="text-zinc-500">
-                                                      We build products too.
-                                                </span>
-                                          </h2>
-
-                                          <p class="mt-6 max-w-2xl text-sm leading-7 text-zinc-500">
-                                                Working with businesses gives us a close view of the
-                                                challenges organizations face every day. We use those insights
-                                                to create products that make complex work simpler and more
-                                                accessible.
-                                          </p>
-                                    </div>
-
-                                    <div class="flex items-end lg:justify-end">
-                                          <div class="w-full border-l border-white/8 pl-6 lg:max-w-65">
-                                                <p
-                                                    class="font-mono text-[10px] uppercase tracking-[0.15em] text-zinc-600">
-                                                      Product studio
-                                                </p>
-
-                                                <p class="mt-3 text-sm leading-6 text-zinc-400">
-                                                      Turning real-world problems into useful digital products.
-                                                </p>
-                                          </div>
-                                    </div>
-                              </div>
+                        <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+                              <NuxtLink to="/contact"
+                                  class="inline-flex items-center gap-3 rounded-full bg-primary px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-primary-hover">
+                                    Start a conversation
+                              </NuxtLink>
+                              <NuxtLink to="/"
+                                  class="inline-flex items-center rounded-full border border-border/70 bg-background/60 px-6 py-3.5 text-sm font-semibold text-foreground transition hover:border-primary/25 hover:text-primary">
+                                    Back to home
+                              </NuxtLink>
                         </div>
-                  </div>
-            </section>
-
-            <section>
-                  <div class="mx-auto max-w-7xl px-6 py-28 sm:px-8 lg:px-12 lg:py-40">
-                        <div class="text-center">
-                              <p class="text-xs font-medium uppercase tracking-[0.22em] text-zinc-600">
-                                    Let's build something meaningful
-                              </p>
-
-                              <h2
-                                  class="mx-auto mt-7 max-w-4xl text-4xl font-medium leading-[1.05] tracking-[-0.04em] text-white sm:text-5xl lg:text-7xl">
-                                    Have an idea worth
-                                    <span class="text-zinc-600">building?</span>
-                              </h2>
-
-                              <p class="mx-auto mt-7 max-w-xl text-base leading-7 text-zinc-500">
-                                    Whether you're starting something new or improving something that
-                                    already exists, we'd love to hear what you're working on.
-                              </p>
-
-                              <div class="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
-                                    <NuxtLink to="/contact"
-                                        class="group inline-flex items-center gap-3 rounded-full bg-white px-6 py-3.5 text-sm font-medium text-zinc-950 transition-all duration-300 hover:bg-zinc-200">
-                                          Start a conversation
-
-                                          <span class="transition-transform duration-300 group-hover:translate-x-1">
-                                                →
-                                          </span>
-                                    </NuxtLink>
-
-                                    <NuxtLink to="/"
-                                        class="inline-flex items-center rounded-full border border-white/10 px-6 py-3.5 text-sm font-medium text-zinc-400 transition-colors hover:border-white/20 hover:text-white">
-                                          Back to home
-                                    </NuxtLink>
-                              </div>
-                        </div>
-                  </div>
-            </section>
+                  </section>
+            </BaseContainer>
       </div>
 </template>

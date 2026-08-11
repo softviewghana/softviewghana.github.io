@@ -6,303 +6,274 @@
       });
 
       const productCapabilities = [
-            'Admissions',
-            'Student Management',
-            'Academics',
-            'Attendance',
-            'Assessments & Examinations',
-            'Automatic Report Cards',
-            'Fee Management',
-            'Accounting & Payroll',
-            'Communication (SMS, Email, Telegram)',
-            'Parent & Teacher Portals',
-            'Timetable & Calendar',
-            'Reports & Analytics',
+            'Admissions and enrollment',
+            'Student records and academics',
+            'Attendance and assessments',
+            'Report cards and timetables',
+            'Fees, accounting, and payroll',
+            'Parent, teacher, and staff portals',
+            'Communication and notifications',
+            'Reports and operational insight',
+      ];
+
+      const audiences = [
+            {
+                  title: 'School leaders',
+                  description: 'A clearer view of the operations, finances, and activity that need attention across the school.',
+                  label: 'Lead with visibility',
+            },
+            {
+                  title: 'Teaching teams',
+                  description: 'Practical tools for class records, assessments, attendance, and communication without duplicate work.',
+                  label: 'Teach with focus',
+            },
+            {
+                  title: 'Parents and guardians',
+                  description: 'A dependable way to stay informed about fees, performance, announcements, and school life.',
+                  label: 'Stay connected',
+            },
       ];
 
       const productBenefits = [
             {
-                  title: 'One Integrated Platform',
-                  description: 'Bring essential school operations together instead of relying on disconnected tools and manual processes.',
+                  title: 'One connected source of truth',
+                  description: 'Essential school activity lives in one integrated platform instead of disconnected tools and spreadsheets.',
             },
             {
-                  title: 'Better Operational Visibility',
-                  description: 'Give school leaders access to the information they need to understand what\'s happening across the school.',
+                  title: 'A better rhythm for daily work',
+                  description: 'Routine tasks become more consistent, easier to follow, and less dependent on manual coordination.',
             },
             {
-                  title: 'Designed for Real School Workflows',
-                  description: 'The platform is designed around the operational needs of private basic schools.',
+                  title: 'Designed for Ghanaian basic schools',
+                  description: 'The product is shaped around the working realities of private basic schools and the people who run them.',
             },
             {
-                  title: 'Accessible From Anywhere',
-                  description: 'Cloud-based access gives authorized users the ability to work with school information wherever they are.',
-            },
-            {
-                  title: 'Built to Grow',
-                  description: 'The platform is designed to support schools as their operations and needs evolve.',
+                  title: 'Ready to grow with the school',
+                  description: 'Cloud-based access and a flexible foundation support the school as needs, staff, and enrollment evolve.',
             },
       ];
 </script>
 
 <template>
       <div class="pb-20">
-            <PageHero eyebrow="Our Products" title="Technology We Build, Own, and Operate"
-                description="We don't only build software for businesses. We create and operate digital products designed to solve real problems and create lasting value.">
-                  <template #visual>
-                        <div class="grid gap-5 bg-background p-4 md:grid-cols-[0.9fr_1.1fr] md:p-6">
-                              <div class="rounded-2xl border border-border bg-surface p-4">
-                                    <div
-                                        class="mb-4 flex items-center justify-between text-xs font-medium uppercase tracking-[0.2em] text-muted">
-                                          <span>Product</span>
-                                          <span
-                                              class="rounded-full border border-primary/30 bg-primary/10 px-2 py-1 text-primary">Live</span>
-                                    </div>
-                                    <div class="space-y-3">
-                                          <div class="h-2.5 w-20 rounded-full bg-primary/30" />
-                                          <div class="h-2 w-32 rounded-full bg-border" />
-                                          <div class="grid grid-cols-2 gap-3 pt-2">
-                                                <div class="rounded-xl border border-border bg-background/80 p-3">
-                                                      <div class="text-[10px] uppercase tracking-[0.2em] text-muted">
-                                                            Fees Collected</div>
-                                                      <div class="mt-2 text-xl font-semibold text-foreground">GH₵92K
-                                                      </div>
-                                                </div>
-                                                <div class="rounded-xl border border-border bg-background/80 p-3">
-                                                      <div class="text-[10px] uppercase tracking-[0.2em] text-muted">
-                                                            Students</div>
-                                                      <div class="mt-2 text-xl font-semibold text-foreground">1,486
-                                                      </div>
-                                                </div>
+            <PageHero eyebrow="Softview Products" title="Technology Built for Work That Matters"
+                description="We build and operate focused digital products that solve real operational problems for the organizations they serve.">
+                  <!-- <template #visual>
+                        <div class="grid gap-4 sm:grid-cols-[0.82fr_1.18fr]">
+                              <div class="softview-card flex flex-col justify-between p-5">
+                                    <div>
+                                          <div class="flex items-center justify-between">
+                                                <span
+                                                    class="text-[10px] font-semibold uppercase tracking-[0.22em] text-muted">Product
+                                                      no. 01</span>
+                                                <span
+                                                    class="rounded-full border border-primary/20 bg-primary/10 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-primary">Live</span>
                                           </div>
+                                          <p class="mt-8 text-2xl font-semibold tracking-tighter text-foreground">
+                                                eSchool<br>Ghana</p>
+                                          <p class="mt-3 text-sm leading-6 text-muted">
+                                                The operating system for basic schools.
+                                          </p>
+                                    </div>
+                                    <div class="mt-8 flex items-center gap-2 text-xs font-medium text-primary">
+                                          <span class="size-2 rounded-full bg-primary" />
+                                          Built and operated by Softview
                                     </div>
                               </div>
 
-                              <div class="rounded-2xl border border-border bg-background/80 p-4">
-                                    <div class="mb-4 flex items-center justify-between border-b border-border pb-3">
+                              <div class="softview-card p-4 sm:p-5">
+                                    <div class="flex items-center justify-between border-b border-border/70 pb-3">
                                           <div>
-                                                <div class="text-[10px] uppercase tracking-[0.2em] text-muted">Overview
-                                                </div>
-                                                <div class="mt-1 text-lg font-semibold text-foreground">School Operating
-                                                      System</div>
+                                                <p
+                                                    class="text-[10px] font-semibold uppercase tracking-[0.2em] text-muted">
+                                                      eSchool Ghana</p>
+                                                <p class="mt-1 text-sm font-medium text-foreground">School day overview
+                                                </p>
                                           </div>
-                                          <div class="flex items-center gap-2 text-xs text-primary">
+                                          <div class="flex items-center gap-1.5 text-xs text-primary">
                                                 <span class="size-2 rounded-full bg-primary" />
-                                                Live
+                                                Connected
                                           </div>
                                     </div>
-                                    <div class="grid grid-cols-3 gap-3 text-center">
-                                          <div class="rounded-xl border border-border bg-surface p-3">
-                                                <div class="text-[10px] uppercase tracking-[0.2em] text-muted">Students
-                                                </div>
-                                                <div class="mt-2 text-2xl font-semibold text-foreground">1,486</div>
+                                    <div class="mt-4 grid grid-cols-3 gap-2 sm:gap-3">
+                                          <div class="rounded-lg border border-border/70 bg-background/70 p-2.5">
+                                                <p class="text-[9px] uppercase tracking-[0.14em] text-muted">Admissions
+                                                </p>
+                                                <div class="mt-3 h-1.5 w-4/5 rounded-full bg-primary/70" />
                                           </div>
-                                          <div class="rounded-xl border border-border bg-surface p-3">
-                                                <div class="text-[10px] uppercase tracking-[0.2em] text-muted">
-                                                      Attendance</div>
-                                                <div class="mt-2 text-2xl font-semibold text-foreground">96.4%</div>
+                                          <div class="rounded-lg border border-border/70 bg-background/70 p-2.5">
+                                                <p class="text-[9px] uppercase tracking-[0.14em] text-muted">Academics
+                                                </p>
+                                                <div class="mt-3 h-1.5 w-3/5 rounded-full bg-primary/60" />
                                           </div>
-                                          <div class="rounded-xl border border-border bg-surface p-3">
-                                                <div class="text-[10px] uppercase tracking-[0.2em] text-muted">Fees
-                                                </div>
-                                                <div class="mt-2 text-2xl font-semibold text-foreground">GH₵92K</div>
+                                          <div class="rounded-lg border border-border/70 bg-background/70 p-2.5">
+                                                <p class="text-[9px] uppercase tracking-[0.14em] text-muted">Finance</p>
+                                                <div class="mt-3 h-1.5 w-2/3 rounded-full bg-primary/80" />
                                           </div>
                                     </div>
-                                    <div class="mt-4 rounded-2xl border border-border bg-background p-4">
+                                    <div class="mt-4 rounded-lg border border-border/70 bg-background/60 p-3">
                                           <div
-                                              class="mb-3 flex items-center justify-between text-xs uppercase tracking-[0.2em] text-muted">
-                                                <span>Student performance</span>
-                                                <span>Q3</span>
+                                              class="flex items-center justify-between text-[10px] font-medium uppercase tracking-[0.16em] text-muted">
+                                                <span>School operations</span>
+                                                <span class="text-primary">In one place</span>
                                           </div>
-                                          <div
-                                              class="h-20 rounded-xl bg-[linear-gradient(135deg,color-mix(in_oklab,var(--brand)_16%,transparent),color-mix(in_oklab,var(--foreground)_2%,transparent))] p-3">
-                                                <div class="flex h-full items-end gap-2">
-                                                      <span class="w-full rounded-t-md bg-primary/60"
-                                                          style="height: 35%" />
-                                                      <span class="w-full rounded-t-md bg-primary/40"
-                                                          style="height: 58%" />
-                                                      <span class="w-full rounded-t-md bg-primary/50"
-                                                          style="height: 72%" />
-                                                      <span class="w-full rounded-t-md bg-primary/70"
-                                                          style="height: 86%" />
-                                                      <span class="w-full rounded-t-md bg-primary/80"
-                                                          style="height: 100%" />
-                                                </div>
+                                          <div class="mt-3 grid grid-cols-4 gap-2">
+                                                <div class="h-10 rounded-md bg-primary/15" />
+                                                <div class="h-10 rounded-md bg-primary/10" />
+                                                <div class="h-10 rounded-md bg-primary/20" />
+                                                <div class="h-10 rounded-md bg-primary/12" />
                                           </div>
                                     </div>
                               </div>
                         </div>
-                  </template>
+                  </template> -->
             </PageHero>
 
-            <BaseContainer class="mt-8 md:mt-16">
-                  <section id="eschool-ghana" class="rounded-4xl border border-border bg-surface p-6 md:p-10">
-                        <div class="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-                              <div>
-                                    <p class="text-xs font-semibold uppercase tracking-[0.22em] text-primary">Featured
-                                          Product</p>
+            <BaseContainer class="mt-8 md:mt-12">
+                  <section id="eschool-ghana" class="softview-panel p-6 md:p-10 lg:p-12">
+                        <div
+                            class="flex flex-col gap-6 border-b border-border/70 pb-8 md:flex-row md:items-end md:justify-between">
+                              <div class="max-w-2xl">
+                                    <span class="softview-kicker">Featured product</span>
                                     <h2
-                                        class="mt-4 text-3xl font-semibold tracking-tighter text-foreground md:text-5xl">
+                                        class="mt-5 text-4xl font-semibold tracking-tighter text-foreground md:text-6xl">
                                           eSchool
                                           Ghana</h2>
                               </div>
                               <p class="max-w-xl text-base leading-8 text-muted md:text-lg">
-                                    The School Operating System built for basic schools in Ghana.
+                                    A connected school operating system that helps private basic schools spend less time
+                                    managing
+                                    scattered information and more time moving the school forward.
                               </p>
                         </div>
 
-                        <div class="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
+                        <div class="mt-10 grid gap-10 xl:grid-cols-[0.9fr_1.1fr] xl:items-start">
                               <div>
-                                    <p class="text-base leading-8 text-muted md:text-lg">
-                                          eSchool Ghana connects admissions, academics, attendance, fees, accounting,
-                                          communication, and reporting in one platform—so school leaders always see
-                                          the full picture.
+                                    <span class="text-xs font-semibold uppercase tracking-[0.22em] text-primary">One
+                                          platform, one
+                                          school view</span>
+                                    <h3
+                                        class="mt-4 text-3xl font-semibold tracking-tighter text-foreground md:text-4xl">
+                                          Every part of the school can work from the same picture.
+                                    </h3>
+                                    <p class="mt-5 text-base leading-8 text-muted md:text-lg">
+                                          eSchool Ghana brings admissions, learning, finance, communication, and
+                                          reporting into a
+                                          single practical workspace. It gives each person the context they need while
+                                          keeping the
+                                          whole school aligned.
                                     </p>
 
-                                    <div class="mt-8 grid gap-3 sm:grid-cols-2">
-                                          <div v-for="item in productCapabilities" :key="item"
-                                              class="rounded-2xl border border-border bg-background/70 px-4 py-3 text-sm text-foreground/85">
-                                                {{ item }}
-                                          </div>
+                                    <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+                                          <NuxtLink to="https://eschoolghana.com" target="_blank" rel="noopener"
+                                              external
+                                              class="inline-flex items-center justify-center rounded-xl bg-primary px-5 py-3 font-medium text-white transition hover:bg-primary-hover">
+                                                Explore eSchool Ghana
+                                          </NuxtLink>
+                                          <NuxtLink to="https://eschoolghana.com/watch-demo" target="_blank"
+                                              rel="noopener" external
+                                              class="inline-flex items-center justify-center rounded-xl border border-border bg-background/60 px-5 py-3 font-medium text-foreground transition hover:border-primary hover:text-primary">
+                                                Watch the demo
+                                          </NuxtLink>
                                     </div>
                               </div>
 
-                              <div
-                                  class="rounded-[28px] border border-border bg-background p-4 shadow-[0_30px_80px_rgba(0,0,0,0.3)]">
-                                    <div class="flex items-center justify-between border-b border-border pb-3">
-                                          <div class="flex items-center gap-2">
-                                                <div class="h-2.5 w-2.5 rounded-full bg-primary" />
-                                                <span class="text-sm font-medium text-foreground">eSchool Ghana</span>
-                                          </div>
+                              <div class="grid gap-3 sm:grid-cols-2">
+                                    <div v-for="item in productCapabilities" :key="item"
+                                        class="softview-card flex items-center gap-3 px-4 py-3.5">
                                           <span
-                                              class="rounded-full border border-primary/30 bg-primary/10 px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-primary">Live</span>
-                                    </div>
-
-                                    <div class="mt-4 grid grid-cols-[180px_1fr] gap-4">
-                                          <aside class="rounded-2xl border border-border bg-surface p-3">
-                                                <div class="space-y-2 text-sm text-foreground/80">
-                                                      <div class="rounded-lg bg-surface px-2 py-2">Dashboard</div>
-                                                      <div class="rounded-lg bg-surface px-2 py-2">Students</div>
-                                                      <div class="rounded-lg bg-surface px-2 py-2">Admissions</div>
-                                                      <div class="rounded-lg bg-surface px-2 py-2">Academics</div>
-                                                      <div class="rounded-lg bg-surface px-2 py-2">Attendance</div>
-                                                      <div class="rounded-lg bg-surface px-2 py-2">Finance</div>
-                                                </div>
-                                          </aside>
-
-                                          <div class="rounded-2xl border border-border bg-background/80 p-3">
-                                                <div
-                                                    class="mb-3 flex items-center justify-between text-xs uppercase tracking-[0.2em] text-muted">
-                                                      <span>Overview</span>
-                                                      <span>Today</span>
-                                                </div>
-                                                <div class="grid grid-cols-3 gap-3">
-                                                      <div
-                                                          class="rounded-xl border border-border bg-surface p-2 text-center">
-                                                            <div
-                                                                class="text-[10px] uppercase tracking-[0.18em] text-muted">
-                                                                  Students
-                                                            </div>
-                                                            <div class="mt-2 text-xl font-semibold text-foreground">2431
-                                                            </div>
-                                                      </div>
-                                                      <div
-                                                          class="rounded-xl border border-border bg-surface p-2 text-center">
-                                                            <div
-                                                                class="text-[10px] uppercase tracking-[0.18em] text-muted">
-                                                                  Fees
-                                                            </div>
-                                                            <div class="mt-2 text-xl font-semibold text-foreground">
-                                                                  84.6%</div>
-                                                      </div>
-                                                      <div
-                                                          class="rounded-xl border border-border bg-surface p-2 text-center">
-                                                            <div
-                                                                class="text-[10px] uppercase tracking-[0.18em] text-muted">
-                                                                  Attendance</div>
-                                                            <div class="mt-2 text-xl font-semibold text-foreground">
-                                                                  96.2%</div>
-                                                      </div>
-                                                </div>
-                                                <div class="mt-4 rounded-xl border border-border bg-background p-3">
-                                                      <div
-                                                          class="mb-2 text-[10px] uppercase tracking-[0.2em] text-muted">
-                                                            Performance</div>
-                                                      <div class="flex h-24 items-end gap-2">
-                                                            <span class="w-full rounded-t-md bg-primary/50"
-                                                                style="height: 35%" />
-                                                            <span class="w-full rounded-t-md bg-primary/60"
-                                                                style="height: 52%" />
-                                                            <span class="w-full rounded-t-md bg-primary/70"
-                                                                style="height: 69%" />
-                                                            <span class="w-full rounded-t-md bg-primary/80"
-                                                                style="height: 86%" />
-                                                            <span class="w-full rounded-t-md bg-primary"
-                                                                style="height: 100%" />
-                                                      </div>
-                                                </div>
-                                          </div>
+                                              class="flex size-6 shrink-0 items-center justify-center rounded-full bg-primary/10 text-xs text-primary">+</span>
+                                          <span class="text-sm text-foreground/90">{{ item }}</span>
                                     </div>
                               </div>
                         </div>
                   </section>
 
-                  <section class="mt-16 rounded-4xl border border-border bg-surface p-6 md:p-10">
-                        <h3 class="text-3xl font-semibold tracking-tighter text-foreground md:text-4xl">Built Around
-                              How Schools Actually Operate</h3>
-                        <p class="mt-4 max-w-3xl text-base leading-8 text-muted md:text-lg">
-                              Managing a school involves much more than keeping student records. Administrators,
-                              teachers, accountants, school owners, and other staff need access to the right
-                              information at the right time. eSchool Ghana brings these essential operations together
-                              in one platform, helping private basic schools reduce administrative workload, improve
-                              visibility, and operate more efficiently.
-                        </p>
+                  <section class="mt-16">
+                        <div class="mb-8 max-w-2xl">
+                              <span class="softview-kicker">Built around people</span>
+                              <h2 class="mt-5 text-3xl font-semibold tracking-tighter text-foreground md:text-5xl">One
+                                    school
+                                    system. Useful to everyone who keeps it moving.</h2>
+                        </div>
 
-                        <div class="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-                              <div v-for="benefit in productBenefits" :key="benefit.title"
-                                  class="rounded-2xl border border-border bg-background/80 p-5">
+                        <div class="grid gap-4 lg:grid-cols-3">
+                              <article v-for="audience in audiences" :key="audience.title" class="softview-panel p-6">
+                                    <p class="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+                                          {{ audience.label }}
+                                    </p>
+                                    <h3 class="mt-5 text-2xl font-semibold tracking-tighter text-foreground">
+                                          {{ audience.title }}
+                                    </h3>
+                                    <p class="mt-4 text-base leading-7 text-muted">{{ audience.description }}</p>
+                              </article>
+                        </div>
+                  </section>
+
+                  <section class="mt-16 grid gap-8 xl:grid-cols-[0.82fr_1.18fr] xl:items-center">
+                        <div class="softview-panel p-6 md:p-8">
+                              <span class="softview-kicker">The product promise</span>
+                              <h2 class="mt-5 text-3xl font-semibold tracking-tighter text-foreground md:text-4xl">
+                                    Better
+                                    information creates better school decisions.</h2>
+                              <p class="mt-5 text-base leading-8 text-muted md:text-lg">
+                                    The right software should not add another layer of work. It should give the school a
+                                    dependable
+                                    rhythm, clearer ownership, and the confidence to act on what is happening.
+                              </p>
+                        </div>
+
+                        <div class="grid gap-4 sm:grid-cols-2">
+                              <article v-for="benefit in productBenefits" :key="benefit.title"
+                                  class="softview-card p-5 md:p-6">
                                     <div
-                                        class="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
-                                          <span class="text-lg">✓</span>
+                                        class="flex size-9 items-center justify-center rounded-full bg-primary/10 text-primary">
+                                          +
                                     </div>
-                                    <p class="text-base font-medium text-foreground">{{ benefit.title }}</p>
-                                    <p class="mt-2 text-sm leading-6 text-muted">{{ benefit.description }}</p>
+                                    <h3 class="mt-5 text-lg font-semibold text-foreground">{{ benefit.title }}</h3>
+                                    <p class="mt-3 text-sm leading-7 text-muted">{{ benefit.description }}</p>
+                              </article>
+                        </div>
+                  </section>
+
+                  <section class="mt-16">
+                        <div class="softview-panel border border-primary/20 bg-primary/5 p-8 text-center md:p-12">
+                              <span class="softview-kicker">See the platform in action</span>
+                              <h2
+                                  class="mx-auto mt-5 max-w-3xl text-3xl font-semibold tracking-tighter text-foreground md:text-5xl">
+                                    Give your school a better way to run every day.</h2>
+                              <p class="mx-auto mt-5 max-w-2xl text-base leading-8 text-muted md:text-lg">See how
+                                    eSchool Ghana can
+                                    support your school's operations, people, and next stage of growth.</p>
+                              <div class="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+                                    <NuxtLink to="https://eschoolghana.com/watch-demo" target="_blank" rel="noopener"
+                                        external
+                                        class="inline-flex items-center justify-center rounded-xl bg-primary px-6 py-3.5 font-medium text-white transition hover:bg-primary-hover">
+                                          Request a demo
+                                    </NuxtLink>
+                                    <NuxtLink to="/contact"
+                                        class="inline-flex items-center justify-center rounded-xl border border-border bg-background/60 px-6 py-3.5 font-medium text-foreground transition hover:border-primary hover:text-primary">
+                                          Talk to Softview
+                                    </NuxtLink>
                               </div>
                         </div>
                   </section>
 
-                  <section class="mt-16 rounded-4xl border border-primary/20 bg-primary/5 p-8 text-center md:p-12">
-                        <h3 class="text-3xl font-semibold tracking-tighter text-foreground md:text-5xl">Ready to
-                              modernize your
-                              school?</h3>
-                        <div class="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-                              <NuxtLink to="https://eschoolghana.com" target="_blank" rel="noopener" external
-                                  class="inline-flex items-center justify-center rounded-2xl bg-primary px-6 py-3.5 font-medium text-white transition hover:bg-primary-hover">
-                                    Discover eSchool Ghana
-                              </NuxtLink>
-                              <NuxtLink to="https://eschoolghana.com/watch-demo" target="_blank" rel="noopener" external
-                                  class="inline-flex items-center justify-center rounded-2xl border border-border bg-background/70 px-6 py-3.5 font-medium text-foreground transition hover:border-primary hover:text-primary">
-                                    Request a Demo
-                              </NuxtLink>
+                  <section class="mt-16 border-t border-border/70 pt-8 md:flex md:items-end md:justify-between">
+                        <div class="max-w-2xl">
+                              <p class="text-xs font-semibold uppercase tracking-[0.22em] text-primary">What comes next
+                              </p>
+                              <h2 class="mt-4 text-3xl font-semibold tracking-tighter text-foreground md:text-4xl">More
+                                    products are
+                                    on the horizon.</h2>
+                              <p class="mt-4 text-base leading-8 text-muted">We continue to explore practical products
+                                    for
+                                    organizations with meaningful work to improve.</p>
                         </div>
-                  </section>
-
-                  <section class="mt-16 rounded-4xl border border-border bg-surface p-8 md:p-10">
-                        <h3 class="text-3xl font-semibold tracking-tighter text-foreground md:text-4xl">More Products
-                              Are Coming
-                        </h3>
-                        <p class="mt-4 max-w-2xl text-base leading-8 text-muted md:text-lg">
-                              We're continuously exploring new software products that solve meaningful problems for
-                              businesses and
-                              organizations.
-                        </p>
-
-                        <div class="mt-8 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-                              <p class="text-lg font-medium text-foreground">Have a problem worth solving?</p>
-                              <NuxtLink to="/contact"
-                                  class="inline-flex items-center gap-2 text-primary hover:text-primary-hover">
-                                    Talk to us <span aria-hidden="true">→</span>
-                              </NuxtLink>
-                        </div>
+                        <NuxtLink to="/contact"
+                            class="mt-6 inline-flex items-center gap-2 font-medium text-primary hover:text-primary-hover md:mt-0">
+                              Share a problem worth solving <span aria-hidden="true">-&gt;</span>
+                        </NuxtLink>
                   </section>
             </BaseContainer>
       </div>
