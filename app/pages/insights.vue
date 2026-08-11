@@ -51,7 +51,7 @@
                               </div>
 
                               <div
-                                  class="softview-card rounded-[28px] bg-[radial-gradient(circle_at_top,_color-mix(in_oklab,_var(--brand)_18%,_transparent),_transparent_45%)] p-6 md:p-8">
+                                  class="softview-card rounded-[28px] bg-[radial-gradient(circle_at_top,color-mix(in_oklab,var(--brand)_18%,transparent),transparent_45%)] p-6 md:p-8">
                                     <p class="text-xs font-medium uppercase tracking-[0.22em] text-primary/80">
                                           {{ featuredInsight.category }}
                                     </p>

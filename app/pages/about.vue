@@ -209,7 +209,7 @@
 
                               <div class="space-y-4">
                                     <article v-for="capability in capabilities" :key="capability.index"
-                                        class="rounded-[1.4rem] border border-border/60 bg-background/70 p-6 transition duration-300 hover:border-primary/25" 
+                                        class="rounded-[1.4rem] border border-border/60 bg-background/70 p-6 transition duration-300 hover:border-primary/25"
                                         v-fadeIn>
                                           <div class="grid gap-6 lg:grid-cols-[72px_1fr_1fr] lg:items-start">
                                                 <span class="font-mono text-[11px] text-primary/70">
@@ -287,7 +287,8 @@
 
                                     <div class="mt-10 space-y-4">
                                           <div v-for="(principle, index) in principles" :key="principle"
-                                              class="flex items-center gap-4 rounded-[1.2rem] border border-border/60 bg-background/70 px-5 py-4 transition duration-300 hover:border-primary/25" v-fadeIn>
+                                              class="flex items-center gap-4 rounded-[1.2rem] border border-border/60 bg-background/70 px-5 py-4 transition duration-300 hover:border-primary/25"
+                                              v-fadeIn>
                                                 <span class="w-8 font-mono text-[10px] text-primary/70">
                                                       0{{ index + 1 }}
                                                 </span>

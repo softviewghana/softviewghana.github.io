@@ -13,10 +13,10 @@
       ]
 </script>
 <template>
-      <div
+      <div 
         class="relative py-24 sm:py-32 overflow-hidden backdrop-blur-md border border-slate-500/1 dark:bg-slate-700/1 bg-slate-300/40">
             <div class="mx-auto grid max-w-7xl gap-8 lg:gap-20 px-6 lg:px-8 xl:grid-cols-3">
-                  <div v-fadeIn class="max-w-xl">
+                  <div class="max-w-xl">
                         <h2
                           class="text-3xl font-semibold capitalize tracking-tight text-pretty dark:text-white sm:text-4xl">
                               our team
@@ -25,7 +25,7 @@
                               about what we do and dedicated to delivering the best results for our clients.</p>
                   </div>
                   <ul role="list" class="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
-                        <li v-fadeIn v-for="person in people" :key="person.name">
+                        <li v-for="person in people" :key="person.name">
                               <div class="flex items-center gap-x-6">
                                     <img :src="person.imageUrl" :alt="person.name" loading="lazy"
                                       class="size-16 backdrop-blur-2xl rounded-full outline-1 -outline-offset-1 outline-white/10" />

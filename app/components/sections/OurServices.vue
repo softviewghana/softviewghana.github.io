@@ -29,7 +29,7 @@
                   description:
                         'Responsive, scalable, and secure web applications built for performance.',
                   icon: Globe,
-                  href: '/services/web-development',
+                  href: '/services/web-application-development',
                   features: [
                         'Business Websites',
                         'SaaS',
@@ -44,7 +44,7 @@
                   description:
                         'Cross-platform mobile apps designed for Android and iOS.',
                   icon: Smartphone,
-                  href: '/services/mobile-apps-development',
+                  href: '/services/mobile-application-development',
                   features: [
                         'Android',
                         'iOS',
@@ -74,7 +74,7 @@
                   description:
                         'Networking solutions that keep your business connected.',
                   icon: Network,
-                  href: '/services/infrastructure-networking',
+                  href: '/services/it-infrastructure-networking',
                   features: [
                         'Networking',
                         'Wi-Fi',
