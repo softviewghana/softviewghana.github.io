@@ -43,11 +43,7 @@
       }
 
       const transform = computed(() => ({
-            transform: `
-      perspective(1800px)
-      rotateX(${rotateX.value}deg)
-      rotateY(${rotateY.value}deg)
-  `,
+            transform: `perspective(1800px) rotateX(${rotateX.value}deg) rotateY(${rotateY.value}deg)`,
       }))
 </script>
 
@@ -65,23 +61,23 @@
 
                   <div class="absolute -right-24 top-20 hidden xl:block">
                         <FloatingTechCard title="REST APIs" subtitle="Secure" :icon="Workflow" color="text-primary"
-                          :duration="8" />
+                            :duration="8" />
                   </div>
 
                   <div class="absolute -bottom-10 left-0 hidden xl:block">
                         <FloatingTechCard title="Mobile Apps" subtitle="Android • iOS" :icon="Smartphone"
-                          color="text-violet-400" :duration="9" />
+                            color="text-violet-400" :duration="9" />
                   </div>
 
                   <div class="absolute -bottom-8 right-0 hidden xl:block">
                         <FloatingTechCard title="Cyber Security" subtitle="Protected" :icon="ShieldCheck"
-                          color="text-emerald-400" :duration="10" />
+                            color="text-emerald-400" :duration="10" />
                   </div>
 
                   <!-- Dashboard -->
 
                   <div ref="dashboard" :style="transform"
-                    class="transition-transform duration-150 will-change-transform transform-3d ">
+                      class="transition-transform duration-150 will-change-transform transform-3d ">
 
                         <!-- <HeroBackground /> -->
                         <div class="pointer-events-none absolute inset-0 overflow-hidden rounded-3xl">
@@ -89,22 +85,22 @@
                         </div>
 
                         <div
-                          class="overflow-hidden rounded-3xl border border-border bg-background/60 shadow-[0_50px_120px_rgba(0,0,0,.45)] backdrop-blur-3xl">
+                            class="overflow-hidden rounded-3xl border border-border bg-background/60 shadow-[0_50px_120px_rgba(0,0,0,.45)] backdrop-blur-3xl">
                               <!-- Header -->
 
+                              <div class="flex gap-2 ml-8 pt-6">
+
+                                    <div class="h-3 w-3 rounded-full bg-red-400/80" />
+
+                                    <div class="h-3 w-3 rounded-full bg-amber-400/80" />
+
+                                    <div class="h-3 w-3 rounded-full bg-emerald-400/80" />
+
+                              </div>
                               <div class="flex items-center justify-between border-b border-border px-6 py-5">
 
                                     <div class="flex items-center gap-5">
 
-                                          <div class="flex gap-2">
-
-                                                <div class="h-3 w-3 rounded-full bg-red-400/80" />
-
-                                                <div class="h-3 w-3 rounded-full bg-amber-400/80" />
-
-                                                <div class="h-3 w-3 rounded-full bg-emerald-400/80" />
-
-                                          </div>
 
                                           <div>
 
@@ -121,8 +117,8 @@
                                     </div>
 
                                     <div
-                                      class="rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 text-xs font-medium text-emerald-400">
-                                          ● Live
+                                        class="rounded-full text-nowrap border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 text-xs font-medium text-emerald-400">
+                                          <span class="animate-pulse"> ● </span> Live
                                     </div>
 
                               </div>
@@ -130,19 +126,19 @@
                               <!-- Content -->
 
                               <div class="relative z-10 space-y-6 p-6 dashboard-content"
-                                style="transform: translateZ(20px);">
+                                  style="transform: translateZ(20px);">
 
                                     <!-- Metrics -->
 
                                     <div class="grid gap-4 sm:grid-cols-3">
                                           <MetricCard title="Projects" value="24" subtitle="Currently Active"
-                                            :icon="FolderKanban" class=""/>
+                                              :icon="FolderKanban" class="" />
 
                                           <MetricCard title="API Requests" value="1.2M" subtitle="This Month"
-                                            :icon="Activity" class="hidden sm:block"/>
+                                              :icon="Activity" class="hidden sm:block" />
 
                                           <MetricCard title="Uptime" value="99.98%" subtitle="Infrastructure"
-                                            :icon="Database" class="hidden sm:block"/>
+                                              :icon="Database" class="hidden sm:block" />
                                     </div>
 
                                     <!-- Main -->
@@ -161,7 +157,7 @@
 
                   <div class="absolute left-24 -top-10 hidden xl:block">
                         <FloatingTechCard title="Linux Servers" subtitle="Optimized" :icon="Server"
-                          color="text-amber-400" :duration="7" />
+                            color="text-amber-400" :duration="7" />
                   </div>
 
             </div>

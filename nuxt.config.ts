@@ -23,7 +23,7 @@ export default defineNuxtConfig({
     head: {
       title: "Softview Ghana | Your Trusted IT Solutions Partner",
       htmlAttrs: {
-        lang: "en-GH",
+        lang: "en",
       },
       link: [
         {

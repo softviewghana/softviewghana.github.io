@@ -101,9 +101,9 @@
             </PageHero>
 
             <BaseContainer class="mt-4 md:mt-8">
-                  <section v-fadeIn class="softview-panel p-8 sm:p-10 lg:p-12">
+                  <section v-fade-in class="softview-panel p-8 sm:p-10 lg:p-12">
                         <div class="grid gap-10 lg:grid-cols-[260px_1fr] lg:gap-16">
-                              <div v-fadeIn>
+                              <div v-fade-in>
                                     <p class="softview-kicker">Our story</p>
                                     <div class="mt-6 space-y-4 text-sm leading-7 text-muted">
                                           <p>
@@ -121,13 +121,13 @@
                               </div>
 
                               <div class="space-y-6">
-                                    <h2 v-fadeIn
+                                    <h2 v-fade-in
                                         class="text-3xl font-semibold leading-tight tracking-[-0.03em] text-foreground sm:text-4xl lg:text-5xl">
                                           Technology should make
                                           <span class="text-primary">things better.</span>
                                     </h2>
 
-                                    <div v-fadeIn class="grid gap-4 text-base leading-8 text-muted md:grid-cols-2">
+                                    <div v-fade-in class="grid gap-4 text-base leading-8 text-muted md:grid-cols-2">
                                           <p>
                                                 That means looking beyond simply delivering software. We take time to
                                                 understand the
@@ -143,7 +143,7 @@
                                           </p>
                                     </div>
 
-                                    <div v-fadeIn class="softview-card p-6">
+                                    <div v-fade-in class="softview-card p-6">
                                           <div
                                               class="flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-primary">
                                                 <span class="softview-divider" />
@@ -162,7 +162,7 @@
             </BaseContainer>
 
             <BaseContainer class="mt-6 md:mt-10">
-                  <section v-fadeIn class="softview-panel p-8 sm:p-10 lg:p-12">
+                  <section v-fade-in class="softview-panel p-8 sm:p-10 lg:p-12">
                         <div class="mb-10 max-w-2xl">
                               <p class="softview-kicker">What guides us</p>
                               <h2 class="mt-5 text-3xl font-semibold tracking-[-0.03em] text-foreground sm:text-4xl">
@@ -174,7 +174,7 @@
                         <div class="grid gap-4 md:grid-cols-2">
                               <article v-for="value in values" :key="value.number"
                                   class="group rounded-[1.4rem] border border-border/60 bg-background/70 p-6 transition duration-300 hover:-translate-y-1 hover:border-primary/25"
-                                  v-fadeIn>
+                                  v-fade-in>
                                     <div class="flex gap-4">
                                           <span class="font-mono text-[11px] text-primary/70">
                                                 {{ value.number }}
@@ -197,7 +197,7 @@
             <TeamMembers class="mt-6 md:mt-10" />
 
             <BaseContainer class="mt-6 md:mt-10">
-                  <section v-fadeIn class="softview-panel p-8 sm:p-10 lg:p-12">
+                  <section v-fade-in class="softview-panel p-8 sm:p-10 lg:p-12">
                         <div class="grid gap-10 lg:grid-cols-[260px_1fr] lg:gap-16">
                               <div>
                                     <p class="softview-kicker">What we do</p>
@@ -210,7 +210,7 @@
                               <div class="space-y-4">
                                     <article v-for="capability in capabilities" :key="capability.index"
                                         class="rounded-[1.4rem] border border-border/60 bg-background/70 p-6 transition duration-300 hover:border-primary/25"
-                                        v-fadeIn>
+                                        v-fade-in>
                                           <div class="grid gap-6 lg:grid-cols-[72px_1fr_1fr] lg:items-start">
                                                 <span class="font-mono text-[11px] text-primary/70">
                                                       {{ capability.index }}
@@ -240,11 +240,11 @@
             </BaseContainer>
 
             <BaseContainer class="mt-6 md:mt-10">
-                  <section v-fadeIn class="softview-panel overflow-hidden">
+                  <section v-fade-in class="softview-panel overflow-hidden">
                         <div
                             class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.12),transparent_32%)]" />
                         <div class="relative grid gap-8 p-8 sm:p-10 lg:grid-cols-[1fr_320px] lg:p-12">
-                              <div v-fadeIn>
+                              <div v-fade-in>
                                     <p class="softview-kicker">Built from Ghana</p>
                                     <h2
                                         class="mt-6 text-3xl font-semibold tracking-[-0.03em] text-foreground sm:text-4xl">
@@ -258,7 +258,7 @@
                                     </p>
                               </div>
 
-                              <div v-fadeIn class="rounded-[1.4rem] border border-border/60 bg-background/70 p-6">
+                              <div v-fade-in class="rounded-[1.4rem] border border-border/60 bg-background/70 p-6">
                                     <p class="font-mono text-[10px] uppercase tracking-[0.16em] text-primary/70">
                                           05°33'N · 00°12'W
                                     </p>
@@ -272,7 +272,7 @@
             </BaseContainer>
 
             <BaseContainer class="mt-6 md:mt-10">
-                  <section v-fadeIn class="softview-panel p-8 sm:p-10 lg:p-12">
+                  <section v-fade-in class="softview-panel p-8 sm:p-10 lg:p-12">
                         <div class="grid gap-10 lg:grid-cols-[260px_1fr] lg:gap-16">
                               <div>
                                     <p class="softview-kicker">How we work</p>
@@ -288,7 +288,7 @@
                                     <div class="mt-10 space-y-4">
                                           <div v-for="(principle, index) in principles" :key="principle"
                                               class="flex items-center gap-4 rounded-[1.2rem] border border-border/60 bg-background/70 px-5 py-4 transition duration-300 hover:border-primary/25"
-                                              v-fadeIn>
+                                              v-fade-in>
                                                 <span class="w-8 font-mono text-[10px] text-primary/70">
                                                       0{{ index + 1 }}
                                                 </span>
@@ -303,7 +303,7 @@
             </BaseContainer>
 
             <BaseContainer class="mt-6 md:mt-10">
-                  <section v-fadeIn
+                  <section v-fade-in
                       class="rounded-4xl border border-primary/15 bg-linear-to-br from-primary/10 via-surface/60 to-background px-8 py-12 text-center shadow-[0_24px_80px_rgba(0,0,0,0.25)] sm:px-10 lg:px-14 lg:py-16">
                         <p class="softview-kicker">Let's build something meaningful</p>
                         <h2
@@ -317,13 +317,13 @@
                               what you're working on.
                         </p>
 
-                        <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+                        <div class="mt-8 flex w-full flex-col justify-center gap-3 sm:flex-row">
                               <NuxtLink to="/contact"
-                                  class="inline-flex items-center gap-3 rounded-full bg-primary px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-primary-hover">
+                                  class="inline-flex items-center justify-center gap-2 rounded-2xl bg-primary px-6 py-4 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-hover">
                                     Start a conversation
                               </NuxtLink>
                               <NuxtLink to="/"
-                                  class="inline-flex items-center rounded-full border border-border/70 bg-background/60 px-6 py-3.5 text-sm font-semibold text-foreground transition hover:border-primary/25 hover:text-primary">
+                                  class="inline-flex items-center justify-center gap-2 rounded-2xl border border-border/70 bg-background/60 px-6 py-4 font-medium text-foreground transition-all duration-300 hover:border-primary/25 hover:text-primary">
                                     Back to home
                               </NuxtLink>
                         </div>

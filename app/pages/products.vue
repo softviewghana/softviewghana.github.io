@@ -45,7 +45,7 @@
             },
             {
                   title: 'Designed for Ghanaian basic schools',
-                  description: 'The product is shaped around the working realities of private basic schools and the people who run them.',
+                  description: 'The product is shaped around the working realities of basic schools and the people who run them.',
             },
             {
                   title: 'Ready to grow with the school',
@@ -141,7 +141,7 @@
                                           Ghana</h2>
                               </div>
                               <p class="max-w-xl text-base leading-8 text-muted md:text-lg">
-                                    A connected school operating system that helps private basic schools spend less time
+                                    A connected school operating system that helps basic schools spend less time
                                     managing
                                     scattered information and more time moving the school forward.
                               </p>
@@ -149,9 +149,9 @@
 
                         <div class="mt-10 grid gap-10 xl:grid-cols-[0.9fr_1.1fr] xl:items-start">
                               <div>
-                                    <span class="text-xs font-semibold uppercase tracking-[0.22em] text-primary">One
-                                          platform, one
-                                          school view</span>
+                                    <span class="text-xs font-semibold uppercase tracking-[0.22em] text-primary">
+                                          One platform, one school view
+                                    </span>
                                     <h3
                                         class="mt-4 text-3xl font-semibold tracking-tighter text-foreground md:text-4xl">
                                           Every part of the school can work from the same picture.

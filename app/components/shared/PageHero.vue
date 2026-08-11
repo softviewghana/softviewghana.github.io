@@ -34,21 +34,21 @@
                   </div>
 
                   <div class="max-w-4xl">
-                        <p v-if="eyebrow" v-fadeIn class="softview-kicker">
+                        <p v-if="eyebrow" class="softview-kicker">
                               {{ eyebrow }}
                         </p>
 
-                        <h1 v-fadeIn
+                        <p
                             class="mt-6 text-4xl font-semibold leading-[0.95] tracking-[-0.04em] text-foreground md:text-6xl">
                               {{ title }}
-                        </h1>
-
-                        <p v-fadeIn v-if="description" class="mt-6 max-w-2xl text-base leading-8 text-muted md:text-lg">
-                              {{ description }}
                         </p>
+
+                        <h1 v-if="description" class="mt-6 max-w-2xl text-base leading-8 text-muted md:text-lg">
+                              {{ description }}
+                        </h1>
                   </div>
 
-                  <div v-if="$slots.visual" v-fadeIn class="mt-10">
+                  <div v-if="$slots.visual" class="mt-10">
                         <div class="softview-card max-w-2xl p-5 sm:p-6">
                               <slot name="visual" />
                         </div>

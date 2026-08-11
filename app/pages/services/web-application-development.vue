@@ -105,8 +105,9 @@
 
                   <section class="mt-16">
                         <div class="softview-panel border border-primary/20 bg-primary/5 p-8 text-center md:p-12">
-                              <h3 class="text-3xl font-semibold tracking-tighter text-foreground md:text-4xl">Need a web
-                                    product that performs?</h3>
+                              <h3 class="text-3xl font-semibold tracking-tighter text-foreground md:text-4xl">
+                                    Need a web product that performs?
+                              </h3>
                               <NuxtLink to="/contact"
                                   class="mt-8 inline-flex items-center justify-center rounded-2xl bg-primary px-6 py-3.5 font-medium text-white transition hover:bg-primary-hover">
                                     Build a Web Application

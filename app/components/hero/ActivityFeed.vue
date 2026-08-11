@@ -16,11 +16,10 @@
             icon: Component
       }
 
-      withDefaults(
-            defineProps<{
-                  title?: string
-                  activities?: Activity[]
-            }>(),
+      withDefaults(defineProps<{
+            title?: string
+            activities?: Activity[]
+      }>(),
             {
                   title: 'Recent Activity',
                   activities: () => [
@@ -72,33 +71,31 @@
                   </h3>
 
                   <span class="rounded-full bg-emerald-500/15 px-3 py-1 text-xs font-medium text-emerald-400">
-                        Live
+                        <span class="animate-pulse"> ● </span> Live
                   </span>
             </div>
 
-            <div class="space-y-4">
+            <div class="space-y-4 relative">
                   <div v-for="(activity, index) in activities" :key="activity.id"
-                    class="group flex items-start gap-4 rounded-xl border border-transparent p-3 transition-all duration-300 hover:border-white/10 hover:bg-white/5"
-                    :style="{
-                        animationDelay: `${index * 120}ms`,
-                  }">
+                      class="group flex items-start gap-4 rounded-xl border border-transparent p-3 transition-all duration-300 hover:border-white/10 hover:bg-white/5"
+                      :style="{ animationDelay: `${index * 120}ms` }">
                         <div
-                          class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/15 text-primary transition-transform duration-300 group-hover:scale-110">
+                            class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/15 text-primary transition-transform duration-300 group-hover:scale-110">
                               <component :is="activity.icon" class="size-5" />
                         </div>
 
                         <div class="min-w-0 flex-1">
-                              <div class="flex items-center justify-between gap-3">
+                              <div class="flex items-center justify-between gap-3 flex-wrap">
                                     <h4 class="truncate font-medium text-white">
                                           {{ activity.title }}
                                     </h4>
 
-                                    <span class="text-xs text-white/40">
+                                    <span class="text-xs text-white/40 text-wrap">
                                           {{ activity.time }}
                                     </span>
                               </div>
 
-                              <p class="mt-1 text-sm text-white/55">
+                              <p class="mt-1 text-sm text-white/55 text-wrap">
                                     {{ activity.description }}
                               </p>
                         </div>

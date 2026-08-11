@@ -67,21 +67,21 @@
                 description="We design and build software, digital products, and technology infrastructure that solve real business problems and create long-term value." />
 
             <BaseContainer class="mt-6 md:mt-10">
-                  <section v-fadeIn class="softview-panel p-8 sm:p-10 lg:p-12">
-                        <p v-fadeIn class="softview-kicker">From Ideas to Reliable Technology</p>
-                        <h2 v-fadeIn
+                  <section v-fade-in class="softview-panel p-8 sm:p-10 lg:p-12">
+                        <p v-fade-in class="softview-kicker">From Ideas to Reliable Technology</p>
+                        <h2 v-fade-in
                             class="mt-5 max-w-2xl text-3xl font-semibold tracking-[-0.03em] text-foreground md:text-4xl">
                               A practical approach to technology that actually works.</h2>
                         <div class="mt-6 max-w-3xl space-y-4 text-base leading-8 text-muted md:text-lg">
-                              <p v-fadeIn>
+                              <p v-fade-in>
                                     Every business operates differently. That's why we don't believe in
                                     one-size-fits-all technology.
                               </p>
-                              <p v-fadeIn>
+                              <p v-fade-in>
                                     We take the time to understand your goals, processes, challenges, and users before
                                     designing a solution around them.
                               </p>
-                              <p v-fadeIn>
+                              <p v-fade-in>
                                     Whether you need a custom business system, a customer-facing application, a mobile
                                     product, or reliable infrastructure, we bring the technical expertise and business
                                     thinking needed to take it from idea to reality.
@@ -94,7 +94,7 @@
                   <BaseContainer>
                         <div class="grid gap-6 lg:grid-cols-2">
                               <NuxtLink v-for="service in serviceCards" :key="service.title" :to="service.href"
-                                  class="group rounded-[1.6rem] border border-border/60 bg-surface/70 p-8 shadow-[0_20px_60px_rgba(0,0,0,0.18)] transition duration-300 hover:-translate-y-1 hover:border-primary/25" v-fadeIn>
+                                  class="group rounded-[1.6rem] border border-border/60 bg-surface/70 p-8 shadow-[0_20px_60px_rgba(0,0,0,0.18)] transition duration-300 hover:-translate-y-1 hover:border-primary/25" v-fade-in>
                                     <div class="flex items-center gap-4">
                                           <div
                                               class="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary">

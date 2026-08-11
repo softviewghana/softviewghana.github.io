@@ -120,7 +120,7 @@
 </script>
 
 <template>
-      <button v-bind="props" :class="[classes, props.class]">
+      <button @click="$emit('click', $event)" v-bind="props" :class="[classes, props.class]">
             <LoaderCircle v-if="loading" class="size-4 animate-spin" />
             <slot />
       </button>

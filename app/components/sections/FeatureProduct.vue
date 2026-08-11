@@ -81,23 +81,23 @@
                                           </NuxtLink>
                                     </div>
 
-                                    <div class="mt-10 flex flex-wrap items-center gap-6 border-t border-white/10 pt-6">
+                                    <div class="mt-10 flex flex-wrap items-center gap-3 sm:gap-6 border-t border-white/10 pt-6">
                                           <div>
-                                                <p class="text-2xl font-bold text-white">100%</p>
+                                                <p class="text-lg sm:text-2xl font-bold text-white">100%</p>
                                                 <p class="text-sm text-white/50">Cloud-based</p>
                                           </div>
 
-                                          <div class="h-10 w-px bg-white/10" />
+                                          <div class="h-10 w-px bg-white/20" />
 
                                           <div>
-                                                <p class="text-2xl font-bold text-white">24/7</p>
+                                                <p class="text-lg sm:text-2xl font-bold text-white">24/7</p>
                                                 <p class="text-sm text-white/50">Accessible</p>
                                           </div>
 
                                           <div class="h-10 w-px bg-white/10" />
 
                                           <div>
-                                                <p class="text-2xl font-bold text-white">GES +</p>
+                                                <p class="text-lg sm:text-2xl font-bold text-white">GES +</p>
                                                 <p class="text-sm text-white/50">Foreign Curricula</p>
                                           </div>
                                     </div>

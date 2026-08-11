@@ -68,9 +68,9 @@
                 description="We build technology around the way organizations actually work, combining software engineering with an understanding of industry-specific challenges and workflows." />
 
             <BaseContainer class="mt-6 md:mt-10">
-                  <section v-fadeIn class="softview-panel overflow-hidden px-6 py-14 md:px-12 md:py-20">
+                  <section v-fade-in class="softview-panel overflow-hidden px-6 py-14 md:px-12 md:py-20">
                         <div class="relative grid gap-10 md:grid-cols-[1.1fr_0.9fr] md:items-end">
-                              <div v-fadeIn>
+                              <div v-fade-in>
                                     <p class="softview-kicker">
                                           <span class="h-1.5 w-1.5 rounded-full bg-primary" />
                                           Sector Index
@@ -82,7 +82,7 @@
                                     </h2>
                               </div>
 
-                              <div v-fadeIn class="space-y-4 text-base leading-8 text-muted md:pb-1 md:text-lg">
+                              <div v-fade-in class="space-y-4 text-base leading-8 text-muted md:pb-1 md:text-lg">
                                     <p>
                                           Technology is most effective when it reflects the realities of the people and
                                           organizations using it.
@@ -109,14 +109,14 @@
                         <div class="divide-y divide-border/70 rounded-[1.6rem] border border-border/60 bg-surface/70">
                               <NuxtLink v-for="industry in industries" :key="industry.title" :to="industry.href"
                                   class="group grid gap-6 px-5 py-8 transition-colors duration-300 hover:bg-surface/80 md:grid-cols-[140px_1fr_auto] md:items-center md:gap-10 md:px-8 md:py-10">
-                                    <div v-fadeIn class="flex items-center gap-4 md:block">
+                                    <div v-fade-in class="flex items-center gap-4 md:block">
                                           <div
                                               class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-border bg-background/70 text-primary transition-colors duration-300 group-hover:border-primary/40 group-hover:bg-primary/10 md:h-14 md:w-14">
                                                 <component :is="industry.icon" class="size-6" aria-hidden="true" />
                                           </div>
                                     </div>
 
-                                    <div v-fadeIn>
+                                    <div v-fade-in>
                                           <h3 class="text-2xl font-semibold text-foreground md:text-3xl">
                                                 {{ industry.title }}
                                           </h3>
@@ -143,7 +143,7 @@
             </div>
 
             <BaseContainer class="mt-10">
-                  <section v-fadeIn
+                  <section v-fade-in
                       class="rounded-4xl border border-primary/15 bg-linear-to-br from-primary/10 via-surface/60 to-background px-8 py-12 text-center shadow-[0_24px_80px_rgba(0,0,0,0.25)] sm:px-10 lg:px-14 lg:py-16">
                         <p class="softview-kicker">New Entry</p>
                         <h2 class="mt-5 text-3xl font-semibold tracking-[-0.03em] text-foreground md:text-4xl">

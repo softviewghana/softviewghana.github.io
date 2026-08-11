@@ -73,9 +73,9 @@
       <section class="relative overflow-hidden py-24 sm:py-28">
             <div class="pointer-events-none absolute inset-0">
                   <div
-                    class="absolute left-[-12rem] top-[-10rem] h-[28rem] w-[28rem] rounded-full bg-primary/10 blur-[140px]" />
+                    class="absolute -left-48 -top-40 h-112 w-md rounded-full bg-primary/10 blur-[140px]" />
                   <div
-                    class="absolute bottom-[-12rem] right-[-10rem] h-[30rem] w-[30rem] rounded-full bg-primary/5 blur-[160px]" />
+                    class="absolute -bottom-48 -right-40 h-120 w-120 rounded-full bg-primary/5 blur-[160px]" />
                   <div
                     class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.06),transparent_35%)]" />
             </div>
@@ -99,10 +99,10 @@
 
                   <div class="mt-20 grid gap-8 lg:grid-cols-2 xl:grid-cols-3">
                         <article v-for="(step, index) in steps" :key="step.title"
-                          class="group relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] p-8 shadow-[0_0_0_1px_rgba(255,255,255,0.03)] backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:border-primary/30 hover:shadow-[0_20px_60px_rgba(0,0,0,.45)]"
+                          class="group relative overflow-hidden rounded-3xl border border-white/10 bg-linear-to-b from-white/6 to-white/2 p-8 shadow-[0_0_0_1px_rgba(255,255,255,0.03)] backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:border-primary/30 hover:shadow-[0_20px_60px_rgba(0,0,0,.45)]"
                           :class="[
                               index % 2 === 1 ? 'lg:translate-y-10' : '',
-                              index === 6 ? 'xl:col-span-1 lg:col-span-2 xl:col-span-1' : '',
+                              index === 6 ? 'lg:col-span-2 xl:col-span-1' : '',
                         ]">
                               <span
                                 class="pointer-events-none absolute right-5 top-4 select-none text-7xl font-black tracking-tighter text-white/5 transition-colors duration-500 group-hover:text-primary/10">
@@ -140,7 +140,7 @@
                               </ul>
 
                               <div
-                                class="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                                class="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-primary/30 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                         </article>
                   </div>
             </div>
