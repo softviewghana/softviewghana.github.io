@@ -1,7 +1,7 @@
 <script setup lang="ts">
       import { ref } from 'vue';
       import BaseButton from '@/components/UI/BaseButton.vue';
-      import { ArrowRight, Menu, X } from '@lucide/vue';
+      import { AlignRightIcon, ArrowRight, X } from '@lucide/vue';
 
       interface Link {
             label: string;
@@ -21,7 +21,7 @@
       <button
         class="inline-flex size-10 items-center justify-center rounded-xl border-0 border-border bg-surface-elevated lg:hidden"
         @click="open = true" aria-label="Open navigation menu" type="button">
-            <Menu class="size-6" />
+            <AlignRightIcon class="size-6" />
       </button>
 
       <ClientOnly>
@@ -36,10 +36,10 @@
                                           <span>
 
                                                 <div
-                                                  class="flex flex-row items-center justify-between px-6 py-3 sticky border-b border-border/25 top-0 bg-background">
+                                                  class="flex flex-row items-center justify-between px-4 py-3 sticky border-b border-border/25 top-0 bg-background">
                                                       <NuxtLink to="/" @click="open = false"
                                                         aria-label="Go to homepage">
-                                                            <Logo fill-color="var(--color-primary)" />
+                                                            <Logo fill-color="white" />
                                                       </NuxtLink>
 
                                                       <button @click="open = false" aria-label="Close navigation menu"
@@ -50,7 +50,7 @@
 
                                                 </div>
 
-                                                <div class="flex flex-col gap-2 p-6">
+                                                <div class="flex flex-col gap-2 py-4 px-4">
                                                       <span v-for="link in links" :key="link.href"
                                                         class="flex flex-row justify-between items-center rounded-0 border-b border-border hover:border-primary/40">
                                                             <NuxtLink :href="link.href"

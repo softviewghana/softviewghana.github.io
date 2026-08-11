@@ -17,7 +17,7 @@
 }
 
 :root {
-      color-scheme: dark;
+      color-scheme: dark !important;
       --background: oklab(17.629% -0.00283 -0.01375);
       --surface: oklab(22.022% -0.00358 -0.01531);
       --border: oklab(31.862000000000002% -0.0041 -0.01607);

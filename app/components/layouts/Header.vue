@@ -7,23 +7,28 @@
                   label: 'About',
                   href: '/about',
                   title: '',
-            }, {
+            },
+            {
                   label: 'Services',
                   href: '/services',
                   title: '',
-            }, {
+            }, 
+            {
                   label: 'Industries',
                   href: '/industries',
                   title: '',
-            }, {
+            }, 
+            {
                   label: 'Products',
                   href: '/products',
                   title: '',
-            }, {
+            }, 
+            {
                   label: 'Insights',
                   href: '/insights',
                   title: '',
-            }, {
+            }, 
+            {
                   label: 'Contact',
                   href: '/contact',
                   title: '',
@@ -35,11 +40,11 @@
 <template>
       <header class="fixed top-0 inset-x-0 z-50">
             <div class="w-full rounded-0 border-b border-border bg-background/45 backdrop-blur-xl">
-                  <nav class="flex items-center justify-between  px-4 py-2.5 md:px-6 max-w-7xl mx-auto">
+                  <nav class="flex items-center justify-between px-4 py-2.5 md:px-6 max-w-7xl mx-auto">
                         <NuxtLink active-class="" exact-active-class="" :to="{ name: 'index' }"
                           class="flex items-center gap-3">
-                              <Logo fill-color="var(--brand)" />
-                              <span class="text-primary font-semibold">
+                              <Logo fill-color="white" />
+                              <span class="t font-semibold">
                                     {{ CONSTANTS.APP_NAME }}
                               </span>
                         </NuxtLink>

@@ -31,13 +31,13 @@
       const legalLinks = [
             {
                   label: 'Privacy Policy',
-                  // href: '/privacy-policy',
-                  href: '#'
+                  href: '/privacy-policy',
+                  // href: '#'
             },
             {
                   label: 'Terms of Service',
-                  // href: '/terms',
-                  href: '#'
+                  href: '/terms',
+                  // href: '#'
             },
             {
                   label: 'Cookies',
@@ -50,11 +50,11 @@
 <template>
       <section class="mx-auto max-w-7xl px-6 py-6">
 
-            <div class="flex flex-col gap-8 text-sm text-white/50 md:flex-row md:items-center md:justify-between">
+            <div class="flex flex-col justify-items-center gap-8 text-sm text-white/50 md:flex-row md:items-center md:justify-between">
 
                   <!-- Brand -->
 
-                  <div>
+                  <div class="order-3 flex flex-col items-center justify-center">
 
                         <p class="text-white/70">
                               © {{ new Date().getFullYear() }} Softview Ghana.
@@ -73,7 +73,7 @@
 
                   <!-- Legal -->
 
-                  <nav class="order-3 flex flex-wrap gap-6 lg:order-0">
+                  <nav class="order-2 flex flex-col/ items-center justify-center flex-wrap gap-6 lg:order-0">
 
                         <NuxtLink v-for="link in legalLinks" :key="link.label" :to="link.href"
                           class="transition-colors hover:text-white">
@@ -85,11 +85,11 @@
 
                   <!-- Social -->
 
-                  <div class="flex items-center gap-3">
+                  <div class="flex flex-col/ items-center justify-center gap-3">
 
                         <NuxtLink external v-for="social in socials" :key="social.label" :href="social.href"
                           :aria-label="social.label" target="_blank"
-                          class="group flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/12 text-white/60 transition-all duration-300 hover:border-primary/30 hover:bg-primary/10 hover:text-primary">
+                          class="group flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/12 text-white/90 transition-all duration-300 hover:border-primary/30 hover:bg-primary/10 hover:text-primary">
 
                               <component :is="social.icon"
                                 class="size-5 transition-transform duration-300 group-hover:scale-110" />
