@@ -38,7 +38,7 @@
 </script>
 
 <template>
-      <section class="relative overflow-hidden py-28">
+      <section class="relative overflow-hidden py-20">
 
             <!-- Background Glow -->
 
@@ -58,7 +58,7 @@
                               </span>
 
                               <h2 vv-fade-in
-                                class="mt-8 max-w-xl text-2xl md:text-4xl font-semibold leading-tight tracking-tight text-white">
+                                class="mt-8 max-w-xl text-3xl md:text-4xl font-semibold leading-tight tracking-tight text-white">
                                     Technology that moves
                                     <span class="text-primary">your business forward.</span>
                               </h2>
@@ -158,7 +158,7 @@
                               <!-- Floating Badge -->
 
                               <div vv-fade-in
-                                class="absolute -bottom-6 -left-6 rounded-2xl border border-primary/20 bg-neutral-900/90 p-5 shadow-xl backdrop-blur">
+                                class="absolute -bottom-20 -left-6 rounded-2xl border border-primary/20 bg-neutral-900/90 p-5 shadow-xl backdrop-blur">
 
                                     <p class="text-sm text-white/60">
                                           Proven Process

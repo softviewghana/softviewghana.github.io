@@ -41,7 +41,7 @@
       <header class="fixed top-0 inset-x-0 z-50">
             <div class="w-full border-b border-border/70 bg-background/70 backdrop-blur-2xl">
                   <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-6">
-                        <NuxtLink active-class="" exact-active-class="" :to="{ name: 'index' }"
+                        <NuxtLink title="Home" active-class="" exact-active-class="" :to="{ name: 'index' }"
                             class="flex items-center gap-3">
                               <Logo fill-color="white"/>
                               <span class="text-sm font-semibold uppercase tracking-[0.2em] text-foreground">
@@ -57,7 +57,7 @@
                         </div>
                         <div class="hidden items-center gap-3 lg:flex">
                               <NuxtLink to="/contact"
-                                  class="inline-flex h-10 items-center justify-center rounded-2xl bg-primary px-5 text-sm font-semibold text-white transition hover:bg-primary-hover">
+                                  class="inline-flex h-10 items-center justify-center rounded-2xl bg-primary/10 px-5 text-sm font-semibold text-primary transition outline outline-primary-hover/70 active:outline active:outline-offset-[1.5px] active:outline-primary/50">
                                     Start a Project
                               </NuxtLink>
                         </div>

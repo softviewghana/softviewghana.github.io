@@ -30,7 +30,7 @@
                                     </div>
 
                                     <div class="mt-8">
-                                          <h2 class="text-4xl font-bold tracking-tight text-white">
+                                          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-white">
                                                 eSchool Ghana
                                           </h2>
 
@@ -68,7 +68,7 @@
                                           </div>
                                     </div>
 
-                                    <div class="mt-10 flex flex-wrap items-center gap-4">
+                                    <div class="mt-10 flex flex-wrap items-center justify-center sm:justify-start gap-4">
                                           <NuxtLink to="https://eschoolghana.com" external target="_blank"
                                             class="inline-flex items-center gap-2 rounded-2xl bg-primary px-6 py-3 font-medium transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-hover">
                                                 Discover eSchool Ghana
@@ -83,21 +83,21 @@
 
                                     <div class="mt-10 flex flex-wrap items-center gap-3 sm:gap-6 border-t border-white/10 pt-6">
                                           <div>
-                                                <p class="text-lg sm:text-2xl font-bold text-white">100%</p>
+                                                <p class="text-sm sm:text-2xl font-bold text-white">100%</p>
                                                 <p class="text-sm text-white/50">Cloud-based</p>
                                           </div>
 
                                           <div class="h-10 w-px bg-white/20" />
 
                                           <div>
-                                                <p class="text-lg sm:text-2xl font-bold text-white">24/7</p>
+                                                <p class="text-sm sm:text-2xl font-bold text-white">24/7</p>
                                                 <p class="text-sm text-white/50">Accessible</p>
                                           </div>
 
                                           <div class="h-10 w-px bg-white/10" />
 
                                           <div>
-                                                <p class="text-lg sm:text-2xl font-bold text-white">GES +</p>
+                                                <p class="text-sm sm:text-2xl font-bold text-white">GES +</p>
                                                 <p class="text-sm text-white/50">Foreign Curricula</p>
                                           </div>
                                     </div>

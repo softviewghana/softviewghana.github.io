@@ -113,7 +113,7 @@
                               Our Services
                         </span>
 
-                        <h2 class="mt-6 text-5xl font-bold tracking-tight text-white">
+                        <h2 class="mt-6 text-3xl sm:text-5xl font-bold tracking-tight text-white">
                               Technology Solutions Built Around Your Business
                         </h2>
 

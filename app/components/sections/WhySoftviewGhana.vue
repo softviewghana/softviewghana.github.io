@@ -52,7 +52,7 @@
                               Why Choose Us
                         </span>
 
-                        <h2 class="mt-6 text-5xl font-bold tracking-tight text-white">
+                        <h2 class="mt-6 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white">
                               Technology Built Around Your Success
                         </h2>
 
@@ -85,7 +85,7 @@
 
                         </div>
 
-                        <div class="grid gap-18 xl:grid-cols-2">
+                        <div class="grid gap-8 md:gap-18 md:grid-cols-2">
 
                               <ValueCard v-for="value in values" :key="value.title" v-bind="value" />
 

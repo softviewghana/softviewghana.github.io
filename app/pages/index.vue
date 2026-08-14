@@ -3,7 +3,7 @@
       import CONSTANTS from '~/constants';
 
       usePageSeo({
-            title: 'Softview Ghana | Your Trusted IT Solutions Partner',
+            title: 'Softview Ghana - Your Trusted IT Solutions Partner',
             description: 'Softview Ghana builds custom software, web applications, mobile apps, cloud solutions, and IT infrastructure for businesses across Ghana and Africa.',
             path: '/',
       });
