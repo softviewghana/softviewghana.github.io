@@ -122,7 +122,7 @@
 </script>
 
 <template>
-      <section class="mx-auto max-w-7xl px-6 py-3">
+      <section class="mx-auto max-w-7xl px-6 pt-8">
 
             <div class="grid grid-cols-1 gap-12 border-b border-white/10 pb-5 sm:grid-cols-2 lg:grid-cols-4">
 

@@ -41,7 +41,7 @@
 
 <template>
 
-      <section class="py-22">
+      <section class="md:py-18 lg:py-22">
 
             <div class="mx-auto max-w-7xl px-6">
 
@@ -64,7 +64,7 @@
 
                   </div>
 
-                  <div class="relative mt-24">
+                  <div class="relative mt-12 md:mt-24">
 
                         <!-- Center -->
 
