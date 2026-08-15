@@ -69,7 +69,7 @@
                         <!-- Center -->
 
                         <div
-                          class="absolute left-1/2 top-1/2 hidden h-52 w-52 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-primary/20 bg-primary/10 backdrop-blur-xl xl:flex">
+                          class="absolute left-1/2 top-1/2 hidden h-52 w-52 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-primary/20 bg-primary/10 backdrop-blur-xl md:flex">
 
                               <div class="text-center">
 
@@ -77,7 +77,7 @@
                                           Reliable
                                     </h3>
 
-                                    <p class="mt-2 text-muted">
+                                    <p class="xl:mt-2 text-muted">
                                           Digital Solutions
                                     </p>
 

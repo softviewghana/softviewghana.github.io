@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-      import { AlertTriangle, Check, Mail, MapPin, MessageSquareText, Send } from '@lucide/vue';
+      import { AlertTriangle, Check, Mail, MapPin, MessageSquareText, PhoneIcon, Send } from '@lucide/vue';
       import CONSTANTS from '~/constants';
 
       import type { FetchError } from 'ofetch';
@@ -184,8 +184,22 @@
                                                           class="block text-base text-foreground hover:text-primary">
                                                             +233 54 309 3942
                                                       </NuxtLink>
-                                                      <NuxtLink to="https://wa.me/233549289243" target="_blank"
-                                                          rel="noopener" external
+                                                </div>
+                                          </div>
+                                    </div>
+
+                                    <div class="flex items-start gap-4">
+                                          <div class="mt-1 flex h-11 w-11 items-center justify-center rounded-2xl
+                                          bg-primary/10 text-primary">
+                                                <PhoneIcon class="size-5" />
+                                          </div>
+                                          <div>
+                                                <p class="text-sm font-medium uppercase tracking-[0.18em] text-muted">
+                                                      Call Us
+                                                </p>
+                                                <div class="mt-2 space-y-1.5">
+                                                      <NuxtLink to="tel:+233549289243" target="_blank" rel="noopener"
+                                                          external
                                                           class="block text-base text-foreground hover:text-primary">
                                                             +233 54 928 9243
                                                       </NuxtLink>

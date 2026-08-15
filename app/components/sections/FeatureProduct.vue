@@ -200,7 +200,7 @@
 
                                     <!-- Floating Status -->
                                     <div
-                                      class="absolute -bottom-3 right-4 hidden rounded-2xl border border-white/10 bg-white/10 px-4 py-3 backdrop-blur-xl md:block">
+                                      class="absolute animate-bounce -bottom-3 right-4 hidden rounded-2xl border border-white/10 bg-white/10 px-4 py-3 backdrop-blur-xl md:block">
                                           <div class="flex items-center gap-3">
                                                 <div
                                                   class="flex h-10 w-10 items-center justify-center rounded-xl bg-primary-hover/10 text-primary">

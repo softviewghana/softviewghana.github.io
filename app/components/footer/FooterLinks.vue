@@ -8,6 +8,10 @@
             ArrowUpRight,
       } from '@lucide/vue'
       import CONSTANTS from '~/constants'
+      import WhatsAppIcon from '../icons/WhatsAppIcon.vue'
+      import GithubIcon from '../icons/GithubIcon.vue'
+      import XTwitterIcon from '../icons/XTwitterIcon.vue'
+      import FacebookIcon from '../icons/FacebookIcon.vue'
 
       const sections = [
             {
@@ -92,6 +96,29 @@
                   ],
             },
       ]
+
+      const socials = [
+            {
+                  label: 'WhatsApp',
+                  href: 'https://wa.me/233543093942',
+                  icon: WhatsAppIcon,
+            },
+            {
+                  label: 'GitHub',
+                  href: 'https://github.com/softviewghana',
+                  icon: GithubIcon,
+            },
+            {
+                  label: 'X',
+                  href: 'https://x.com/SoftviewGhana',
+                  icon: XTwitterIcon,
+            },
+            {
+                  label: 'Facebook',
+                  href: 'https://facebook.com/softviewghana',
+                  icon: FacebookIcon,
+            },
+      ]
 </script>
 
 <template>
@@ -118,11 +145,11 @@
                         <nav class="space-y-3">
 
                               <NuxtLink v-for="link in section.links" :key="link.label" :to="link.href"
-                                class="group flex items-center justify-between text-white/60 transition-colors hover:text-white">
+                                  class="group flex items-center justify-between text-white/60 transition-colors hover:text-white">
                                     <span>{{ link.label }}</span>
 
                                     <ArrowUpRight
-                                      class="size-4 opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:opacity-100" />
+                                        class="size-4 opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:opacity-100" />
                               </NuxtLink>
 
                         </nav>
@@ -146,7 +173,7 @@
                               <div v-for="group in contact" :key="group.title" class="flex gap-4">
 
                                     <div
-                                      class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white/10 text-primary">
+                                        class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white/10 text-primary">
                                           <component :is="group.icon" class="size-5" />
                                     </div>
 
@@ -165,7 +192,7 @@
                                                       </p>
 
                                                       <NuxtLink v-if="item.href && item.href" :href="item.href"
-                                                        class="text-sm text-white/70 transition-colors hover:text-primary">
+                                                          class="text-sm text-white/70 transition-colors hover:text-primary">
                                                             {{ item.value }}
                                                       </NuxtLink>
 
@@ -180,7 +207,17 @@
                                     </div>
 
                               </div>
+                              
+                        </div>
+                        <div class="flex gap-4 mt-12 items-center justify-center sm:justify-start">
+                              <NuxtLink external v-for="social in socials" :key="social.label" :href="social.href"
+                                  :aria-label="social.label" target="_blank"
+                                  class="group flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/12 text-white/90 transition-all duration-300 hover:border-primary/30 hover:bg-primary/10 hover:text-primary">
 
+                                    <component :is="social.icon"
+                                        class="size-5 transition-transform duration-300 group-hover:scale-110" />
+
+                              </NuxtLink>
                         </div>
 
                   </div>

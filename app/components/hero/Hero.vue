@@ -12,11 +12,6 @@
             Workflow,
       } from '@lucide/vue'
 
-      import ActivityFeed from './ActivityFeed.vue'
-      import ChartCard from './ChartCard.vue'
-      import FloatingTechCard from './FloatingTechCard.vue'
-      import MetricCard from './MetricCard.vue'
-
       const dashboard = useTemplateRef('dashboard')
 
       const rotateX = ref(3)
@@ -38,7 +33,7 @@
       }
 
       function resetTilt() {
-            rotateX.value = 6
+            rotateX.value = -6
             rotateY.value = -10
       }
 
@@ -55,11 +50,11 @@
 
                   <!-- Floating Cards -->
 
-                  <div class="absolute -left-24 top-8 hidden xl:block">
+                  <div class="absolute -left-34 top-8 hidden xl:block">
                         <FloatingTechCard title="Cloud" subtitle="Infrastructure" :icon="Cloud" color="text-sky-400" />
                   </div>
 
-                  <div class="absolute -right-24 top-20 hidden xl:block">
+                  <div class="absolute -right-34 top-20 hidden xl:block">
                         <FloatingTechCard title="REST APIs" subtitle="Secure" :icon="Workflow" color="text-primary"
                             :duration="8" />
                   </div>
