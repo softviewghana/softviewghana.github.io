@@ -10,7 +10,7 @@
 </script>
 
 <template>
-      <section class="relative sm:py-8">
+      <section class="relative py-12 sm:py-22">
             <div class="mx-auto max-w-7xl px-6">
                   <div class="relative overflow-hidden rounded-4xl border border-border bg-white/5 backdrop-blur-2xl">
                         <!-- Background Glow -->
@@ -19,7 +19,7 @@
 
                         <div class="grid items-center gap-12 lg:grid-cols-2">
                               <!-- Left Content -->
-                              <div class="relative z-10 p-8 lg:p-12">
+                              <div class="relative z-10 p-6 lg:p-12">
                                     <div class="flex items-center gap-3">
                                           <span
                                             class="inline-flex items-center gap-2 rounded-full border border-primary-hover/20 bg-primary-hover/10 px-4 py-2 text-sm font-medium text-primary">
@@ -84,21 +84,21 @@
                                     <div class="mt-10 flex flex-wrap items-center gap-3 sm:gap-6 border-t border-white/10 pt-6">
                                           <div>
                                                 <p class="text-sm sm:text-2xl font-bold text-white">100%</p>
-                                                <p class="text-sm text-white/50">Cloud-based</p>
+                                                <p class="text-xs sm:text-sm text-white/50">Cloud-based</p>
                                           </div>
 
                                           <div class="h-10 w-px bg-white/20" />
 
                                           <div>
                                                 <p class="text-sm sm:text-2xl font-bold text-white">24/7</p>
-                                                <p class="text-sm text-white/50">Accessible</p>
+                                                <p class="text-xs sm:text-sm text-white/50">Accessible</p>
                                           </div>
 
                                           <div class="h-10 w-px bg-white/10" />
 
                                           <div>
                                                 <p class="text-sm sm:text-2xl font-bold text-white">GES +</p>
-                                                <p class="text-sm text-white/50">Foreign Curricula</p>
+                                                <p class="text-xs sm:text-sm text-white/50">Foreign Curricula</p>
                                           </div>
                                     </div>
                               </div>
