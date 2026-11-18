@@ -1,26 +1,13 @@
 <script lang="ts" setup>
       import { AlertTriangle, Check, Mail, MapPin, MessageSquareText, PhoneCall, Send } from '@lucide/vue';
       import CONSTANTS from '~/constants';
+      import type { FetchError } from 'ofetch';
 
       usePageSeo({
             title: 'Contact Softview Ghana',
             description: 'Have a software or technology project in mind? Talk to Softview Ghana about your next digital solution.',
             path: '/contact',
       });
-
-      const form = reactive({
-            fullName: '',
-            email: '',
-            phone: '',
-            company: '',
-            projectType: '',
-            budgetRange: '',
-            message: '',
-      });
-
-      const isSubmitting = ref(false);
-      const isSuccess = ref(false);
-      const isError = ref(false);
 
       const projectOptions = [
             'Custom Software',
@@ -32,24 +19,65 @@
             'Other',
       ];
 
-      const submitEnquiry = () => new Promise<void>((resolve) => {
-            window.setTimeout(resolve, 700);
+      const form = reactive({
+            name: '',
+            email: '',
+            phone: '',
+            organization: '',
+            project_type: '',
+            budget_range: '',
+            message: '',
       });
 
-      const handleFormSubmit = async () => {
+      const isSubmitting = ref(false);
+      const isSuccess = ref(false);
+      const isError = ref(false);
+
+      interface ApiResponse {
+            success: boolean;
+            message: string;
+      }
+
+      const response = ref<ApiResponse>({ success: false, message: '' });
+
+      const handleSendEnquiry = async () => {
+            response.value = { success: false, message: '' };
             isSubmitting.value = true;
-            isError.value = false;
 
             try {
-                  await submitEnquiry();
+                  await $fetch('https://api-mail.softview.app/eschoolghana-enquiry/', {
+                        method: 'POST',
+                        body: form,
+                  });
+
+                  response.value = {
+                        success: true,
+                        message: 'Your enquiry has been sent successfully. We will get back to you shortly.'
+                  };
                   isSuccess.value = true;
+
                   Object.keys(form).forEach((key) => {
                         form[key as keyof typeof form] = '';
                   });
-            } catch {
+
+            } catch (error: unknown) {
+
+                  console.error('Error sending enquiry:', error);
+
+                  const fetchError = error as FetchError<ApiResponse>;
+
+                  response.value = {
+                        success: false,
+                        message: fetchError.data?.message
+                              ?? 'An error occurred while sending the enquiry.'
+                  };
                   isError.value = true;
             } finally {
                   isSubmitting.value = false;
+                  // auto hide the response message after 5 seconds
+                  setTimeout(() => {
+                        response.value = { success: false, message: '' };
+                  }, 5000);
             }
       };
 
@@ -119,7 +147,7 @@
                                                       </p>
                                                       <NuxtLink :href="`tel:+${CONSTANTS.PHONE_1}`"
                                                         class="mt-2 block text-base text-foreground hover:text-primary">
-                                                            +233  543 093 942
+                                                            +233 543 093 942
                                                       </NuxtLink>
                                                 </div>
                                           </div>
@@ -158,7 +186,7 @@
                               </div>
                         </aside>
 
-                        <form @submit.prevent="handleFormSubmit"
+                        <form @submit.prevent="handleSendEnquiry"
                           class="rounded-4xl border border-border bg-surface p-6 md:p-8">
                               <p class="text-base leading-8 text-muted">
                                     Tell us a little about what you're trying to achieve. You don't need to have all
@@ -179,7 +207,7 @@
                               <div class="mt-6 grid gap-5 md:grid-cols-2">
                                     <label class="block text-sm text-muted">
                                           <span class="mb-2 block font-medium text-foreground">Full Name *</span>
-                                          <input v-model="form.fullName" required type="text"
+                                          <input v-model="form.name" required type="text"
                                             class="w-full rounded-2xl border border-border bg-background/80 px-4 py-3 text-foreground placeholder:text-muted/70 focus:border-primary"
                                             placeholder="Your full name" />
                                     </label>
@@ -201,14 +229,14 @@
                                     <label class="block text-sm text-muted">
                                           <span class="mb-2 block font-medium text-foreground">Company /
                                                 Organization</span>
-                                          <input v-model="form.company" type="text"
+                                          <input v-model="form.organization" type="text"
                                             class="w-full rounded-2xl border border-border bg-background/80 px-4 py-3 text-foreground placeholder:text-muted/70 focus:border-primary"
                                             placeholder="Optional" />
                                     </label>
 
                                     <label class="block text-sm text-muted md:col-span-2">
                                           <span class="mb-2 block font-medium text-foreground">Project Type *</span>
-                                          <select v-model="form.projectType" required
+                                          <select v-model="form.project_type" required
                                             class="w-full rounded-2xl border border-border bg-background/80 px-4 py-3 text-foreground focus:border-primary">
                                                 <option value="" disabled>Select a project type</option>
                                                 <option v-for="option in projectOptions" :key="option" :value="option">
@@ -219,7 +247,7 @@
 
                                     <label class="block text-sm text-muted md:col-span-2">
                                           <span class="mb-2 block font-medium text-foreground">Budget Range</span>
-                                          <input v-model="form.budgetRange" type="text"
+                                          <input v-model="form.budget_range" type="text"
                                             class="w-full rounded-2xl border border-border bg-background/80 px-4 py-3 text-foreground placeholder:text-muted/70 focus:border-primary"
                                             placeholder="Optional" />
                                     </label>
@@ -232,6 +260,10 @@
                                     </label>
                               </div>
 
+                              <div v-if="response.message" :class="response.success ? 'text-green-600' : 'text-red-600'"
+                                class="mt-2 text-sm">
+                                    {{ response.message }}
+                              </div>
                               <div class="mt-6 flex justify-end">
                                     <button type="submit" :disabled="isSubmitting"
                                       class="inline-flex items-center justify-center gap-2 rounded-2xl bg-primary px-6 py-3.5 font-medium text-white transition hover:bg-primary-hover disabled:cursor-not-allowed disabled:opacity-60">
