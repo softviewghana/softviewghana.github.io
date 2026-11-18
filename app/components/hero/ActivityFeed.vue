@@ -27,7 +27,7 @@
                         {
                               id: 1,
                               title: 'Deployment Successful',
-                              description: 'Production environment updated.',
+                              description: 'Production env. updated.',
                               time: '2 mins ago',
                               icon: Rocket,
                         },
@@ -76,15 +76,15 @@
                   </span>
             </div>
 
-            <div class="space-y-4">
+            <div class="space-y-0">
                   <div v-for="(activity, index) in activities" :key="activity.id"
                     class="group flex items-start gap-4 rounded-xl border border-transparent p-3 transition-all duration-300 hover:border-white/10 hover:bg-white/5"
                     :style="{
                         animationDelay: `${index * 120}ms`,
                   }">
                         <div
-                          class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/15 text-primary transition-transform duration-300 group-hover:scale-110">
-                              <component :is="activity.icon" class="size-5" />
+                          class="flex size-10 shrink-0 items-center justify-center rounded-xl bg-primary/15 text-primary transition-transform duration-300 group-hover:scale-110">
+                              <component :is="activity.icon" class="size-4" />
                         </div>
 
                         <div class="min-w-0 flex-1">
@@ -93,12 +93,12 @@
                                           {{ activity.title }}
                                     </h4>
 
-                                    <span class="text-xs text-white/40">
+                                    <span class="text-[10px] text-white/40">
                                           {{ activity.time }}
                                     </span>
                               </div>
 
-                              <p class="mt-1 text-sm text-white/55">
+                              <p class="mt-1 text-xs text-white/55">
                                     {{ activity.description }}
                               </p>
                         </div>

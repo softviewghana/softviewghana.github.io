@@ -54,7 +54,6 @@
 <template>
 
       <section class="relative flex items-center justify-center" @mousemove="handleMouseMove" @mouseleave="resetTilt">
-
             <div class="relative w-full">
 
                   <!-- Floating Cards -->
@@ -81,7 +80,7 @@
                   <!-- Dashboard -->
 
                   <div ref="dashboard" :style="transform"
-                    class="transition-transform duration-150 will-change-transform transform-3d ">
+                    class="transition-transform duration-150 will-change-transform transform-3d text-xs">
 
                         <!-- <HeroBackground /> -->
                         <div class="pointer-events-none absolute inset-0 overflow-hidden rounded-3xl">
@@ -96,6 +95,7 @@
 
                                     <div class="flex items-center gap-5">
 
+                                          <!-- actions -->
                                           <div class="flex gap-2">
 
                                                 <div class="h-3 w-3 rounded-full bg-red-400/80" />
@@ -108,11 +108,11 @@
 
                                           <div>
 
-                                                <p class="text-xs uppercase tracking-[0.18em] text-white/40">
+                                                <p class="text-xs uppercase tracking-wide text-white/70">
                                                       Enterprise Dashboard
                                                 </p>
 
-                                                <h2 class="mt-1 text-xl font-semibold text-white">
+                                                <h2 class="mt-1 text-lg font-semibold text-white">
                                                       Technology Overview
                                                 </h2>
 
@@ -136,13 +136,13 @@
 
                                     <div class="grid gap-4 sm:grid-cols-3">
                                           <MetricCard title="Projects" value="24" subtitle="Currently Active"
-                                            :icon="FolderKanban" class=""/>
+                                            :icon="FolderKanban" class="" />
 
                                           <MetricCard title="API Requests" value="1.2M" subtitle="This Month"
-                                            :icon="Activity" class="hidden sm:block"/>
+                                            :icon="Activity" class="hidden sm:block" />
 
                                           <MetricCard title="Uptime" value="99.98%" subtitle="Infrastructure"
-                                            :icon="Database" class="hidden sm:block"/>
+                                            :icon="Database" class="hidden sm:block" />
                                     </div>
 
                                     <!-- Main -->

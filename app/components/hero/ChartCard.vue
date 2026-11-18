@@ -44,24 +44,24 @@
             <!-- Header -->
             <div class="mb-6 flex items-center justify-between">
                   <div>
-                        <p class="text-sm text-white/60">
+                        <p class="text-sm text-white/70">
                               {{ title }}
                         </p>
 
-                        <h3 class="mt-1 text-xl font-semibold text-white">
+                        <h3 class="mt-1 text-lg font-semibold text-white">
                               {{ subtitle }}
                         </h3>
                   </div>
 
-                  <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/15 text-primary">
-                        <TrendingUp class="size-5" />
+                  <div class="flex size-10 items-center justify-center rounded-xl bg-primary/15 text-primary">
+                        <TrendingUp class="size-4" />
                   </div>
             </div>
 
             <!-- Chart -->
-            <div class="flex h-52 items-end justify-between gap-3">
+            <div class="flex items-end justify-between gap-3">
                   <div v-for="(item, index) in data" :key="item.label" class="flex flex-1 flex-col items-center">
-                        <div class="relative flex h-44 w-full items-end">
+                        <div class="relative flex h-35 w-full items-end">
                               <div
                                 class="w-full rounded-t-xl bg-linear-to-t from-primary/60 to-primary shadow-lg shadow-primary/20 transition-all duration-700 ease-out hover:brightness-110"
                                 :style="{

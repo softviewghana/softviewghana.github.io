@@ -157,7 +157,7 @@
                               <!-- Floating Badge -->
 
                               <div v-fadeIn
-                                class="absolute -bottom-6 -left-6 rounded-2xl border border-primary/20 bg-neutral-900/90 p-5 shadow-xl backdrop-blur">
+                                class="absolute -bottom-16 -left-9 rounded-2xl border border-primary/20 bg-neutral-900/90 p-5 shadow-xl backdrop-blur">
 
                                     <p class="text-sm text-white/60">
                                           Proven Process

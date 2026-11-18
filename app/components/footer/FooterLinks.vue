@@ -6,6 +6,7 @@
             Mail,
             MapPin,
             ArrowUpRight,
+            PhoneCall,
       } from '@lucide/vue'
       import CONSTANTS from '~/constants'
 
@@ -81,6 +82,17 @@
                   ],
             },
             {
+                  title: 'Phone',
+                  icon: PhoneCall,
+                  items: [
+                        {
+                              label: '+233 543 093 942',
+                              value: CONSTANTS.PHONE_1,
+                              href: `tel:+${CONSTANTS.PHONE_1}`,
+                        },
+                  ],
+            },
+            {
                   title: 'Location',
                   icon: MapPin,
                   items: [
@@ -109,21 +121,21 @@
                                     <component :is="section.icon" class="size-5" />
                               </div> -->
 
-                              <h3 class="font-semibold text-white/85">
+                              <h3 class="font-semibold text-primary/90">
                                     {{ section.title }}
                               </h3>
 
                         </div>
 
                         <nav class="space-y-3">
-
-                              <NuxtLink v-for="link in section.links" :key="link.label" :to="link.href"
-                                class="group flex items-center justify-between text-white/60 transition-colors hover:text-white">
-                                    <span>{{ link.label }}</span>
-
+                              <div v-for="link in section.links" :key="link.label"
+                                class="group flex flex-row justify-start items-center gap-x-5 text-white/60 transition-colors hover:text-white">
+                                    <NuxtLink :to="link.href">
+                                          <span>{{ link.label }}</span>
+                                    </NuxtLink>
                                     <ArrowUpRight
                                       class="size-4 opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:opacity-100" />
-                              </NuxtLink>
+                              </div>
 
                         </nav>
 
@@ -135,7 +147,7 @@
 
                         <div class="mb-6 flex items-center gap-3">
 
-                              <h3 class="font-semibold text-white/85">
+                              <h3 class="font-semibold text-primary/90">
                                     Contact
                               </h3>
 
@@ -157,17 +169,16 @@
                                           </p>
 
                                           <div>
-
                                                 <div v-for="item in group.items" :key="item.label">
-
+<!-- 
                                                       <p class="text-xs text-white/40">
                                                             {{ item.label }}
-                                                      </p>
+                                                      </p> -->
 
-                                                      <NuxtLink v-if="item.href && item.href" :href="item.href"
+                                                      <a v-if="item.href && item.href" :href="item.href"
                                                         class="text-sm text-white/70 transition-colors hover:text-primary">
-                                                            {{ item.value }}
-                                                      </NuxtLink>
+                                                            {{ item.label ? item.label : item.value }}
+                                                      </a>
 
                                                       <p v-else class="text-sm text-white/70">
                                                             {{ item.value }}

@@ -23,7 +23,7 @@
                               {{ title }}
                         </p>
 
-                        <h3 class="mt-2 text-2xl font-semibold text-white">
+                        <h3 class="mt-2 text-lg font-semibold text-white">
                               {{ value }}
                         </h3>
 

@@ -4,6 +4,8 @@
 <template>
   <Header />
   <main class="grid min-h-screen place-items-center bg-background px-6 py-24 sm:py-32 lg:px-8">
+    <div class="pointer-events-none absolute inset-0 bg-noise" />
+    <div class="pointer-events-none absolute inset-0 bg-grid opacity-50" />
     <div class="text-center">
       <p class="text-base font-semibold text-primary">404</p>
       <h1 class="mt-4 text-5xl font-semibold tracking-tight text-balance text-foreground sm:text-7xl">Page not found</h1>

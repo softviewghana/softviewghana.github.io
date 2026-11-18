@@ -19,7 +19,7 @@ export function useTheme() {
 
     onMounted(() => {
         // 1. Check for a saved theme in localStorage
-        const savedTheme = localStorage.getItem('theme') as Theme | null;
+        const savedTheme = localStorage.getItem('sv-web-theme') as Theme | null;
 
         if (savedTheme) {
             theme.value = savedTheme;
@@ -45,7 +45,7 @@ export function useTheme() {
         // Toggle the theme and save to localStorage
         const newTheme = theme.value === 'light' ? 'dark' : 'light';
         theme.value = newTheme;
-        localStorage.setItem('theme', newTheme);
+        localStorage.setItem('sv-web-theme', newTheme);
         applyThemeClass(newTheme);
     };
 

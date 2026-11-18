@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+      import CONSTANTS from '~/constants'
+
       interface Insight {
             slug: string
             title: string
@@ -11,7 +13,7 @@
       }
 
       usePageSeo({
-            title: 'Insights | Softview Ghana',
+            title: 'Insights  — ' + CONSTANTS.APP_NAME,
             description: 'Practical insights on software engineering, technology, digital transformation, and building better digital businesses.',
             path: '/insights',
       });
@@ -41,7 +43,7 @@
 <template>
       <div class="pb-20">
             <PageHero eyebrow="Insights" title="Ideas, Engineering, and Technology"
-                description="Practical insights on software development, technology, digital transformation, and building better digital businesses." />
+              description="Practical insights on software development, technology, digital transformation, and building better digital businesses." />
 
             <BaseContainer class="mt-8 md:mt-10">
                   <template v-if="insights.length">
@@ -52,12 +54,12 @@
                               </div>
 
                               <div
-                                  class="rounded-[28px] border border-border bg-[radial-gradient(circle_at_top,_color-mix(in_oklab,_var(--brand)_18%,_transparent),_transparent_45%)] bg-background p-6 md:p-8">
+                                class="rounded-[28px] border border-border bg-[radial-gradient(circle_at_top,color-mix(in_oklab,var(--brand)_18%,transparent),transparent_45%)] bg-background p-6 md:p-8">
                                     <p class="text-xs font-medium uppercase tracking-[0.22em] text-primary/80">
                                           {{ featuredInsight.category }}
                                     </p>
                                     <h2
-                                        class="mt-4 max-w-3xl text-3xl font-semibold tracking-tighter text-foreground md:text-5xl">
+                                      class="mt-4 max-w-3xl text-3xl font-semibold tracking-tighter text-foreground md:text-5xl">
                                           {{ featuredInsight.title }}
                                     </h2>
                                     <p class="mt-5 max-w-2xl text-base leading-8 text-muted md:text-lg">
@@ -69,7 +71,7 @@
                                           <span>{{ featuredInsight.readingTime }} min read</span>
                                     </div>
                                     <NuxtLink :to="`/insights/${featuredInsight.slug}`"
-                                        class="mt-8 inline-flex items-center gap-2 text-base font-medium text-primary hover:text-primary-hover">
+                                      class="mt-8 inline-flex items-center gap-2 text-base font-medium text-primary hover:text-primary-hover">
                                           Read Article <span aria-hidden="true">→</span>
                                     </NuxtLink>
                               </div>
@@ -90,8 +92,8 @@
 
                         <section class="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
                               <NuxtLink v-for="insight in filteredInsights" :key="insight.slug"
-                                  :to="`/insights/${insight.slug}`"
-                                  class="rounded-3xl border border-border bg-surface p-6 transition duration-300 hover:-translate-y-1 hover:border-primary/30">
+                                :to="`/insights/${insight.slug}`"
+                                class="rounded-3xl border border-border bg-surface p-6 transition duration-300 hover:-translate-y-1 hover:border-primary/30">
                                     <p class="text-xs font-semibold uppercase tracking-[0.18em] text-primary/80">
                                           {{ insight.category }}
                                     </p>
@@ -110,7 +112,10 @@
                   </template>
 
                   <section v-else
-                      class="rounded-4xl border border-dashed border-border bg-surface p-8 text-center md:p-16">
+                    class="p-8 text-center md:p-16 relative mt-20 overflow-hidden rounded-4xl border border-primary/20 bg-primary/5 backdrop-blur-lg">
+                        <div class="absolute -left-20 -top-24 size-64 rounded-full bg-primary/10 blur-3xl" />
+                        <div class="absolute -bottom-28 -right-16 size-64 rounded-full bg-primary/10 blur-3xl" />
+
                         <h3 class="text-3xl font-semibold tracking-tighter text-foreground md:text-4xl">We're
                               Working on Something Worth Reading</h3>
                         <p class="mx-auto mt-5 max-w-2xl text-base leading-8 text-muted md:text-lg">

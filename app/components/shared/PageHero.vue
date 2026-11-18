@@ -15,10 +15,7 @@
 </script>
 
 <template>
-      <div
-        class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(39,201,120,0.20),transparent_38%)]" />
-        <div class="pointer-events-none absolute inset-0 bg-grid opacity-25" />
-      <section class="relative overflow-hidden pb-12 pt-16 md:pb-16 md:pt-20">
+      <section class="relative overflow-hidden">
 
             <BaseContainer class="relative">
                   <div v-if="breadcrumbs && breadcrumbs.length"

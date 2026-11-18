@@ -1,27 +1,29 @@
-import { defineNuxtConfig } from "nuxt/config";
 import tailwindcss from "@tailwindcss/vite";
+
+const $siteName = "Softview Ghana";
+const $siteDescription = "Softview Ghana builds custom software, web applications, mobile apps, cloud solutions, and IT infrastructure for businesses across Ghana and Africa.";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  modules: ["@nuxt/fonts", "@nuxt/image", "@nuxtjs/seo"],
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
   ssr: true,
-  css: ["~/assets/css/app.css"],
-
-  vite: {
-    plugins: [tailwindcss()],
-  },
   components: [
     {
       path: "~/components",
       pathPrefix: false,
     },
   ],
-  modules: ["@nuxtjs/sitemap", "@nuxt/image", "@nuxt/fonts"],
+  vite: {
+    plugins: [tailwindcss()],
+  },
+  css: ["~/assets/css/app.css"],
   app: {
     baseURL: "/",
     head: {
-      title: "Softview Ghana | Your Trusted IT Solutions Partner",
+      title: "Softview Ghana — Your Trusted IT Solutions Partner",
+      titleTemplate: "%s ",
       htmlAttrs: {
         lang: "en-GH",
       },
@@ -31,6 +33,12 @@ export default defineNuxtConfig({
           type: "image/x-icon",
           href: "/favicon.ico",
           sizes: "32x32",
+        },
+        {
+          rel: "icon",
+          type: "image/png",
+          href: "/icon-192.png",
+          sizes: "192x192",
         },
         {
           rel: "apple-touch-icon",
@@ -45,15 +53,20 @@ export default defineNuxtConfig({
       meta: [
         {
           name: "description",
-          content:
-            "Softview Ghana builds custom software, web applications, mobile apps, cloud solutions, and IT infrastructure for businesses across Ghana and Africa.",
+          content: $siteDescription,
         },
         {
           name: "keywords",
           content: "Softview Ghana, Softview Ghana Ltd, Softview Ghana Limited",
         },
-        { name: "author", content: "Kingsley Osei Opoku" },
-        { name: "viewport", content: "width=device-width, initial-scale=1" },
+        {
+          name: "author",
+          content: "Kingsley Osei Opoku",
+        },
+        {
+          name: "viewport",
+          content: "width=device-width, initial-scale=1",
+        },
         {
           name: "robots",
           content:
@@ -81,7 +94,7 @@ export default defineNuxtConfig({
         },
         {
           name: "application-name",
-          content: "Softview Ghana",
+          content: $siteName,
         },
         {
           property: "fb:pages",
@@ -89,6 +102,9 @@ export default defineNuxtConfig({
         },
       ],
     },
+  },
+  robots:{
+    enabled: true,
   },
   site: {
     url: "https://softviewghana.com",

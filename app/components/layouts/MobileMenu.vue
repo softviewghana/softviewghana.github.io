@@ -7,6 +7,7 @@
             label: string;
             href: string;
             title?: string;
+            icon?: any;
       }
 
       defineProps<{
@@ -18,78 +19,57 @@
 
 <template>
 
-      <button
-        class="inline-flex size-10 items-center justify-center rounded-xl border-0 border-border bg-surface-elevated lg:hidden"
-        @click="open = true" aria-label="Open navigation menu" type="button">
+      <button class="inline-flex size-10 items-center justify-center rounded-xl border-0 border-border lg:hidden"
+        @click="open = !open" aria-label="Open navigation menu" type="button">
             <AlignRightIcon class="size-6" />
       </button>
 
-      <ClientOnly>
-            <Teleport to="body">
-                  <Transition name="slide-in" mode="in-out">
-                        <div @click.self="open = false" v-if="open" tabindex="0"
-                          class="fixed inset-0 z-50 flex h-full w-full justify-end overflow-hidden bg-black/30 backdrop-blur-sm focus:outline-none lg:hidden">
+      <Teleport to="#teleports">
+            <Transition name="slide-in" mode="in-out">
+                  <div @click.self="open = false" v-if="open" tabindex="0"
+                    class="fixed inset-0 top-17.5 z-50 flex h-full w-full justify-end overflow-hidden bg-background/15 backdrop-blur-lg focus:outline-none lg:hidden">
 
-                              <div
-                                class="relative h-full w-full max-w-120 max-[480px]:border-l-0 overflow-y-auto border-l border-border bg-background">
-                                    <div class="grid grid-rows-[1fr_auto] min-h-screen">
-                                          <span>
+                        <div
+                          class="relative h-full w-full max-w-120 max-[480px]:border-l-0 overflow-y-auto border-l border-border bg-background/85">
+                              <div class="grid grid-rows-[1fr_auto] min-h-screen">
+                                    <span>
+                                          <nav aria-label="Mobile navigation"
+                                            class="flex flex-col gap-2 py-4 px-4 space-y-1 border-t border-border">
+                                                <NuxtLink v-for="item in links" :key="item.href" :to="item.href"
+                                                  class="flex items-center gap-1.5 rounded-xl px-3 py-2.5 text-sm font-medium text-muted transition-all duration-200 xl:px-3 xl:text-sm"
+                                                  exact-active-class="bg-primary/90 text-white shadow-sm"
+                                                  active-class="hover:bg-primary/90 text-white shadow-sm"
+                                                  :class="$route.path === item.href ? '' : 'hover:bg-foreground/25 hover:text-white'"
+                                                  :aria-current="$route.path === item.href ? 'page' : undefined"
+                                                  @click="open = false">
+                                                      <component :is="item.icon" :size="17" />
+                                                      <span>{{ item.label }}</span>
+                                                </NuxtLink>
+                                          </nav>
 
-                                                <div
-                                                  class="flex flex-row items-center justify-between px-4 py-3 sticky border-b border-border/25 top-0 bg-background">
-                                                      <NuxtLink to="/" @click="open = false"
-                                                        aria-label="Go to homepage">
-                                                            <Logo fill-color="white" />
-                                                      </NuxtLink>
 
-                                                      <button @click="open = false" aria-label="Close navigation menu"
-                                                        type="button"
-                                                        class="inline-flex size-10 items-center justify-center rounded-xl border-0 border-border bg-surface-elevated">
-                                                            <X class="size-6" />
-                                                      </button>
+                                          <div class="relative px-6 space-y-6 py-10">
 
-                                                </div>
+                                                <BaseButton block
+                                                  @click="() => { open = false; navigateTo('/contact') }">
+                                                      Start a Project
+                                                </BaseButton>
 
-                                                <div class="flex flex-col gap-2 py-4 px-4">
-                                                      <span v-for="link in links" :key="link.href"
-                                                        class="flex flex-row justify-between items-center rounded-0 border-b border-border hover:border-primary/40">
-                                                            <NuxtLink :href="link.href"
-                                                              exact-active-class="text-primary"
-                                                              active-class="text-primary"
-                                                              class="px-4 py-3 text-sm font-semibold  hover:text-primary"
-                                                              @click="open = false" :title="link.title">
-                                                                  {{ link.label }}
-                                                            </NuxtLink>
-
-                                                            <ArrowRight class="size-4 text-muted" />
-
-                                                      </span>
-
-                                                </div>
-
-                                                <div class="relative px-6 space-y-6 py-10">
-
-                                                      <BaseButton block @click="() => { open = false; navigateTo('/contact') }">
-                                                            Start a Project
-                                                      </BaseButton>
-
-                                                </div>
-
-                                          </span>
-                                          <div class="relative bottom-0 lg:py-6 py-3">
-                                                <p class="text-sm text-center">
-                                                      &copy; {{ new Date().getFullYear() }} Softview Ghana. All rights
-                                                      reserved.
-                                                </p>
                                           </div>
 
+                                    </span>
+                                    <div class="relative bottom-17.5 lg:py-6 py-3">
+                                          <p class="text-sm text-center">
+                                                &copy; {{ new Date().getFullYear() }} Softview Ghana. All rights
+                                                reserved.
+                                          </p>
                                     </div>
-                              </div>
 
+                              </div>
                         </div>
 
-                  </Transition>
-            </Teleport>
-      </ClientOnly>
+                  </div>
+            </Transition>
+      </Teleport>
 
 </template>

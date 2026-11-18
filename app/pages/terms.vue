@@ -1,6 +1,8 @@
 <script setup lang="ts">
+      import CONSTANTS from '~/constants';
+
       usePageSeo({
-            title: 'Terms of Service | Softview Ghana',
+            title: 'Terms of Service  — ' + CONSTANTS.APP_NAME,
             description: 'The terms governing the use of Softview Ghana websites, products, and services.',
             path: '/terms',
       });
@@ -27,8 +29,8 @@
 
 <template>
       <LegalLayout eyebrow="Legal" title="Terms of Service"
-          description="The terms governing the use of Softview Ghana websites, products, and services."
-          last-updated="August 10, 2026" :items="tocItems">
+        description="The terms governing the use of Softview Ghana websites, products, and services."
+        last-updated="August 10, 2026" :items="tocItems">
             <section id="01" class="mb-10 scroll-mt-24">
                   <h2 class="mb-3 text-2xl font-semibold tracking-[-0.04em] text-foreground">1. Introduction</h2>
                   <p class="text-base leading-8 text-muted">
