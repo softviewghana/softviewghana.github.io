@@ -57,10 +57,14 @@ html {
 @layer utilities {
       .bg-grid {
             background-image:
-                  linear-gradient(rgba(36, 199, 107, 0.217) 1px, transparent 1px),
-                  linear-gradient(90deg, rgba(31, 185, 98, 0.117) 1px, transparent 1px);
+                  linear-gradient(0deg, rgba(36, 199, 107, 0.065) 1px, transparent 1px),
+                  linear-gradient(90deg, rgba(31, 185, 98, 0.065) 1px, transparent 1px);
 
             background-size: 44px 44px;
+      }
+
+      .bg-noise{
+            position: relative;
       }
 
       .bg-noise::before {
@@ -71,11 +75,9 @@ html {
 
             pointer-events: none;
 
-            opacity: 0.02;
+            opacity: 0.045;
 
-            background-image: radial-gradient(circle at 25% 25%,
-                        white 1px,
-                        transparent 1px);
+            background-image: radial-gradient(circle at 25% 25%, white 1px, transparent 1px);
 
             background-size: 8px 8px;
       }

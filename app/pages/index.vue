@@ -25,7 +25,7 @@
 <template>
       <!-- <section class="relative overflow-hidden"> -->
       <BaseContainer>
-            <div class="grid grid-cols-1 items-center lg:items-start lg:grid-cols-[0.92fr_1.08fr] gap-8 lg:gap-16">
+            <div class="grid grid-cols-1 items-center lg:items-start lg:grid-cols-[0.92fr_1.08fr] gap-8 lg:gap-16 mt-6 sm:mt-10">
                   <div class="flex flex-col items-start">
                         <div class="w-full flex justify-center items-center">
 

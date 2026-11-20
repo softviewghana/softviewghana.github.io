@@ -204,7 +204,7 @@
 
                         <div class="grid border-t border-border md:grid-cols-2">
                               <article v-for="(value, index) in values" :key="value.number"
-                                class="group border-b border-border py-8 md:px-8 md:py-10"
+                                class="group border-b border-border py-8 md:px-8 md:py-10 bg-surface/5 backdrop-blur-md"
                                 :class="index % 2 === 0 ? 'md:border-r md:pl-0' : 'md:pr-0'">
                                     <div class="flex gap-5">
                                           <span
@@ -249,7 +249,7 @@
 
                               <div class="divide-y divide-border border-y border-border">
                                     <article v-for="capability in capabilities" :key="capability.index"
-                                      class="group py-9 md:py-11">
+                                      class="group py-9 md:py-11 bg-surface/2 backdrop-blur-md">
                                           <div class="grid gap-5 lg:grid-cols-[60px_1fr_1fr] lg:items-start lg:gap-8">
                                                 <span
                                                   class="font-mono text-xs text-muted transition-colors group-hover:text-primary">
@@ -352,7 +352,7 @@
 
                                     <div class="mt-10">
                                           <article v-for="principle in principles" :key="principle.number"
-                                            class="group flex items-start gap-5 border-t border-border py-6">
+                                            class="group flex items-start gap-5 border-t border-border py-6  bg-surface/5 backdrop-blur-md">
                                                 <span class="w-8 shrink-0 pt-1 font-mono text-xs text-muted">
                                                       {{ principle.number }}
                                                 </span>
@@ -435,6 +435,8 @@
                         </div>
                   </BaseContainer>
             </section>
+
+            <TeamMembers />
 
             <!-- CTA -->
             <section>

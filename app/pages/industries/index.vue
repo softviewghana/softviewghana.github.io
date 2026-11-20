@@ -221,7 +221,7 @@
                               </NuxtLink>
                         </div>
 
-                        <div class="rounded-4xl border border-border bg-surface p-6 md:p-8">
+                        <div class="rounded-4xl border border-border bg-surface/55 backdrop-blur-2x p-6 md:p-8">
                               <p class="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
                                     Our perspective
                               </p>

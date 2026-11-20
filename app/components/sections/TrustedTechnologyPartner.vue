@@ -40,9 +40,6 @@
       <section class="relative overflow-hidden py-28">
 
             <!-- Background Glow -->
-
-            <div class="absolute left-1/2 top-0 h-96 w-96 -translate-x-1/2 rounded-full bg-primary/20 blur-[160px]" />
-
             <BaseContainer>
 
                   <div class="grid items-center gap-20 lg:grid-cols-2">

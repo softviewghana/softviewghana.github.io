@@ -1,7 +1,8 @@
 import tailwindcss from "@tailwindcss/vite";
 
 const $siteName = "Softview Ghana";
-const $siteDescription = "Softview Ghana builds custom software, web applications, mobile apps, cloud solutions, and IT infrastructure for businesses across Ghana and Africa.";
+const $siteDescription =
+  "Softview Ghana builds custom software, web applications, mobile apps, cloud solutions, and IT infrastructure for businesses across Ghana and Africa.";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -103,11 +104,14 @@ export default defineNuxtConfig({
       ],
     },
   },
-  robots:{
+  robots: {
     enabled: true,
   },
   site: {
     url: "https://softviewghana.com",
     name: "Softview Ghana",
+  },
+  image: {
+    provider: "ipxStatic",
   },
 });
