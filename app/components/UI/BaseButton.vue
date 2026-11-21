@@ -21,6 +21,7 @@
             disabled?: boolean;
             block?: boolean;
             class?: HTMLAttributes['class'];
+            as?: HTMLButtonElement['type'];
       }
 
       const props = withDefaults(defineProps<Props>(), {
@@ -120,7 +121,7 @@
 </script>
 
 <template>
-      <button v-bind="props" :class="[classes, props.class]">
+      <button :class="[classes, props.class]" :disabled="props.disabled || props.loading" :type="props.type" v-bind="$attrs">
             <LoaderCircle v-if="loading" class="size-4 animate-spin" />
             <slot />
       </button>

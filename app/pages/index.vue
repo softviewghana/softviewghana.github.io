@@ -27,7 +27,7 @@
       <BaseContainer>
             <div class="grid grid-cols-1 items-center lg:items-start lg:grid-cols-[0.92fr_1.08fr] gap-8 lg:gap-16 mt-6 sm:mt-10">
                   <div class="flex flex-col items-start">
-                        <div class="w-full flex justify-center items-center">
+                        <div class="w-full flex justify-center items-center bg-none">
 
                               <div class="flex gap-2 items-center flex-nowrap rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 
                                     text-sm font-medium text-primary" v-fadeIn>
@@ -52,11 +52,11 @@
                         </p>
                         <div v-fadeIn
                           class="mt-8 flex flex-col w-full sm:w-auto gap-5 transition-all duration-1000 ease-out opacity-100 translate-y-0">
-                              <BaseButton block variant="primary">
+                              <BaseButton block variant="primary" @click="navigateTo({name: 'contact'})">
                                     Start Your Project
                                     <ArrowRight :size="16" />
                               </BaseButton>
-                              <BaseButton variant="outline"
+                              <BaseButton variant="outline" @click="navigateTo({name: 'services'})"
                                 class="border-border bg-background shadow hover:text-primary text-white" block>
                                     Explore Our Services
                                     <SquareArrowOutUpRight :size="16" />
