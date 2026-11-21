@@ -1,0 +1,33 @@
+# Softview Ghana
+
+Canonical Origin: https://softviewghana.com/
+
+## LLM Resources
+
+- [Full Content](https://softviewghana.com/llms-full.txt): Complete page content in markdown format.
+- [sitemap.xml](https://softviewghana.com/sitemap.xml): XML sitemap for search engines and crawlers.
+- [robots.txt](https://softviewghana.com/robots.txt): Crawler rules and permissions.
+
+## Pages
+
+- [Softview Ghana](https://softviewghana.com/index.md): Softview Ghana builds custom software, web applications, mobile apps, cloud solutions, and IT infrastructure for businesses across Ghana and Africa.
+- [About Softview Ghana](https://softviewghana.com/about.md): Softview Ghana is a technology company building thoughtful software, digital products and experiences that solve real problems for businesses and organizations.
+- [Contact Softview Ghana](https://softviewghana.com/contact.md): Have a software or technology project in mind? Talk to Softview Ghana about your next digital solution.
+- [Industries We Serve — Softview Ghana](https://softviewghana.com/industries.md): Discover how Softview Ghana applies software, digital solutions, and technology infrastructure to the needs of education, retail, professional services, healthc...
+- [Education Technology Solutions — Softview Ghana](https://softviewghana.com/industries/education.md): Explore education technology solutions for school administration, student records, academic operations, attendance, fees, communication, and reporting.
+- [Finance &amp; Financial Services Technology Solutions — Softview Ghana](https://softviewghana.com/industries/finance.md): Explore technology solutions for financial workflows, customer management, reporting, approvals, document management, automation, and system integrations.
+- [Healthcare Technology Solutions — Softview Ghana](https://softviewghana.com/industries/healthcare.md): Explore digital solutions for healthcare administration, patient coordination, information management, reporting, and operational workflows.
+- [Business Operations Technology Solutions — Softview Ghana](https://softviewghana.com/industries/operations.md): Explore custom business systems, workflow automation, internal applications, approvals, dashboards, reporting, document management, and system integrations.
+- [Professional Services Technology Solutions — Softview Ghana](https://softviewghana.com/industries/professional-services.md): Explore custom software solutions for professional services firms, including client portals, CRM, workflow automation, document management, scheduling, billing,...
+- [Retail &amp; Commerce Technology Solutions — Softview Ghana](https://softviewghana.com/industries/retail-commerce.md): Explore retail and commerce technology solutions, including e-commerce websites, POS systems, inventory management, order processing, customer management, payme...
+- [Insights — Softview Ghana](https://softviewghana.com/insights.md): Practical insights on software engineering, technology, digital transformation, and building better digital businesses.
+- [Privacy Policy — Softview Ghana](https://softviewghana.com/privacy-policy.md): How Softview Ghana collects, uses, protects, and manages information.
+- [Our Software Products — Softview Ghana](https://softviewghana.com/products.md): Discover software products developed by Softview Ghana, including eSchool Ghana for school management and EPSSP for payroll and staff self-service.
+- [Software &amp; Technology Services — Softview Ghana](https://softviewghana.com/services.md): Explore Softview Ghana services in custom software development, web and mobile applications, UI/UX design, cloud and DevOps, and IT infrastructure.
+- [Cloud &amp; DevOps — Softview Ghana](https://softviewghana.com/services/cloud-devops.md): Cloud infrastructure, server management, CI/CD pipelines, deployment automation, monitoring and DevOps solutions for reliable digital operations.
+- [Custom Software Development — Softview Ghana](https://softviewghana.com/services/custom-software-development.md): Tailored software solutions built around your business processes, workflows and goals. ERP systems, business automation, portals and integrations.
+- [IT Infrastructure &amp; Networking — Softview Ghana](https://softviewghana.com/services/it-infrastructure-networking.md): Business networking, Wi-Fi deployment, firewall configuration, server installation and IT infrastructure consulting for reliable business operations.
+- [Mobile Application Development — Softview Ghana](https://softviewghana.com/services/mobile-application-development.md): Cross-platform Android and iOS applications designed to improve customer experiences, connect business operations and make essential services accessible on mobi...
+- [UI/UX Design — Softview Ghana](https://softviewghana.com/services/ui-ux-design.md): User-centred UI/UX design, wireframes, prototypes, and responsive digital experiences built around real user needs and business goals.
+- [Web Application Development — Softview Ghana](https://softviewghana.com/services/web-application-development.md): We design and develop responsive websites, web applications, customer portals, SaaS platforms and business systems built for real-world use.
+- [Terms of Service — Softview Ghana](https://softviewghana.com/terms.md): The terms governing the use of Softview Ghana websites, products, and services.

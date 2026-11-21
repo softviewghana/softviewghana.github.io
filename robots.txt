@@ -1,4 +1,7 @@
-User-Agent: *
-Disallow:
+# START nuxt-robots (indexable)
+User-agent: *
+Disallow: 
+Content-Signal: search=yes, ai-input=yes
 
 Sitemap: https://softviewghana.com/sitemap.xml
+# END nuxt-robots
